@@ -1,39 +1,40 @@
-#include "Rocket.h"
+#include "Enemy.h"
 
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
 #include "GameObject.h"
 
-
-Rocket::Rocket(GameObject* obj) : Component(obj)
+Enemy::Enemy(GameObject* obj) : Component(obj)
 {
 	init();
 }
 
 
-Rocket::~Rocket()
+Enemy::~Enemy()
 {
 }
 
-void Rocket::update()
+
+void Enemy::update()
 {
 	move();
 }
 
-void Rocket::init()
+
+void Enemy::init()
 {
 	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
-	graphics->setSprite("Rocket.txt");
+	graphics->setSprite("Enemy1.txt");
 	addComponent(graphics);
 
 
-	MovementComponent* p = new MovementComponent(_gameObject);
-	p->setSpeed(0.5);
-	_gameObject->addComponent(p);
+	MovementComponent* movement = new MovementComponent(_gameObject);
+	movement->setSpeed(1.0);
+	addComponent(movement);
 }
 
 
-void Rocket::move()
+void Enemy::move()
 {
 	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	if (movement)

@@ -31,7 +31,6 @@ GameObject* GameEngine::getNewGameObject(string name, vector2 position)
 {
 	GameObject* o = new GameObject(name,position);
 	_newObjects.push_back(o);
-	//_objects.push_back(o);
 	return o;
 }
 

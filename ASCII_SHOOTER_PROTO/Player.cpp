@@ -7,7 +7,7 @@
 #include "Structures.h"
 #include "GraphicsComponent.h"
 #include "Rocket.h"
-
+#include "Enemy.h"
 
 #include <iostream>
 
@@ -92,7 +92,15 @@ void Player::fire()
 	{
 		_previous = _timer->getElapsedMs();
 
-		GameObject* rocket = GameEngine::instance().getNewGameObject("Rocket",_gameObject->getPosition());
+		vector2 firePos = _gameObject->getPosition();
+
+		if (firePos1)
+		{
+			firePos.y += 2;
+		}
+		firePos1 = !firePos1;
+
+		GameObject* rocket = GameEngine::instance().getNewGameObject("Rocket", firePos);
 		rocket->addComponent(new Rocket(rocket));
 	}
 }

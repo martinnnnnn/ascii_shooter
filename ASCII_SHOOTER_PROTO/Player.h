@@ -28,5 +28,7 @@ protected:
 	NYTimer* _timer;
 	double _previous;
 	double _elapsed;
+
+	bool firePos1 = false;
 };
 

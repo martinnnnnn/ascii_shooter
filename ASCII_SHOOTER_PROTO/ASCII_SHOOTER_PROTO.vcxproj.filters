@@ -99,6 +99,9 @@
     <ClInclude Include="Rocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -143,12 +146,18 @@
     <ClCompile Include="Rocket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Ship1.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="ZiziRocket.txt">
+    <Text Include="Rocket.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Enemy1.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
