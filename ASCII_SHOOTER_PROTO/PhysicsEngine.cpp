@@ -3,7 +3,7 @@
 #include "Parametres.h"
 #include "GameObject.h"
 #include "GameEngine.h"
-#include "PhysicsComponent.h"
+#include "MovementComponent.h"
 
 #include <iostream>
 
@@ -23,11 +23,11 @@ void PhysicsEngine::update()
 {
 	for (GameObject* obj : GameEngine::instance().getObjects())
 	{
-		PhysicsComponent* physics = obj->getComponent<PhysicsComponent>();
+		MovementComponent* physics = obj->getComponent<MovementComponent>();
 
 		if (physics)
 		{
-			vector2 pos = obj->getPosition();
+			vector2 pos = obj->getPosition();	
 			float speed = physics->getSpeed();
 			vector2 vel = physics->getVelocity();
 
@@ -44,16 +44,16 @@ vector2 PhysicsEngine::updatePosition(vector2 pos, vector2 vel, float speed)
 	newPos.y = pos.y + (vel.y * speed);
 
 
-	if (newPos.x >= 0 && newPos.x + 3 < SCREEN_WIDTH)
+	if (newPos.x >= 0 && newPos.x + 2 < SCREEN_WIDTH)
 	{
 		pos.x = newPos.x;
 	}
-	if (newPos.y >= 0 && newPos.y + 3 < SCREEN_HEIGHT)
+	if (newPos.y >= 0 && newPos.y + 2 < SCREEN_HEIGHT)
 	{
 		pos.y = newPos.y;
 	}
 
-	return pos;
+	return newPos;
 
 	//return newPos;
 

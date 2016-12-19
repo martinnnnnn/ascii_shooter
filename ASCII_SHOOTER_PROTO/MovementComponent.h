@@ -4,13 +4,13 @@
 #include "Structures.h"
 
 
-class PhysicsComponent : public Component
+class MovementComponent : public Component
 {
 
 public:
 
-	PhysicsComponent(GameObject* g) : Component(g) {}
-	~PhysicsComponent();
+	MovementComponent(GameObject* g) : Component(g) {}
+	~MovementComponent();
 
 	void setVelocity(float x, float y) { _velocity.x = x; _velocity.y = y; }
 	void setVelocity(vector2 v) { _velocity = v; }

@@ -1,24 +1,19 @@
 #include "GameObject.h"
 #include "GraphicsComponent.h"
-#include "PhysicsComponent.h"
-#include "PlayerComponent.h"
+#include "MovementComponent.h"
+#include "Player.h"
 
 #include "FileReader.h"
 
+#include <iostream>
+
+
 using namespace std;
 
-GameObject::GameObject()
+GameObject::GameObject(string name, vector2 position)
 {
-	_position.x = 4.0;
-	_position.y = 10.0;
-
-	addComponent(new GraphicsComponent(this));
-	addComponent(new PlayerComponent(this));
-	PhysicsComponent* p = new PhysicsComponent(this);
-	p->setSpeed(2.0);
-	addComponent(p);
-
-	
+	_name = name;
+	_position = position;
 }
 
 

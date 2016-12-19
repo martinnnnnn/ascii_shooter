@@ -12,13 +12,14 @@ class GameObject
 
 public:
 
-	GameObject();
+	GameObject(std::string name, vector2 position = { 0,0 } );
 	~GameObject();
 
 
 	void addComponent(Component*);
 
 	std::vector<Component*>& getComponents();
+
 	template<class T>
 	T* getComponent()
 	{

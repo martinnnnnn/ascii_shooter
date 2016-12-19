@@ -41,7 +41,7 @@ void GraphicsEngine::render()
 {
 	clear();
 	draw();
-	print();
+	swap();
 }
 
 
@@ -51,6 +51,12 @@ void GraphicsEngine::draw()
 	{
 		int posX = (int)obj->getPosition().x;
 		int posY = (int)obj->getPosition().y;
+
+		if (posX < 0 || posX > SCREEN_WIDTH || posY < 0 || posY > SCREEN_HEIGHT)
+		{
+			continue;
+		}
+
 		GraphicsComponent* graphics = obj->getComponent<GraphicsComponent>();
 
 		if (graphics)
@@ -78,7 +84,7 @@ void GraphicsEngine::clear()
 }
 
 
-void GraphicsEngine::print()
+void GraphicsEngine::swap()
 {
 	WriteConsoleOutput(hOutput, (CHAR_INFO*)map, dwBufferSize,
 		dwBufferCoord, &rcRegion);

@@ -4,7 +4,7 @@
 #include "Structures.h"
 #include "Component.h"
 
-
+#include <string>
 #include <vector>
 
 
@@ -16,7 +16,7 @@ public:
 	GraphicsComponent(GameObject* g);
 	virtual ~GraphicsComponent();
 
-
+	void setSprite(std::string path);
 	std::vector<pixel>& getSprite();
 
 private:

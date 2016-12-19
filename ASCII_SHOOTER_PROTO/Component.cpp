@@ -18,3 +18,9 @@ void Component::sendMessage(string msg, int data)
 {
 	_gameObject->sendMessage(msg, data);
 }
+
+Component* Component::addComponent(Component* comp)
+{
+	_gameObject->addComponent(comp);
+	return comp;
+}

@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="Component.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicsComponent.h" />
@@ -119,28 +120,32 @@
     <ClInclude Include="InputEngine.h" />
     <ClInclude Include="NYTimer.h" />
     <ClInclude Include="Parametres.h" />
-    <ClInclude Include="PhysicsComponent.h" />
+    <ClInclude Include="MovementComponent.h" />
     <ClInclude Include="PhysicsEngine.h" />
-    <ClInclude Include="PlayerComponent.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Rocket.h" />
     <ClInclude Include="Structures.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GraphicsComponent.cpp" />
     <ClCompile Include="GraphicsEngine.cpp" />
     <ClCompile Include="InputEngine.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="PhysicsComponent.cpp" />
+    <ClCompile Include="MovementComponent.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
-    <ClCompile Include="PlayerComponent.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Rocket.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Ship1.txt" />
+    <Text Include="ZiziRocket.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

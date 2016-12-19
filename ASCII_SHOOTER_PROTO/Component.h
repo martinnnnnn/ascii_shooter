@@ -15,11 +15,13 @@ public:
 	
 	virtual void update() {}
 
-	virtual void sendMessage(std::string msg, int data);
+
+	void sendMessage(std::string msg, int data);
 	virtual void receiveMessage(std::string msg, int data) {}
 
 protected:
 
 	GameObject* _gameObject;
+	Component* addComponent(Component*);
 };
 

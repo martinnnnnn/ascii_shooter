@@ -3,6 +3,11 @@
 #include "PhysicsEngine.h"
 #include "InputEngine.h"
 
+
+#include "GraphicsComponent.h"
+#include "MovementComponent.h"
+#include "Player.h"
+
 #include <iostream>
 #include "stdio.h"
 
@@ -14,13 +19,20 @@ GameEngine::GameEngine()
 {
 	_graphics = new GraphicsEngine();
 	_graphics->initConsole();
-
 	_physics = new PhysicsEngine();
 
 	_inputs = new InputEngine();
-	
-	_objects.push_back(new GameObject());
 
+
+}
+
+
+GameObject* GameEngine::getNewGameObject(string name, vector2 position)
+{
+	GameObject* o = new GameObject(name,position);
+	_newObjects.push_back(o);
+	//_objects.push_back(o);
+	return o;
 }
 
 
@@ -28,7 +40,14 @@ GameEngine::~GameEngine()
 {
 }
 
-
+void GameEngine::addNewObjects()
+{
+	for (GameObject* obj : _newObjects)
+	{
+		_objects.push_back(obj);
+	}
+	_newObjects.clear();
+}
 
 void GameEngine::run()
 {
@@ -36,7 +55,6 @@ void GameEngine::run()
 
 	double previous = _timer.getElapsedMs();
 	double lag = 0.0;
-
 	while (true)
 	{
 		double current = _timer.getElapsedMs();
@@ -45,16 +63,15 @@ void GameEngine::run()
 
 		lag += elapsed;
 
+		addNewObjects();
 		update();
 
 		while (lag >= TIME_PER_FRAME)
 		{
-			//cout << "update" << endl;
 			updatePhysics();
 			lag -= TIME_PER_FRAME;
 		}
 		render();
-
 	}
 }
 

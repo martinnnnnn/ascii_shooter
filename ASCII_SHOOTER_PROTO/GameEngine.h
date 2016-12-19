@@ -3,6 +3,8 @@
 #include "GameObject.h"
 #include "NYTimer.h"
 
+#include <string>
+
 class PhysicsEngine;
 class GraphicsEngine;
 class InputEngine;
@@ -25,17 +27,27 @@ public:
 
 	std::vector<GameObject*>& getObjects() { return _objects; }
 
-	InputEngine* _inputs;
+	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
 
-private:
-	GameEngine();
-	void update();
-	void updatePhysics();
-	void render();
+
+	InputEngine* _inputs;
 
 	NYTimer _timer;
 
+protected:
+
+	GameEngine();
+	GameEngine(GameEngine const&) = delete;
+	void operator=(GameEngine const&) = delete;
+
+	void update();
+	void updatePhysics();
+	void render();
+	void addNewObjects();
+
+
 	std::vector<GameObject*> _objects;
+	std::vector<GameObject*> _newObjects;
 
 	GraphicsEngine* _graphics;
 	PhysicsEngine* _physics;

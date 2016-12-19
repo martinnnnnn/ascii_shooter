@@ -14,7 +14,7 @@ void FileReader::readSprite(string path, vector<pixel>& sprite)
 	ifstream file(path);
 	string str;
 	int i = 0;
-	int j;
+	unsigned int j;
 
 	CHAR_INFO c;
 	c.Attributes = 0x0A;
@@ -24,7 +24,7 @@ void FileReader::readSprite(string path, vector<pixel>& sprite)
 		for (j = 0; j < str.length(); ++j)
 		{
 			c.Char.UnicodeChar = str[j];
-			sprite.push_back(pixel{ c,j,i });
+			sprite.push_back(pixel{ c,(int)j,i });
 		}
 		++i;
 	}
