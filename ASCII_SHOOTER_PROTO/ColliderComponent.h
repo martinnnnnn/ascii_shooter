@@ -18,10 +18,13 @@ public:
 	
 	vector2 getHitBox() { return _hitbox; }
 
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
 
 protected:
 
 	vector2 _hitbox;
+
 
 };
 

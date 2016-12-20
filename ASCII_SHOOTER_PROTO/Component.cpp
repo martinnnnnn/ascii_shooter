@@ -14,9 +14,14 @@ Component::~Component()
 {
 }
 
-void Component::sendMessage(string msg, int data)
+void Component::sendMessage(Message message)
 {
-	_gameObject->sendMessage(msg, data);
+	_gameObject->sendMessage(message);
+}
+
+void Component::receiveMessage(Message message)
+{
+	boost::apply_visitor(*this, message);
 }
 
 Component* Component::addComponent(Component* comp)

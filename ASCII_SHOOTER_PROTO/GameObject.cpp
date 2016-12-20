@@ -2,8 +2,8 @@
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
 #include "Player.h"
-
 #include "FileReader.h"
+#include "Parametres.h"
 
 #include <iostream>
 #include <vector>
@@ -21,11 +21,24 @@ GameObject::GameObject(string tag, vector2 position)
 {
 	setTag(tag);
 	_position = position;
+	_dead = false;
 }
 
 
 GameObject::~GameObject()
 {
+}
+
+void GameObject::update()
+{
+	if (_position.x > SCREEN_WIDTH + 10)
+	{
+		kill();
+	}
+	for (Component* comp : _components)
+	{
+		comp->update();
+	}
 }
 
 void GameObject::addComponent(Component* c)
@@ -38,11 +51,11 @@ vector<Component*>& GameObject::getComponents()
 	return _components;
 }
 
-void GameObject::sendMessage(string msg, int data)
+void GameObject::sendMessage(Message message)
 {
 	for (Component* c : _components)
 	{
-		c->receiveMessage(msg, data);
+		c->receiveMessage(message);
 	}
 }
 

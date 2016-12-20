@@ -63,6 +63,7 @@ void GameEngine::run()
 		lag += elapsed;
 
 		addNewObjects();
+		takeCareOfDeadBodies();
 		update();
 
 		while (lag >= TIME_PER_FRAME)
@@ -74,16 +75,33 @@ void GameEngine::run()
 	}
 }
 
+void GameEngine::takeCareOfDeadBodies()
+{
+	//for (GameObject* obj : _objects)
+	//{
+	//	if (obj->isdead())
+	//	{
+	//		
+	//	}
+	//}
+
+	for (int i = 0; i < _objects.size(); i++)
+	{
+		if (_objects[i]->isDead())
+		{
+			delete _objects[i];
+			_objects.erase(_objects.begin() + i);
+		}
+	}
+}
 
 void GameEngine::update()
 {
 	_inputs->update();
 	for (GameObject* obj : _objects)
 	{
-		for (Component* comp : obj->getComponents())
-		{
-			comp->update();
-		}
+		obj->update();
+
 	}
 }
 

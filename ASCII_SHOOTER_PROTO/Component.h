@@ -2,10 +2,12 @@
 
 #include <string>
 
+#include "MessageHandler.h"
+
 class GameObject;
 
 
-class Component
+class Component : public MessageHandler
 {
 
 public:
@@ -16,12 +18,17 @@ public:
 	virtual void update() {}
 
 
-	void sendMessage(std::string msg, int data);
-	virtual void receiveMessage(std::string msg, int data) {}
+	void sendMessage(Message);
+
+	virtual void receiveMessage(Message);
+
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
 
 protected:
 
 	GameObject* _gameObject;
 	Component* addComponent(Component*);
+
 };
 

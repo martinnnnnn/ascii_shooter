@@ -3,11 +3,10 @@
 
 #include "Structures.h"
 #include "Component.h"
+#include "MessageHandler.h"
 
 #include <vector>
 #include <string>
-
-
 
 
 class GameObject
@@ -18,6 +17,7 @@ public:
 	GameObject(std::string tag, vector2 position = { 0,0 } );
 	~GameObject();
 
+	void update();
 
 	void addComponent(Component*);
 
@@ -46,7 +46,7 @@ public:
 	void setName(std::string name) { _name = name; }
 
 
-	void sendMessage(std::string msg, int data);
+	void sendMessage(Message);
 
 	bool tagged(std::string tag);
 	void setTag(std::string tag);
@@ -54,11 +54,15 @@ public:
 	static bool findTag(std::string tag);
 	static std::vector<std::string> _Tags;
 
+	inline void kill() { _dead = true; }
+	inline bool isDead() { return _dead; }
+
 private:
 
 	std::string _name;
 	std::string _tag;
 	vector2 _position;
+	bool _dead;
 
 	std::vector<Component*> _components;
 

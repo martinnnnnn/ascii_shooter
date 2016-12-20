@@ -4,6 +4,7 @@
 #include "MovementComponent.h"
 #include "GraphicsComponent.h"
 #include "ColliderComponent.h"
+#include "LifeComponent.h"
 
 #include "InputEngine.h"
 #include "GameEngine.h"
@@ -18,7 +19,8 @@ using namespace std;
 
 Player::Player(GameObject* obj) : Component(obj)
 {
-	init();
+	initValues();
+	initComponent();
 }
 
 
@@ -27,27 +29,34 @@ Player::~Player()
 }
 
 
-void Player::init()
+void Player::initComponent()
 {
 	_timer = &(GameEngine::instance()._timer);
 
 	_previous = _timer->getElapsedMs();
-
-	_fireRate = 100.0;
 
 	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
 	graphics->setSprite("Ship1.txt");
 	addComponent(graphics);
 
 	MovementComponent* movement = new MovementComponent(_gameObject);
-	movement->setSpeed(2.0);
 	addComponent(movement);
+
+	LifeComponent* life = new LifeComponent(_gameObject);
+	life->setLife(5);
+	addComponent(life);
 
 	//ColliderComponent* collider = new ColliderComponent(_gameObject);
 	//collider->setHitBox(3.0, 3.0);
 	//addComponent(collider);
+
 }
 
+void Player::initValues()
+{
+	_speed = 1.0;
+	_fireRate = 100.0;
+}
 
 void Player::update()
 {
@@ -82,6 +91,9 @@ void Player::move()
 	{
 		vel.x = 1;
 	}
+
+	vel.x *= _speed;
+	vel.y *= _speed;
 
 	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	if (movement)

@@ -8,12 +8,6 @@ class InputEngine
 
 public:
 
-	//static InputEngine& instance()
-	//{
-	//	static InputEngine *instance = new InputEngine();
-	//	return *instance;
-	//}
-
 	InputEngine();
 	~InputEngine();
 

@@ -19,10 +19,13 @@ public:
 	void setSprite(std::string path);
 	std::vector<pixel>& getSprite();
 
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
+
 private:
 
-
 	std::vector<pixel> _sprite;
+
 
 };
 

@@ -5,6 +5,7 @@
 #include "GameEngine.h"
 #include "MovementComponent.h"
 #include "ColliderComponent.h"
+#include "MessageHandler.h"
 
 #include <iostream>
 
@@ -30,10 +31,9 @@ void PhysicsEngine::update()
 		if (movement)
 		{
 			vector2 pos = current->getPosition();	
-			float speed = movement->getSpeed();
 			vector2 vel = movement->getVelocity();
 
-			current->setPosition(updatePosition(pos, vel, speed));
+			current->setPosition(updatePosition(pos, vel));
 		}
 
 		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
@@ -51,8 +51,8 @@ void PhysicsEngine::update()
 						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->getHitBox()))
 						{
 							//cout << "hello" << endl;
-							current->sendMessage("TakeDamage", 1);
-							other->sendMessage("TakeDamage", 1);
+							current->sendMessage(CHANGE_LIFE{ -1 });
+							other->sendMessage(CHANGE_LIFE{ -1 });
 						}
 					}
 				}
@@ -62,27 +62,14 @@ void PhysicsEngine::update()
 	}
 }
 
-vector2 PhysicsEngine::updatePosition(vector2 pos, vector2 vel, float speed)
+vector2 PhysicsEngine::updatePosition(vector2 pos, vector2 vel)
 {
 	vector2 newPos;
 
-	newPos.x = pos.x + (vel.x * speed);
-	newPos.y = pos.y + (vel.y * speed);
+	newPos.x = pos.x + (vel.x);
+	newPos.y = pos.y + (vel.y);
 
 	return newPos;
-
-	//if (newPos.x >= 0 && newPos.x + 2 < SCREEN_WIDTH)
-	//{
-	//	pos.x = newPos.x;
-	//}
-	//if (newPos.y >= 0 && newPos.y + 2 < SCREEN_HEIGHT)
-	//{
-	//	pos.y = newPos.y;
-	//}
-
-
-	//return newPos;
-
 }
 
 bool PhysicsEngine::intersect(vector2 pos1, vector2 hitbox1, vector2 pos2, vector2 hitbox2)

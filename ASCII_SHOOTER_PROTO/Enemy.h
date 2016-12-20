@@ -13,10 +13,17 @@ public:
 
 	virtual void update();
 
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
 
 protected:
 
 	void move();
-	void init();
+	void initComponents();
+
+	void initValues();
+
+	float _speed;
+
 };
 

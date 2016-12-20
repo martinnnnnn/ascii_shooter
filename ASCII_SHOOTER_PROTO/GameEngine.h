@@ -40,6 +40,7 @@ protected:
 	GameEngine(GameEngine const&) = delete;
 	void operator=(GameEngine const&) = delete;
 
+	void takeCareOfDeadBodies();
 	void update();
 	void updatePhysics();
 	void render();

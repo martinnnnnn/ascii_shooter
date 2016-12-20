@@ -15,15 +15,13 @@ public:
 	void setVelocity(float x, float y) { _velocity.x = x; _velocity.y = y; }
 	void setVelocity(vector2 v) { _velocity = v; }
 
-	void setSpeed(float speed) { _speed = speed; }
-
-	float getSpeed() { return _speed; }
 	vector2 getVelocity() { return _velocity; }
 
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
 
 private:
 
-	float _speed;
 	vector2 _velocity;
 
 };

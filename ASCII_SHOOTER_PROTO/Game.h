@@ -16,6 +16,9 @@ public:
 
 	virtual void update();
 
+	virtual void operator()(DESTROY const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}
+
 protected:
 
 	void initPlayer();
@@ -34,5 +37,6 @@ protected:
 	std::default_random_engine _generator;
 	std::bernoulli_distribution _bernouilliDistribution;
 	std::uniform_int_distribution<int> _uniformDistribution;
+
 };
 

@@ -24,7 +24,7 @@ void GraphicsEngine::initConsole()
 	RECT r;
 	GetWindowRect(console, &r); //stores the console's current dimensions
 
-	MoveWindow(console, 50, 150, 1300, 600, TRUE); // 800 width, 100 height
+	MoveWindow(console, 0, 0, 1920, 1080, TRUE); // 800 width, 100 height
 
 	_setmode(_fileno(stdout), _O_U16TEXT);
 	hOutput = (HANDLE)GetStdHandle(STD_OUTPUT_HANDLE);
