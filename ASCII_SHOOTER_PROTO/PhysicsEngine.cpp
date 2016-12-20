@@ -4,6 +4,7 @@
 #include "GameObject.h"
 #include "GameEngine.h"
 #include "MovementComponent.h"
+#include "ColliderComponent.h"
 
 #include <iostream>
 
@@ -21,18 +22,43 @@ PhysicsEngine::~PhysicsEngine()
 
 void PhysicsEngine::update()
 {
-	for (GameObject* obj : GameEngine::instance().getObjects())
+	
+	vector<GameObject*> gameObjects = GameEngine::instance().getObjects();
+	for (GameObject* current : gameObjects)
 	{
-		MovementComponent* physics = obj->getComponent<MovementComponent>();
-
-		if (physics)
+		MovementComponent* movement = current->getComponent<MovementComponent>();
+		if (movement)
 		{
-			vector2 pos = obj->getPosition();	
-			float speed = physics->getSpeed();
-			vector2 vel = physics->getVelocity();
+			vector2 pos = current->getPosition();	
+			float speed = movement->getSpeed();
+			vector2 vel = movement->getVelocity();
 
-			obj->setPosition(updatePosition(pos, vel, speed));
+			current->setPosition(updatePosition(pos, vel, speed));
 		}
+
+		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
+		if (currentCollider)
+		{
+			vector2 currentHitBox = currentCollider->getHitBox();
+			vector2 currentPosition = current->getPosition();
+			for (GameObject* other : gameObjects)
+			{
+				if (current != other)
+				{
+					ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
+					if (otherCollider)
+					{
+						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->getHitBox()))
+						{
+							//cout << "hello" << endl;
+							current->sendMessage("TakeDamage", 1);
+							other->sendMessage("TakeDamage", 1);
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
 
@@ -43,17 +69,17 @@ vector2 PhysicsEngine::updatePosition(vector2 pos, vector2 vel, float speed)
 	newPos.x = pos.x + (vel.x * speed);
 	newPos.y = pos.y + (vel.y * speed);
 
-
-	if (newPos.x >= 0 && newPos.x + 2 < SCREEN_WIDTH)
-	{
-		pos.x = newPos.x;
-	}
-	if (newPos.y >= 0 && newPos.y + 2 < SCREEN_HEIGHT)
-	{
-		pos.y = newPos.y;
-	}
-
 	return newPos;
+
+	//if (newPos.x >= 0 && newPos.x + 2 < SCREEN_WIDTH)
+	//{
+	//	pos.x = newPos.x;
+	//}
+	//if (newPos.y >= 0 && newPos.y + 2 < SCREEN_HEIGHT)
+	//{
+	//	pos.y = newPos.y;
+	//}
+
 
 	//return newPos;
 

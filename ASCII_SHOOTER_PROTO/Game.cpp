@@ -45,7 +45,7 @@ void Game::initEnemyGenerator()
 {
 	_timer = &(GameEngine::instance()._timer);
 	_previous = _timer->getElapsedMs();
-	_enemySpawnRate = 1000.0;
+	_enemySpawnRate = 3000.0;
 
 	_bernouilliDistribution = std::bernoulli_distribution(0.2);
 	_uniformDistribution = std::uniform_int_distribution<int>(0, SCREEN_HEIGHT);

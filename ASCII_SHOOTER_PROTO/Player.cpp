@@ -2,12 +2,14 @@
 
 #include "GameObject.h"
 #include "MovementComponent.h"
+#include "GraphicsComponent.h"
+#include "ColliderComponent.h"
+
 #include "InputEngine.h"
 #include "GameEngine.h"
 #include "Structures.h"
-#include "GraphicsComponent.h"
+
 #include "Rocket.h"
-#include "Enemy.h"
 
 #include <iostream>
 
@@ -39,7 +41,11 @@ void Player::init()
 
 	MovementComponent* movement = new MovementComponent(_gameObject);
 	movement->setSpeed(2.0);
-	_gameObject->addComponent(movement);
+	addComponent(movement);
+
+	//ColliderComponent* collider = new ColliderComponent(_gameObject);
+	//collider->setHitBox(3.0, 3.0);
+	//addComponent(collider);
 }
 
 

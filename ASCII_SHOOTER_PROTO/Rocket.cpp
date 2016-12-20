@@ -1,8 +1,10 @@
 #include "Rocket.h"
 
+#include "GameObject.h"
+
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
-#include "GameObject.h"
+#include "ColliderComponent.h"
 
 
 Rocket::Rocket(GameObject* obj) : Component(obj)
@@ -28,8 +30,12 @@ void Rocket::init()
 
 
 	MovementComponent* p = new MovementComponent(_gameObject);
-	p->setSpeed(0.5);
+	p->setSpeed(2.0);
 	_gameObject->addComponent(p);
+
+	ColliderComponent* collider = new ColliderComponent(_gameObject);
+	collider->setHitBox(1.0, 1.0);
+	addComponent(collider);
 }
 
 
@@ -38,6 +44,6 @@ void Rocket::move()
 	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	if (movement)
 	{
-		movement->setVelocity({ -1, 0 });
+		movement->setVelocity({ 1, 0 });
 	}
 }

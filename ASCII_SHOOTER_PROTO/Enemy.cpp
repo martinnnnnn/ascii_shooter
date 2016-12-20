@@ -1,8 +1,11 @@
 #include "Enemy.h"
 
+#include "GameObject.h"
+
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
-#include "GameObject.h"
+#include "ColliderComponent.h"
+
 
 Enemy::Enemy(GameObject* obj) : Component(obj)
 {
@@ -31,6 +34,10 @@ void Enemy::init()
 	MovementComponent* movement = new MovementComponent(_gameObject);
 	movement->setSpeed(1.0);
 	addComponent(movement);
+
+	ColliderComponent* collider = new ColliderComponent(_gameObject);
+	collider->setHitBox(3.0, 1.0);
+	addComponent(collider);
 }
 
 

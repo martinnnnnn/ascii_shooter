@@ -7,12 +7,15 @@
 #include <vector>
 #include <string>
 
+
+
+
 class GameObject
 {
 
 public:
 
-	GameObject(std::string name, vector2 position = { 0,0 } );
+	GameObject(std::string tag, vector2 position = { 0,0 } );
 	~GameObject();
 
 
@@ -45,13 +48,19 @@ public:
 
 	void sendMessage(std::string msg, int data);
 
+	bool tagged(std::string tag);
+	void setTag(std::string tag);
+
+	static bool findTag(std::string tag);
+	static std::vector<std::string> _Tags;
 
 private:
 
 	std::string _name;
-
+	std::string _tag;
 	vector2 _position;
 
 	std::vector<Component*> _components;
 
+	static void addTag(std::string tag);
 };

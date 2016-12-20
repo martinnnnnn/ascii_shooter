@@ -6,13 +6,20 @@
 #include "FileReader.h"
 
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
 
 
 using namespace std;
 
-GameObject::GameObject(string name, vector2 position)
+
+vector<string> GameObject::_Tags = { "Default" };
+
+
+GameObject::GameObject(string tag, vector2 position)
 {
-	_name = name;
+	setTag(tag);
 	_position = position;
 }
 
@@ -37,4 +44,30 @@ void GameObject::sendMessage(string msg, int data)
 	{
 		c->receiveMessage(msg, data);
 	}
+}
+
+void GameObject::addTag(string tag)
+{
+	if (find(GameObject::_Tags.begin(), _Tags.end(), tag) != _Tags.end())
+	{
+		GameObject::_Tags.push_back(tag);
+	}
+}
+
+bool GameObject::findTag(std::string tag)
+{
+	return find(GameObject::_Tags.begin(), _Tags.end(), tag) != _Tags.end();
+}
+
+
+void GameObject::setTag(std::string tag)
+{
+	GameObject::addTag(tag);
+	_tag = tag;
+}
+
+
+bool GameObject::tagged(std::string tag)
+{
+	return (_tag == tag);
 }
