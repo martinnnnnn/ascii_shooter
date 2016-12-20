@@ -24,19 +24,23 @@ protected:
 	void initComponent();
 	void move();
 	void fire();
+
 	void updateTime();
 
 	void initValues();
 
-	double _fireRate;
 	float _speed;
 
-
 	NYTimer* _timer;
-	double _previous;
-	double _elapsed;
 
-	bool firePos1 = false;
+	void fire1();
+	double _fireRate1;
+	double _previous1;
+	double _elapsed1;
 
+	void fire2();
+	double _fireRate2;
+	double _previous2;
+	double _elapsed2;
 };
 

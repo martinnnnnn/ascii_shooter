@@ -26,5 +26,8 @@ enum KEY
 	DOWN,
 	LEFT,
 	RIGHT,
-	ZERO
+	FIRE1,
+	FIRE2,
+	FIRE3,
+	FIRE4
 };

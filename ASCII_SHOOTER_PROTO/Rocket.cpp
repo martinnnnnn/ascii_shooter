@@ -10,8 +10,6 @@
 
 Rocket::Rocket(GameObject* obj) : Component(obj)
 {
-	initValues();
-	initComponent();
 }
 
 
@@ -24,7 +22,14 @@ void Rocket::update()
 	move();
 }
 
-void Rocket::initComponent()
+
+void Rocket::init(int life, vector2 velocity, float speed)
+{
+	initValues(speed);
+	initComponent(life, velocity);
+}
+
+void Rocket::initComponent(int lifeValue, vector2 velocity)
 {
 
 	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
@@ -32,29 +37,30 @@ void Rocket::initComponent()
 	addComponent(graphics);
 
 
-	MovementComponent* p = new MovementComponent(_gameObject);
-	_gameObject->addComponent(p);
+	MovementComponent* movement = new MovementComponent(_gameObject);
+	movement->setVelocity({ velocity.x * _speed, velocity.y * _speed });
+	_gameObject->addComponent(movement);
 
 	ColliderComponent* collider = new ColliderComponent(_gameObject);
 	collider->setHitBox(1.0, 1.0);
 	addComponent(collider);
 
 	LifeComponent* life = new LifeComponent(_gameObject);
-	life->setLife(1);
+	life->setLife(lifeValue);
 	addComponent(life);
 }
 
-void Rocket::initValues()
+void Rocket::initValues(float speed)
 {
-	_speed = 3.0;
+	_speed = speed;
 }
 
 
 void Rocket::move()
 {
-	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
-	if (movement)
-	{
-		movement->setVelocity({ 1 * _speed, 0 * _speed });
-	}
+	//MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
+	//if (movement)
+	//{
+	//	movement->setVelocity({ 0.6f * _speed, 0.4f * _speed });
+	//}
 }

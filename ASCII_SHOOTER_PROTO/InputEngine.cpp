@@ -6,7 +6,7 @@ using namespace std;
 
 InputEngine::InputEngine()
 {
-	for (int i = UP; i < ZERO; i++)
+	for (int i = UP; i < FIRE4; i++)
 	{
 		KEY key = (KEY)i;
 		_keyPressedMap[key] = false;
@@ -26,25 +26,37 @@ void InputEngine::update()
 		it->second = false;
 	}
 
-	if (GetAsyncKeyState(VK_UP) & 0x8000)
+	if (GetAsyncKeyState(VK_NUMPAD8) & 0x8000)
 	{
 		_keyPressedMap[UP] = true;
 	}
-	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+	if (GetAsyncKeyState(VK_NUMPAD5) & 0x8000)
 	{
 		_keyPressedMap[DOWN] = true;
 	}
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+	if (GetAsyncKeyState(VK_NUMPAD4) & 0x8000)
 	{
 		_keyPressedMap[LEFT] = true;
 	}
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+	if (GetAsyncKeyState(VK_NUMPAD6) & 0x8000)
 	{
 		_keyPressedMap[RIGHT] = true;
 	}
-	if (GetAsyncKeyState(VK_NUMPAD0) & 0x8000)
+	if (GetAsyncKeyState(VK_F1) & 0x8000)
 	{
-		_keyPressedMap[ZERO] = true;
+		_keyPressedMap[FIRE1] = true;
+	}
+	if (GetAsyncKeyState(VK_F2) & 0x8000)
+	{
+		_keyPressedMap[FIRE2] = true;
+	}
+	if (GetAsyncKeyState(VK_F3) & 0x8000)
+	{
+		_keyPressedMap[FIRE3] = true;
+	}
+	if (GetAsyncKeyState(VK_F4) & 0x8000)
+	{
+		_keyPressedMap[FIRE4] = true;
 	}
 }
 
