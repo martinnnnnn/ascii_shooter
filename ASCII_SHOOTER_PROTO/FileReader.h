@@ -9,6 +9,5 @@
 namespace FileReader
 {
 	void readSprite(std::string path, std::vector<pixel>& sprite);
-
 }
 

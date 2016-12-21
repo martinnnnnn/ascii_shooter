@@ -30,8 +30,8 @@ void PhysicsEngine::update()
 		MovementComponent* movement = current->getComponent<MovementComponent>();
 		if (movement)
 		{
-			vector2 pos = current->getPosition();	
-			vector2 vel = movement->getVelocity();
+			vector2 pos = current->getPosition();
+			vector2 vel = movement->_velocity;
 
 			current->setPosition(updatePosition(pos, vel));
 		}
@@ -39,7 +39,7 @@ void PhysicsEngine::update()
 		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
 		if (currentCollider)
 		{
-			vector2 currentHitBox = currentCollider->getHitBox();
+			vector2 currentHitBox = currentCollider->_hitbox;
 			vector2 currentPosition = current->getPosition();
 			for (GameObject* other : gameObjects)
 			{
@@ -48,7 +48,7 @@ void PhysicsEngine::update()
 					ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
 					if (otherCollider)
 					{
-						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->getHitBox()))
+						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->_hitbox))
 						{
 							//cout << "hello" << endl;
 							current->sendMessage(CHANGE_LIFE{ -1 });

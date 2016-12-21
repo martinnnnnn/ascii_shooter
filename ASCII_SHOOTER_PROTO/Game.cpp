@@ -13,10 +13,10 @@
 
 using namespace std;
 
-Game::Game(GameObject* obj) : Component(obj)
+Game::Game(GameObject* obj) : GameComponent(obj)
 {
-	initPlayer();
-	initEnemyGenerator();
+	//initPlayer();
+	//initEnemyGenerator();
 }
 
 
@@ -24,6 +24,12 @@ Game::~Game()
 {
 }
 
+
+void Game::init()
+{
+	initPlayer();
+	initEnemyGenerator();
+}
 
 void Game::update()
 {
@@ -34,9 +40,10 @@ void Game::update()
 
 void Game::initPlayer()
 {
-	GameObject* player = GameEngine::instance().getNewGameObject("Player", vector2{ 20.0, 10.0 });
-
-	player->addComponent(new Player(player));
+	GameObject* playerObj = GameEngine::instance().getNewGameObject("Player", vector2{ 20.0, 10.0 });
+	Player* player = new Player(playerObj);
+	player->init();
+	playerObj->addComponent(player);
 }
 
 
@@ -64,6 +71,8 @@ void Game::handleEnemies()
 
 void Game::spawnEnemy(vector2 position)
 {
-	GameObject* enemy = GameEngine::instance().getNewGameObject("Enemy", position);
-	enemy->addComponent(new Enemy(enemy));
+	GameObject* enemyObj = GameEngine::instance().getNewGameObject("Enemy", position);
+	Enemy* enemy = new Enemy(enemyObj);
+	enemy->init();
+	enemyObj->addComponent(enemy);
 }

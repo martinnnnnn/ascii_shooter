@@ -1,11 +1,12 @@
 #pragma once
 
-#include "Component.h"
+#include "GameComponent.h"
 #include "Structures.h"
 #include "NYTimer.h"
 
 #include <random>
-class Game : public Component
+
+class Game : public GameComponent
 {
 
 public:
@@ -13,6 +14,7 @@ public:
 	Game(GameObject*);
 	~Game();
 
+	virtual void init();
 
 	virtual void update();
 

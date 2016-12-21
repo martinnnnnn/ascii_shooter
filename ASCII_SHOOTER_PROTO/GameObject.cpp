@@ -37,7 +37,11 @@ void GameObject::update()
 	}
 	for (Component* comp : _components)
 	{
-		comp->update();
+		GameComponent* script = dynamic_cast<GameComponent*>(comp);
+		if (script)
+		{
+			script->update();
+		}
 	}
 }
 
@@ -55,7 +59,11 @@ void GameObject::sendMessage(Message message)
 {
 	for (Component* c : _components)
 	{
-		c->receiveMessage(message);
+		GameComponent* script = dynamic_cast<GameComponent*>(c);
+		if (script)
+		{
+			script->receiveMessage(message);
+		}
 	}
 }
 

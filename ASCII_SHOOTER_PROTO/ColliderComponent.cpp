@@ -2,11 +2,11 @@
 
 
 
-ColliderComponent::ColliderComponent(GameObject* obj) : Component(obj)
-{
-}
-
-
-ColliderComponent::~ColliderComponent()
-{
-}
+//ColliderComponent::ColliderComponent(GameObject* obj) : Component(obj)
+//{
+//}
+//
+//
+//ColliderComponent::~ColliderComponent()
+//{
+//}

@@ -1,9 +1,11 @@
 #pragma once
 
-#include "Component.h"
+#include "GameComponent.h"
+
+#include <string>
 
 
-class Enemy : public Component
+class Enemy : public GameComponent
 {
 
 public:
@@ -11,6 +13,7 @@ public:
 	Enemy(GameObject*);
 	~Enemy();
 
+	virtual void init(int life = 0, std::string = "Enemy1.txt", float speed = 1.0);
 	virtual void update();
 
 	virtual void operator()(DESTROY const& e) {}
@@ -18,10 +21,10 @@ public:
 
 protected:
 
+	void initValues(float speed);
+	void initComponents(int lifeValue, std::string path);
+	
 	void move();
-	void initComponents();
-
-	void initValues();
 
 	float _speed;
 

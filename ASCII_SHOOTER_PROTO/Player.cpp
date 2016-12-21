@@ -4,7 +4,7 @@
 #include "MovementComponent.h"
 #include "GraphicsComponent.h"
 #include "ColliderComponent.h"
-#include "LifeComponent.h"
+#include "Life.h"
 
 #include "InputEngine.h"
 #include "GameEngine.h"
@@ -17,10 +17,10 @@
 using namespace std;
 
 
-Player::Player(GameObject* obj) : Component(obj)
+Player::Player(GameObject* obj) : GameComponent(obj)
 {
-	initValues();
-	initComponent();
+	//initValues();
+	//initComponent();
 }
 
 
@@ -28,23 +28,29 @@ Player::~Player()
 {
 }
 
+void Player::init(int life, string path, float speed, float fireRate)
+{
+	initValues(speed, fireRate);
+	initComponent(life, path);
+}
 
-void Player::initComponent()
+
+void Player::initComponent(int lifeValue, string path)
 {
 	_timer = &(GameEngine::instance()._timer);
 
 	_previous1 = _timer->getElapsedMs();
 	_previous2 = _timer->getElapsedMs();
 
-	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
-	graphics->setSprite("Ship1.txt");
+	GraphicsComponent* graphics = new GraphicsComponent(path/*_gameObject*/);
+	//graphics->setSprite("Ship1.txt");
 	addComponent(graphics);
 
-	MovementComponent* movement = new MovementComponent(_gameObject);
+	MovementComponent* movement = new MovementComponent(/*_gameObject*/);
 	addComponent(movement);
 
-	LifeComponent* life = new LifeComponent(_gameObject);
-	life->setLife(5);
+	Life* life = new Life(_gameObject);
+	life->init(lifeValue);
 	addComponent(life);
 
 	//ColliderComponent* collider = new ColliderComponent(_gameObject);
@@ -53,7 +59,7 @@ void Player::initComponent()
 
 }
 
-void Player::initValues()
+void Player::initValues(float speed, float fireRate)
 {
 	_speed = 1.0;
 	_fireRate1 = 100.0;
@@ -101,7 +107,7 @@ void Player::move()
 	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	if (movement)
 	{
-		movement->setVelocity(vel);
+		movement->_velocity = vel;
 	}
 }
 
@@ -145,10 +151,10 @@ void Player::fire2()
 	GameObject* rocket;
 	Rocket* rocketComp;
 	vector2 vel;
-	for (float i = 0.0; i < 0.5; i += 0.05)
+	for (double i = 0.0; i < 1.0; i += 0.1)
 	{
-		vel.y = i;
-		vel.x = 1 - i;
+		vel.x = 1.0;
+		vel.y = (float) (0.5 - i);
 		rocket = GameEngine::instance().getNewGameObject("Rocket", firePos);
 		rocketComp = new Rocket(rocket);
 		rocketComp->init(40, vel, 3.0f);

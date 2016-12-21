@@ -85,7 +85,7 @@ void GameEngine::takeCareOfDeadBodies()
 	//	}
 	//}
 
-	for (int i = 0; i < _objects.size(); i++)
+	for (unsigned int i = 0; i < _objects.size(); i++)
 	{
 		if (_objects[i]->isDead())
 		{

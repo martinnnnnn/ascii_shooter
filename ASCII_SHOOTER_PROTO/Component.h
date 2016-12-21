@@ -1,34 +1,34 @@
 #pragma once
 
-#include <string>
+//#include <string>
 
-#include "MessageHandler.h"
+//#include "MessageHandler.h"
 
 class GameObject;
 
 
-class Component : public MessageHandler
+class Component /*: public MessageHandler*/
 {
 
 public:
 
-	Component(GameObject*);
+	Component(/*GameObject**/);
 	virtual ~Component();
 	
-	virtual void update() {}
+	//virtual void update() {}
 
 
-	void sendMessage(Message);
+	/*void sendMessage(Message);
 
 	virtual void receiveMessage(Message);
 
 	virtual void operator()(DESTROY const& e) {}
-	virtual void operator()(CHANGE_LIFE const& e) {}
+	virtual void operator()(CHANGE_LIFE const& e) {}*/
 
 protected:
 
-	GameObject* _gameObject;
-	Component* addComponent(Component*);
+	//GameObject* _gameObject;
+	//Component* addComponent(Component*);
 
 };
 

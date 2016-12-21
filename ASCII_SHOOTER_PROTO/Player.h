@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Component.h"
+#include "GameComponent.h"
 #include "NYTimer.h"
 
 
 
 
-class Player : public Component
+class Player : public GameComponent
 {
 
 public:
@@ -14,6 +14,7 @@ public:
 	Player(GameObject* g);
 	virtual ~Player();
 
+	virtual void init(int life = 5, std::string path = "Ship1.txt", float speed = 4.0, float fireRate = 100.0);
 	virtual void update();
 
 	virtual void operator()(DESTROY const& e) {}
@@ -21,13 +22,14 @@ public:
 
 protected:
 
-	void initComponent();
+	void initValues(float speed, float fireRate);
+	void initComponent(int life, std::string path);
+
 	void move();
 	void fire();
 
 	void updateTime();
 
-	void initValues();
 
 	float _speed;
 

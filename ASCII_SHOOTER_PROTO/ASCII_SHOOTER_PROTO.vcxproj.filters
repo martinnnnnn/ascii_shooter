@@ -31,10 +31,22 @@
     <Filter Include="Source Files\Component">
       <UniqueIdentifier>{4b9f50e4-bb52-4e45-8bc5-e3f829a971e9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Scripts">
+    <Filter Include="Header Files\Component\EngineComponent">
+      <UniqueIdentifier>{aaa8aa0c-45a9-48c4-96f0-ba1ad6f0d454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component\GameComponent">
+      <UniqueIdentifier>{b995dea1-30c7-4ddf-8ab6-d691ffa284e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component\GameComponent\Scripts">
       <UniqueIdentifier>{23c10338-71af-4b82-bd39-95e276b20442}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Scripts">
+    <Filter Include="Source Files\Component\EngineComponent">
+      <UniqueIdentifier>{4c161e91-a242-4d1a-9a43-0fbaf3b196bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent">
+      <UniqueIdentifier>{be3c8307-8899-42b0-a9fe-6470365ab99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts">
       <UniqueIdentifier>{ac40b7c8-8dcd-4248-b153-b54f05207d8f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -51,9 +63,6 @@
     <ClInclude Include="PhysicsEngine.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicsComponent.h">
-      <Filter>Header Files\Component</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>Header Files\Component</Filter>
     </ClInclude>
@@ -69,26 +78,20 @@
     <ClInclude Include="FileReader.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="MovementComponent.h">
-      <Filter>Header Files\Component</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files\Scripts</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Header Files\Scripts</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts</Filter>
     </ClInclude>
     <ClInclude Include="Rocket.h">
-      <Filter>Header Files\Scripts</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Scripts</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts</Filter>
     </ClInclude>
     <ClInclude Include="InputEngine.h">
       <Filter>Header Files\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="ColliderComponent.h">
-      <Filter>Header Files\Component</Filter>
     </ClInclude>
     <ClInclude Include="MessageHandler.h">
       <Filter>Header Files\Utils</Filter>
@@ -96,8 +99,20 @@
     <ClInclude Include="GameObject.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="LifeComponent.h">
-      <Filter>Header Files\Component</Filter>
+    <ClInclude Include="Life.h">
+      <Filter>Header Files\Component\GameComponent\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementComponent.h">
+      <Filter>Header Files\Component\EngineComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsComponent.h">
+      <Filter>Header Files\Component\EngineComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderComponent.h">
+      <Filter>Header Files\Component\EngineComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="GameComponent.h">
+      <Filter>Header Files\Component\GameComponent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -113,9 +128,6 @@
     <ClCompile Include="PhysicsEngine.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="GraphicsComponent.cpp">
-      <Filter>Source Files\Component</Filter>
-    </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>Source Files\Component</Filter>
     </ClCompile>
@@ -125,26 +137,20 @@
     <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="MovementComponent.cpp">
-      <Filter>Source Files\Component</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files\Scripts</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Scripts</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts</Filter>
     </ClCompile>
     <ClCompile Include="Rocket.cpp">
-      <Filter>Source Files\Scripts</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files\Scripts</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts</Filter>
     </ClCompile>
     <ClCompile Include="InputEngine.cpp">
       <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="ColliderComponent.cpp">
-      <Filter>Source Files\Component</Filter>
     </ClCompile>
     <ClCompile Include="MessageHandler.cpp">
       <Filter>Source Files\Utils</Filter>
@@ -152,8 +158,20 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="LifeComponent.cpp">
-      <Filter>Source Files\Component</Filter>
+    <ClCompile Include="Life.cpp">
+      <Filter>Source Files\Component\GameComponent\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="ColliderComponent.cpp">
+      <Filter>Source Files\Component\EngineComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsComponent.cpp">
+      <Filter>Source Files\Component\EngineComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="MovementComponent.cpp">
+      <Filter>Source Files\Component\EngineComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="GameComponent.cpp">
+      <Filter>Source Files\Component\GameComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

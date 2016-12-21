@@ -5,12 +5,12 @@
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
 #include "ColliderComponent.h"
-#include "LifeComponent.h"
+#include "Life.h"
 
-Enemy::Enemy(GameObject* obj) : Component(obj)
+using namespace std;
+
+Enemy::Enemy(GameObject* obj) : GameComponent(obj)
 {
-	initValues();
-	initComponents();
 }
 
 
@@ -24,37 +24,44 @@ void Enemy::update()
 	move();
 }
 
+void Enemy::init(int life, string path, float speed)
+{
+	initValues(speed);
+	initComponents(life,path);
+}
 
-void Enemy::initComponents()
+
+void Enemy::initComponents(int lifeValue, string path)
 {
 
-	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
-	graphics->setSprite("Enemy1.txt");
+	GraphicsComponent* graphics = new GraphicsComponent(path/*_gameObject*/);
+	//graphics->setSprite("Enemy1.txt");
 	addComponent(graphics);
 
 
-	MovementComponent* movement = new MovementComponent(_gameObject);
+	MovementComponent* movement = new MovementComponent( -1 * _speed, 0 * _speed  /*_gameObject*/);
+	//movement->_velocity = { -1 * _speed, 0 * _speed };
 	addComponent(movement);
 
-	ColliderComponent* collider = new ColliderComponent(_gameObject);
-	collider->setHitBox(3.0, 1.0);
+	ColliderComponent* collider = new ColliderComponent(3.0, 1.0/*_gameObject*/);
+	//collider->setHitBox(3.0, 1.0);
 	addComponent(collider);
 
-	LifeComponent* life = new LifeComponent(_gameObject);
-	life->setLife(2);
+	Life* life = new Life(_gameObject);
+	life->init(lifeValue);
 	addComponent(life);
 }
 
-void Enemy::initValues()
+void Enemy::initValues(float speed)
 {
-	_speed = 1.0;
+	_speed = speed;
 }
 
 void Enemy::move()
 {
-	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
-	if (movement)
-	{
-		movement->setVelocity({ -1 * _speed, 0 * _speed });
-	}
+	//MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
+	//if (movement)
+	//{
+	//	movement->_velocity = { -1 * _speed, 0 * _speed };
+	//}
 }

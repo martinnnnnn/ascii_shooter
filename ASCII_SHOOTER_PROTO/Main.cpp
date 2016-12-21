@@ -16,7 +16,9 @@ int main(void)
 	//GameEngine engine;
 
 	GameObject* game = GameEngine::instance().getNewGameObject("Game");
-	game->addComponent(new Game(game));
+	Game* gameScript = new Game(game);
+	gameScript->init();
+	game->addComponent(gameScript);
 	GameEngine::instance().run();
 
 	return 0;

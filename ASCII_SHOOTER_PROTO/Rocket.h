@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Component.h"
+#include "GameComponent.h"
 #include "Structures.h"
 
-class Rocket : public Component
+class Rocket : public GameComponent
 {
 
 public:
@@ -21,10 +21,11 @@ public:
 
 protected:
 
-	void initComponent(int life = 1, vector2 velocity = { 1, 0 });
+	void initValues(float speed);
+	void initComponent(int life, vector2 velocity);
+
 	void move();
 
-	void initValues(float speed = 3.0);
 	
 	float _speed;
 };

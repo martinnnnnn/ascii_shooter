@@ -6,9 +6,9 @@
 
 using namespace std;
 
-GraphicsComponent::GraphicsComponent(GameObject* obj) : Component(obj)
+GraphicsComponent::GraphicsComponent(std::string path/*GameObject* obj*/) /*: Component(obj)*/
 {
-	//FileReader::readSprite("Ship1.txt", _sprite);
+	FileReader::readSprite(path, _sprite);
 }
 
 
@@ -17,10 +17,10 @@ GraphicsComponent::~GraphicsComponent()
 }
 
 
-vector<pixel>& GraphicsComponent::getSprite()
-{
-	return _sprite;
-}
+//vector<pixel>& GraphicsComponent::getSprite()
+//{
+//	return _sprite;
+//}
 
 
 void GraphicsComponent::setSprite(std::string path)
