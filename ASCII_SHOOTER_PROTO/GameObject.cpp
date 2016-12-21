@@ -75,20 +75,24 @@ void GameObject::addTag(string tag)
 	}
 }
 
-bool GameObject::findTag(std::string tag)
+bool GameObject::findTag(string tag)
 {
 	return find(GameObject::_Tags.begin(), _Tags.end(), tag) != _Tags.end();
 }
 
 
-void GameObject::setTag(std::string tag)
+void GameObject::setTag(string tag)
 {
 	GameObject::addTag(tag);
 	_tag = tag;
 }
 
+string GameObject::getTag()
+{
+	return _tag;
+}
 
-bool GameObject::tagged(std::string tag)
+bool GameObject::tagged(string tag)
 {
 	return (_tag == tag);
 }

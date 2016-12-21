@@ -1,8 +1,9 @@
 #pragma once
 
 #include <Windows.h>
+#include <string>
 
-
+using namespace std;
 
 
 
@@ -18,6 +19,26 @@ struct pixel
 	int x;
 	int y;
 };
+
+
+struct PhysicsIgnore
+{
+	string tag1;
+	string tag2;
+
+	bool ignore(string t1, string t2)
+	{
+		return ((t1 == tag1 && t2 == tag2) || (t1 == tag2 && t2 == tag1));
+	}
+};
+
+//enum TAG
+//{
+//	PLAYER,
+//	PLAYER_ROCKET,
+//	ENEMY,
+//	ENEMY_ROCKET
+//};
 
 
 enum KEY

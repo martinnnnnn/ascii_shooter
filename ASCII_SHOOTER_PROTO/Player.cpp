@@ -133,7 +133,7 @@ void Player::fire1()
 	firePos.x += 2;
 	firePos.y += 1;
 
-	GameObject* rocket = GameEngine::instance().getNewGameObject("Rocket", firePos);
+	GameObject* rocket = GameEngine::instance().getNewGameObject("PlayerRocket", firePos);
 	Rocket* rocketComp = new Rocket(rocket);
 	rocketComp->init();
 	rocket->addComponent(rocketComp);
@@ -150,13 +150,13 @@ void Player::fire2()
 	GameObject* rocket;
 	Rocket* rocketComp;
 	vector2 vel;
-	for (double i = 0.0; i < 1.0; i += 0.1)
+	for (double i = 0.0; i < 1.0; i += 0.2)
 	{
 		vel.x = 1.0;
 		vel.y = (float) (0.5 - i);
-		rocket = GameEngine::instance().getNewGameObject("Rocket", firePos);
+		rocket = GameEngine::instance().getNewGameObject("PlayerRocket", firePos);
 		rocketComp = new Rocket(rocket);
-		rocketComp->init(40, vel, 3.0f);
+		rocketComp->init(1, vel, 3.0f);
 		rocket->addComponent(rocketComp);
 	}
 }

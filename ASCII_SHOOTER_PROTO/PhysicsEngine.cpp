@@ -6,6 +6,8 @@
 #include "MovementComponent.h"
 #include "ColliderComponent.h"
 #include "MessageHandler.h"
+#include "FileReader.h"
+
 
 #include <iostream>
 
@@ -20,6 +22,15 @@ PhysicsEngine::~PhysicsEngine()
 {
 }
 
+void PhysicsEngine::initPhysics()
+{
+	initIgnoreMatrix();
+}
+
+void PhysicsEngine::initIgnoreMatrix()
+{
+	FileReader::readPhysicsIgnore("PhysicsIgnore.txt", _ignoreMatrix);
+}
 
 void PhysicsEngine::update()
 {
@@ -50,8 +61,11 @@ void PhysicsEngine::update()
 					{
 						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->_hitbox))
 						{
-							current->sendMessage(CHANGE_LIFE{ -1 });
-							other->sendMessage(CHANGE_LIFE{ -1 });
+							if (!ignore(current->getTag(), other->getTag()))
+							{
+								current->sendMessage(CHANGE_LIFE{ -1 });
+								other->sendMessage(CHANGE_LIFE{ -1 });
+							}
 						}
 					}
 				}
@@ -82,4 +96,16 @@ bool PhysicsEngine::intersect(vector2 pos1, vector2 hitbox1, vector2 pos2, vecto
 		intersecting =  true;
 	}
 	return intersecting;
+}
+
+bool PhysicsEngine::ignore(string tag1, string tag2)
+{
+	for (PhysicsIgnore ignore : _ignoreMatrix)
+	{
+		if (ignore.ignore(tag1, tag2))
+		{
+			return true;
+		}
+	}
+	return false;
 }

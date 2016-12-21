@@ -20,7 +20,7 @@ GameEngine::GameEngine()
 	_graphics = new GraphicsEngine();
 	_graphics->initConsole();
 	_physics = new PhysicsEngine();
-
+	_physics->initPhysics();
 	_inputs = new InputEngine();
 
 

@@ -49,6 +49,7 @@ public:
 	void sendMessage(Message);
 
 	bool tagged(std::string tag);
+	std::string getTag();
 	void setTag(std::string tag);
 
 	static bool findTag(std::string tag);
