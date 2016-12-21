@@ -15,8 +15,7 @@ using namespace std;
 
 Game::Game(GameObject* obj) : GameComponent(obj)
 {
-	//initPlayer();
-	//initEnemyGenerator();
+
 }
 
 

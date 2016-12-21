@@ -50,7 +50,6 @@ void PhysicsEngine::update()
 					{
 						if (intersect(currentPosition, currentHitBox, other->getPosition(), currentCollider->_hitbox))
 						{
-							//cout << "hello" << endl;
 							current->sendMessage(CHANGE_LIFE{ -1 });
 							other->sendMessage(CHANGE_LIFE{ -1 });
 						}

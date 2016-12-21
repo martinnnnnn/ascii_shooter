@@ -16,7 +16,6 @@ public:
 	virtual void init(int life = 1);
 	virtual void update();
 
-	//inline void setLife(int value) { _life = value; }
 	inline void changeLife(int value) { _life += value; }
 
 	inline int getLife() { return _life; }

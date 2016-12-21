@@ -34,17 +34,14 @@ void Enemy::init(int life, string path, float speed)
 void Enemy::initComponents(int lifeValue, string path)
 {
 
-	GraphicsComponent* graphics = new GraphicsComponent(path/*_gameObject*/);
-	//graphics->setSprite("Enemy1.txt");
+	GraphicsComponent* graphics = new GraphicsComponent(path);
 	addComponent(graphics);
 
 
-	MovementComponent* movement = new MovementComponent( -1 * _speed, 0 * _speed  /*_gameObject*/);
-	//movement->_velocity = { -1 * _speed, 0 * _speed };
+	MovementComponent* movement = new MovementComponent( -1 * _speed, 0 * _speed );
 	addComponent(movement);
 
-	ColliderComponent* collider = new ColliderComponent(3.0, 1.0/*_gameObject*/);
-	//collider->setHitBox(3.0, 1.0);
+	ColliderComponent* collider = new ColliderComponent(3.0, 1.0);
 	addComponent(collider);
 
 	Life* life = new Life(_gameObject);

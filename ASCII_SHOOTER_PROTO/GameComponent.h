@@ -14,8 +14,8 @@ public:
 	GameComponent(GameObject*);
 	~GameComponent();
 
-	virtual void init() {}
-	virtual void update() {}
+	virtual void init();
+	virtual void update() = 0;
 
 	void sendMessage(Message);
 	virtual void receiveMessage(Message);

@@ -77,14 +77,6 @@ void GameEngine::run()
 
 void GameEngine::takeCareOfDeadBodies()
 {
-	//for (GameObject* obj : _objects)
-	//{
-	//	if (obj->isdead())
-	//	{
-	//		
-	//	}
-	//}
-
 	for (unsigned int i = 0; i < _objects.size(); i++)
 	{
 		if (_objects[i]->isDead())
