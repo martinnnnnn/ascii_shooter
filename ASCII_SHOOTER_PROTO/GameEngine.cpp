@@ -2,13 +2,14 @@
 #include "GraphicsEngine.h"
 #include "PhysicsEngine.h"
 #include "InputEngine.h"
-
+#include "GameObject.h"
 
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
-#include "Player.h"
-
+#include "Game.h"
+#include "UI.h"
 #include <iostream>
+#include <vector>
 #include <Windows.h>
 #include "stdio.h"
 
@@ -28,48 +29,85 @@ GameEngine::GameEngine()
 }
 
 
-GameObject* GameEngine::getNewGameObject(string name, vector2 position)
-{
-	GameObject* o = new GameObject(name,position);
-	_newObjects.push_back(o);
-	return o;
-}
-
-
 GameEngine::~GameEngine()
 {
 }
 
+GameObject* GameEngine::getNewGameObject(string name, vector2 position)
+{
+	GameObject* o = new GameObject(name, position);
+	_currentNewObjects->push_back(o);
+	return o;
+}
+
 void GameEngine::addNewObjects()
 {
-	for (GameObject* obj : _newObjects)
+	for (GameObject* obj : *_currentNewObjects)
 	{
-		_objects.push_back(obj);
+		_currentObjects->push_back(obj);
 	}
-	_newObjects.clear();
+	_currentNewObjects->clear();
+}
+
+void GameEngine::passObject(GameObject* obj)
+{
+	_passingGameObjects.push_back(obj);
 }
 
 
-void GameEngine::init()
+GameObject* GameEngine::findObjectWithTag(string tag)
 {
+	for (GameObject* obj : *_currentObjects)
+	{
+		if (obj->getTag() == tag)
+		{
+			return obj;
+		}
+	}
+	return nullptr;
+}
+
+
+
+void GameEngine::gameInit()
+{
+	_currentObjects = &_gameObjects;
+	_currentNewObjects = &_newGameObjects;
+
+	_currentObjects->clear();
+	_currentNewObjects->clear();
+
+	GameObject* game = GameEngine::instance().getNewGameObject("Game");
+	Game* gameScript = new Game(game);
+	gameScript->init();
+	game->addComponent(gameScript);
+
 	initTime();
 }
 
-void GameEngine::initTime()
+void GameEngine::uiInit()
 {
-	_timer.start();
-	_previous = _timer.getElapsedMs();
-	_lag = 0.0;
+	_currentObjects = &_uiObjects;
+	_currentNewObjects = &_newUiObjects;
+
+	_currentObjects->clear();
+	_currentNewObjects->clear();
+
+	GameObject* ui = GameEngine::instance().getNewGameObject("UI");
+	UI* uiScript = new UI(ui);
+	uiScript->init();
+	ui->addComponent(uiScript);
+
+	initTime();
 }
+
 
 void GameEngine::run()
 {
-	while (true)
+	while (!_quit)
 	{
-		if (GetAsyncKeyState(VK_F9) & 0x8000)
-		{
-			pause();
-		}
+		//handleGameState();
+		if (_newState) switchState();
 
 		_current = _timer.getElapsedMs();
 		_elapsed = _current - _previous;
@@ -79,6 +117,7 @@ void GameEngine::run()
 
 		addNewObjects();
 		takeCareOfDeadBodies();
+
 		update();
 
 		while (_lag >= TIME_PER_FRAME)
@@ -90,32 +129,78 @@ void GameEngine::run()
 	}
 }
 
-void GameEngine::pause()
-{
-	bool unpause = false;
 
-	while (!unpause)
+void GameEngine::initTime()
+{
+	_timer.start();
+	_previous = _timer.getElapsedMs();
+	_lag = 0.0;
+}
+
+
+//void GameEngine::handleGameState()
+//{
+//	switch (_state)
+//	{
+//	case GAME_START:
+//		break;
+//	case GAME_RUN:
+//		if (_inputs->isKeyDown(KEY::PAUSE))
+//		{
+//			_state = GAME_PAUSE;
+//		}
+//		break;
+//	case GAME_PAUSE:
+//		if (_inputs->isKeyDown(KEY::UNPAUSE))
+//		{
+//			_state = GAME_RUN;
+//		}
+//	case GAME_END:
+//		break;
+//	}
+//}
+
+void GameEngine::switchState()
+{
+	_newState = false;
+	_state = (_state == GAME) ? GAMESTATE_UI : GAME;
+
+	switch (_state)
 	{
-		int i = 0;
-		if (GetAsyncKeyState(VK_F10) & 0x8000)
-		{
-			initTime();
-			unpause = true;
-		}
+	case GAME:
+		_currentObjects = &_gameObjects;
+		_currentNewObjects = &_newGameObjects;
+		break;
+	case GAMESTATE_UI:
+		_currentObjects = &_uiObjects;
+		_currentNewObjects = &_newUiObjects;
+		break;
+	}
+
+	for (GameObject* obj : _passingGameObjects)
+	{
+		_currentNewObjects->push_back(obj);
+	}
+	_passingGameObjects.clear();
+
+	initTime();
+
+	for (GameObject* obj : *_currentObjects)
+	{
+		obj->wake();
 	}
 }
 
 
 
-
 void GameEngine::takeCareOfDeadBodies()
 {
-	for (unsigned int i = 0; i < _objects.size(); i++)
+	for (unsigned int i = 0; i < _currentObjects->size(); i++)
 	{
-		if (_objects[i]->isDead())
+		if ((*_currentObjects)[i]->isDead())
 		{
-			delete _objects[i];
-			_objects.erase(_objects.begin() + i);
+			delete (*_currentObjects)[i];
+			_currentObjects->erase(_currentObjects->begin() + i);
 		}
 	}
 }
@@ -123,7 +208,7 @@ void GameEngine::takeCareOfDeadBodies()
 void GameEngine::update()
 {
 	_inputs->update();
-	for (GameObject* obj : _objects)
+	for (GameObject* obj : *_currentObjects)
 	{
 		obj->update();
 

@@ -130,7 +130,9 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="Rocket.h" />
     <ClInclude Include="Structures.h" />
-    <ClInclude Include="UIEngine.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UIBullet.h" />
+    <ClInclude Include="UIContextComponent.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
@@ -152,14 +154,21 @@
     <ClCompile Include="PhysicsEngine.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rocket.cpp" />
-    <ClCompile Include="UIEngine.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UIBullet.cpp" />
+    <ClCompile Include="UIContextComponent.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="End.txt" />
     <Text Include="Enemy1.txt" />
+    <Text Include="Menu.txt" />
+    <Text Include="Option.txt" />
+    <Text Include="Pause.txt" />
     <Text Include="PhysicsIgnore.txt" />
     <Text Include="Ship1.txt" />
     <Text Include="Rocket.txt" />
+    <Text Include="UIBullet.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

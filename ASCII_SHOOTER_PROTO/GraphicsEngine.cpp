@@ -47,7 +47,7 @@ void GraphicsEngine::render()
 
 void GraphicsEngine::draw()
 {
-	for (GameObject* obj : GameEngine::instance().getObjects())
+	for (GameObject* obj : *(GameEngine::instance().getObjects()))
 	{
 		int posX = (int)obj->_position.x;
 		int posY = (int)obj->_position.y;

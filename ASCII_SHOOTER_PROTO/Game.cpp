@@ -2,12 +2,14 @@
 
 #include "GameObject.h"
 #include "GameEngine.h"
+#include "InputEngine.h"
 #include "Player.h"
 #include "MovementComponent.h"
 #include "GraphicsComponent.h"
 #include "Enemy.h"
 #include "Parametres.h"
 #include "NYTimer.h"
+#include "UIContextComponent.h"
 
 #include <random>
 
@@ -32,10 +34,23 @@ void Game::init()
 
 void Game::update()
 {
-	_elapsed = _timer->getElapsedMs() - _previous;
+	handleInputs();
 	handleEnemies();
 }
 
+void Game::handleInputs()
+{
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_PAUSE))
+	{
+		GameObject* context = new GameObject("UIContext");
+		UIContextComponent* contextComp = new UIContextComponent();
+		contextComp->_context = PAUSE;
+		context->addComponent(contextComp);
+		GameEngine::instance().passObject(context);
+
+		GameEngine::instance().changeState();
+	}
+}
 
 void Game::initPlayer()
 {
@@ -59,7 +74,7 @@ void Game::initEnemyGenerator()
 
 void Game::handleEnemies()
 {
-
+	_elapsed = _timer->getElapsedMs() - _previous;
 	if (_bernouilliDistribution(_generator) && _elapsed > _enemySpawnRate)
 	{
 		_previous = _timer->getElapsedMs();

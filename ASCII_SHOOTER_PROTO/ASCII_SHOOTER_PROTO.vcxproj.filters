@@ -67,6 +67,18 @@
     <Filter Include="Source Files\Components\GameComponents\Scripts\Utils">
       <UniqueIdentifier>{18880918-c6c8-41c5-b504-44ce4274749e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Component\GameComponent\Scripts\UI">
+      <UniqueIdentifier>{970bb50d-2674-4666-aa75-c9f97e6a9f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components\GameComponents\Scripts\UI">
+      <UniqueIdentifier>{9b3e8193-d4aa-4782-8225-e327a8e9f6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\UI">
+      <UniqueIdentifier>{6c01515b-3c37-4e65-b8b0-1689b72d9077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game">
+      <UniqueIdentifier>{e579009b-2dfc-49ba-b0b4-404ebe452735}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Structures.h">
@@ -132,7 +144,13 @@
     <ClInclude Include="Life.h">
       <Filter>Header Files\Component\GameComponent\Scripts\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="UIEngine.h">
+    <ClInclude Include="UI.h">
+      <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIContextComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -194,22 +212,43 @@
     <ClCompile Include="Life.cpp">
       <Filter>Source Files\Components\GameComponents\Scripts\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="UIEngine.cpp">
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIContextComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Ship1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="Rocket.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
     <Text Include="Enemy1.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\Game</Filter>
     </Text>
     <Text Include="PhysicsIgnore.txt">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\Game</Filter>
+    </Text>
+    <Text Include="Rocket.txt">
+      <Filter>Resource Files\Game</Filter>
+    </Text>
+    <Text Include="Ship1.txt">
+      <Filter>Resource Files\Game</Filter>
+    </Text>
+    <Text Include="Menu.txt">
+      <Filter>Resource Files\UI</Filter>
+    </Text>
+    <Text Include="Pause.txt">
+      <Filter>Resource Files\UI</Filter>
+    </Text>
+    <Text Include="End.txt">
+      <Filter>Resource Files\UI</Filter>
+    </Text>
+    <Text Include="Option.txt">
+      <Filter>Resource Files\UI</Filter>
+    </Text>
+    <Text Include="UIBullet.txt">
+      <Filter>Resource Files\UI</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>

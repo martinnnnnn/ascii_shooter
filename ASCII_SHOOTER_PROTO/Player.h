@@ -30,7 +30,6 @@ protected:
 
 	void updateTime();
 
-
 	float _speed;
 
 	NYTimer* _timer;

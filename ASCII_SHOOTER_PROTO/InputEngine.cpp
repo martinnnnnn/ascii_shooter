@@ -28,35 +28,43 @@ void InputEngine::update()
 
 	if (GetAsyncKeyState(VK_NUMPAD8) & 0x8000)
 	{
-		_keyPressedMap[UP] = true;
+		_keyPressedMap[KEY_UP] = true;
 	}
 	if (GetAsyncKeyState(VK_NUMPAD5) & 0x8000)
 	{
-		_keyPressedMap[DOWN] = true;
+		_keyPressedMap[KEY_DOWN] = true;
 	}
 	if (GetAsyncKeyState(VK_NUMPAD4) & 0x8000)
 	{
-		_keyPressedMap[LEFT] = true;
+		_keyPressedMap[KEY_LEFT] = true;
 	}
 	if (GetAsyncKeyState(VK_NUMPAD6) & 0x8000)
 	{
-		_keyPressedMap[RIGHT] = true;
+		_keyPressedMap[KEY_RIGHT] = true;
 	}
 	if (GetAsyncKeyState(VK_F1) & 0x8000)
 	{
-		_keyPressedMap[FIRE1] = true;
+		_keyPressedMap[KEY_FIRE1] = true;
 	}
 	if (GetAsyncKeyState(VK_F2) & 0x8000)
 	{
-		_keyPressedMap[FIRE2] = true;
+		_keyPressedMap[KEY_FIRE2] = true;
 	}
 	if (GetAsyncKeyState(VK_F3) & 0x8000)
 	{
-		_keyPressedMap[FIRE3] = true;
+		_keyPressedMap[KEY_FIRE3] = true;
 	}
 	if (GetAsyncKeyState(VK_F4) & 0x8000)
 	{
-		_keyPressedMap[FIRE4] = true;
+		_keyPressedMap[KEY_FIRE4] = true;
+	}
+	if (GetAsyncKeyState(VK_ESCAPE) & 0x8000)
+	{
+		_keyPressedMap[KEY_PAUSE] = true;
+	}
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+	{
+		_keyPressedMap[KEY_ENTER] = true;
 	}
 }
 

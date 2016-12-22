@@ -46,6 +46,19 @@ void GameObject::update()
 	}
 }
 
+void GameObject::wake()
+{
+
+	for (Component* comp : _components)
+	{
+		GameComponent* script = dynamic_cast<GameComponent*>(comp);
+		if (script)
+		{
+			script->wake();
+		}
+	}
+}
+
 void GameObject::addComponent(Component* c)
 {
 	_components.push_back(c);

@@ -46,7 +46,6 @@ void Player::initComponent(int lifeValue, string path)
 	addComponent(graphics);
 
 	MovementComponent* movement = new MovementComponent();
-	//movement->_velocity = { ,
 	addComponent(movement);
 
 	Life* life = new Life(_gameObject);
@@ -84,19 +83,19 @@ void Player::move()
 {
 	vector2 vel{ 0,0 };
 
-	if (GameEngine::instance()._inputs->isKeyDown(DOWN))
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_DOWN))
 	{
 		vel.y = 1;
 	}
-	else if (GameEngine::instance()._inputs->isKeyDown(UP))
+	else if (GameEngine::instance()._inputs->isKeyDown(KEY_UP))
 	{
 		vel.y = -1;
 	}
-	if (GameEngine::instance()._inputs->isKeyDown(LEFT))
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_LEFT))
 	{
 		vel.x = -1;
 	}
-	else if (GameEngine::instance()._inputs->isKeyDown(RIGHT))
+	else if (GameEngine::instance()._inputs->isKeyDown(KEY_RIGHT))
 	{
 		vel.x = 1;
 	}
@@ -115,12 +114,12 @@ void Player::fire()
 {
 
 
-	if (GameEngine::instance()._inputs->isKeyDown(FIRE1) && _elapsed1 > _fireRate1)
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_FIRE1) && _elapsed1 > _fireRate1)
 	{
 		_previous1 = _timer->getElapsedMs();
 		fire1();
 	}
-	if (GameEngine::instance()._inputs->isKeyDown(FIRE2) && _elapsed2 > _fireRate2)
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_FIRE2) && _elapsed2 > _fireRate2)
 	{
 		_previous2 = _timer->getElapsedMs();
 		fire2();

@@ -19,6 +19,7 @@ public:
 	~GameObject();
 
 	void update();
+	void wake();
 
 	void addComponent(Component*);
 

@@ -15,6 +15,7 @@ public:
 	~GameComponent();
 
 	virtual void init() {}
+	virtual void wake() {}
 	virtual void update() = 0;
 
 	void sendMessage(Message);

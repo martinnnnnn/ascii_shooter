@@ -33,19 +33,29 @@ struct PhysicsIgnore
 };
 
 
-
+enum UICONTEXT
+{
+	MENU,
+	PAUSE,
+	OPTION,
+	END,
+	QUIT,
+	UICONTEXT_END
+};
 
 
 enum KEY
 {
 	KEY_START,
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT,
-	FIRE1,
-	FIRE2,
-	FIRE3,
-	FIRE4,
+	KEY_UP,
+	KEY_DOWN,
+	KEY_LEFT,
+	KEY_RIGHT,
+	KEY_FIRE1,
+	KEY_FIRE2,
+	KEY_FIRE3,
+	KEY_FIRE4,
+	KEY_PAUSE,
+	KEY_ENTER,
 	KEY_END
 };
