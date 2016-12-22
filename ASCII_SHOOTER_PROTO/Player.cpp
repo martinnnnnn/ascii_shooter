@@ -46,6 +46,7 @@ void Player::initComponent(int lifeValue, string path)
 	addComponent(graphics);
 
 	MovementComponent* movement = new MovementComponent();
+	//movement->_velocity = { ,
 	addComponent(movement);
 
 	Life* life = new Life(_gameObject);
@@ -128,7 +129,7 @@ void Player::fire()
 
 void Player::fire1()
 {
-	vector2 firePos = _gameObject->getPosition();
+	vector2 firePos = _gameObject->_position;
 
 	firePos.x += 2;
 	firePos.y += 1;
@@ -142,7 +143,7 @@ void Player::fire1()
 void Player::fire2()
 {
 
-	vector2 firePos = _gameObject->getPosition();
+	vector2 firePos = _gameObject->_position;
 
 	firePos.x += 2;
 	firePos.y += 1;

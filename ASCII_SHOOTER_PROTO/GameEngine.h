@@ -9,6 +9,14 @@ class PhysicsEngine;
 class GraphicsEngine;
 class InputEngine;
 
+enum GAME_STATE
+{
+	START,
+	RUN,
+	PAUSE,
+	END
+};
+
 class GameEngine
 {
 
@@ -22,8 +30,9 @@ public:
 		return *instance;
 	}
 
+	void init();
 	void run();
-
+	void pause();
 
 	std::vector<GameObject*>& getObjects() { return _objects; }
 
@@ -40,6 +49,7 @@ protected:
 	GameEngine(GameEngine const&) = delete;
 	void operator=(GameEngine const&) = delete;
 
+	void initTime();
 	void takeCareOfDeadBodies();
 	void update();
 	void updatePhysics();
@@ -52,5 +62,12 @@ protected:
 
 	GraphicsEngine* _graphics;
 	PhysicsEngine* _physics;
+
+	GAME_STATE _state;
+
+	double _previous;
+	double _lag;
+	double _current;
+	double _elapsed;
 };
 

@@ -22,6 +22,7 @@ GameObject::GameObject(string tag, vector2 position)
 	setTag(tag);
 	_position = position;
 	_dead = false;
+	_enabled = true;
 }
 
 

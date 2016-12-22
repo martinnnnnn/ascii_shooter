@@ -132,6 +132,9 @@
     <ClInclude Include="Life.h">
       <Filter>Header Files\Component\GameComponent\Scripts\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="UIEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -190,6 +193,9 @@
     </ClCompile>
     <ClCompile Include="Life.cpp">
       <Filter>Source Files\Components\GameComponents\Scripts\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="UIEngine.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

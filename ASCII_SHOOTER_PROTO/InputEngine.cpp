@@ -6,7 +6,7 @@ using namespace std;
 
 InputEngine::InputEngine()
 {
-	for (int i = UP; i < FIRE4; i++)
+	for (int i = KEY_START; i < KEY_END; i++)
 	{
 		KEY key = (KEY)i;
 		_keyPressedMap[key] = false;

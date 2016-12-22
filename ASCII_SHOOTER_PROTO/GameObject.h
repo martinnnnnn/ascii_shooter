@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 
+class GameEngine;
 
 class GameObject
 {
@@ -39,12 +40,9 @@ public:
 	}
 
 
-	vector2& getPosition() { return _position; }
 	std::string getName() { return _name; }
 
-	void setPosition(vector2 pos) { _position = pos; }
 	void setName(std::string name) { _name = name; }
-
 
 	void sendMessage(Message);
 
@@ -58,12 +56,17 @@ public:
 	inline void kill() { _dead = true; }
 	inline bool isDead() { return _dead; }
 
+	vector2 _position;
+	bool _enabled;
+
 private:
 
 	std::string _name;
 	std::string _tag;
-	vector2 _position;
 	bool _dead;
+
+
+	
 
 	std::vector<Component*> _components;
 

@@ -19,6 +19,7 @@ int main(void)
 	Game* gameScript = new Game(game);
 	gameScript->init();
 	game->addComponent(gameScript);
+	GameEngine::instance().init();
 	GameEngine::instance().run();
 
 	return 0;

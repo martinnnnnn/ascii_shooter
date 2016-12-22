@@ -32,17 +32,13 @@ struct PhysicsIgnore
 	}
 };
 
-//enum TAG
-//{
-//	PLAYER,
-//	PLAYER_ROCKET,
-//	ENEMY,
-//	ENEMY_ROCKET
-//};
+
+
 
 
 enum KEY
 {
+	KEY_START,
 	UP,
 	DOWN,
 	LEFT,
@@ -50,5 +46,6 @@ enum KEY
 	FIRE1,
 	FIRE2,
 	FIRE3,
-	FIRE4
+	FIRE4,
+	KEY_END
 };

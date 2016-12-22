@@ -9,6 +9,7 @@
 #include "Player.h"
 
 #include <iostream>
+#include <Windows.h>
 #include "stdio.h"
 
 #define TIME_PER_FRAME 1000 / 30
@@ -48,32 +49,64 @@ void GameEngine::addNewObjects()
 	_newObjects.clear();
 }
 
-void GameEngine::run()
+
+void GameEngine::init()
+{
+	initTime();
+}
+
+void GameEngine::initTime()
 {
 	_timer.start();
+	_previous = _timer.getElapsedMs();
+	_lag = 0.0;
+}
 
-	double previous = _timer.getElapsedMs();
-	double lag = 0.0;
+void GameEngine::run()
+{
 	while (true)
 	{
-		double current = _timer.getElapsedMs();
-		double elapsed = current - previous;
-		previous = current;
+		if (GetAsyncKeyState(VK_F9) & 0x8000)
+		{
+			pause();
+		}
 
-		lag += elapsed;
+		_current = _timer.getElapsedMs();
+		_elapsed = _current - _previous;
+		_previous = _current;
+		_lag += _elapsed;
+
 
 		addNewObjects();
 		takeCareOfDeadBodies();
 		update();
 
-		while (lag >= TIME_PER_FRAME)
+		while (_lag >= TIME_PER_FRAME)
 		{
 			updatePhysics();
-			lag -= TIME_PER_FRAME;
+			_lag -= TIME_PER_FRAME;
 		}
 		render();
 	}
 }
+
+void GameEngine::pause()
+{
+	bool unpause = false;
+
+	while (!unpause)
+	{
+		int i = 0;
+		if (GetAsyncKeyState(VK_F10) & 0x8000)
+		{
+			initTime();
+			unpause = true;
+		}
+	}
+}
+
+
+
 
 void GameEngine::takeCareOfDeadBodies()
 {

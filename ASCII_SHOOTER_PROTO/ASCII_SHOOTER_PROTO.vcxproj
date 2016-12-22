@@ -130,6 +130,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="Rocket.h" />
     <ClInclude Include="Structures.h" />
+    <ClInclude Include="UIEngine.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClCompile Include="PhysicsEngine.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rocket.cpp" />
+    <ClCompile Include="UIEngine.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>

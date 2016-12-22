@@ -8,7 +8,6 @@
 
 #include "Parametres.h"
 
-
 class GraphicsEngine
 {
 
@@ -19,7 +18,6 @@ public:
 
 	void initConsole();
 	void render();
-
 
 
 private:
