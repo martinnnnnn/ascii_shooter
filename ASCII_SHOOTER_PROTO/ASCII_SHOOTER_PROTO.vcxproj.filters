@@ -148,10 +148,10 @@
       <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
     </ClInclude>
     <ClInclude Include="UIContextComponent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
     </ClInclude>
     <ClInclude Include="UIBullet.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -216,10 +216,10 @@
       <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
     </ClCompile>
     <ClCompile Include="UIContextComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
     </ClCompile>
     <ClCompile Include="UIBullet.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

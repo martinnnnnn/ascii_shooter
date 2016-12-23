@@ -35,6 +35,7 @@ void GraphicsEngine::initConsole()
 
 	SetConsoleWindowInfo(hOutput, TRUE, &rcRegion);
 	SetConsoleScreenBufferSize(hOutput, dwBufferSize);
+
 }
 
 void GraphicsEngine::render()

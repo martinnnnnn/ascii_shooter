@@ -106,7 +106,6 @@ void GameEngine::run()
 {
 	while (!_quit)
 	{
-		//handleGameState();
 		if (_newState) switchState();
 
 		_current = _timer.getElapsedMs();
@@ -138,27 +137,6 @@ void GameEngine::initTime()
 }
 
 
-//void GameEngine::handleGameState()
-//{
-//	switch (_state)
-//	{
-//	case GAME_START:
-//		break;
-//	case GAME_RUN:
-//		if (_inputs->isKeyDown(KEY::PAUSE))
-//		{
-//			_state = GAME_PAUSE;
-//		}
-//		break;
-//	case GAME_PAUSE:
-//		if (_inputs->isKeyDown(KEY::UNPAUSE))
-//		{
-//			_state = GAME_RUN;
-//		}
-//	case GAME_END:
-//		break;
-//	}
-//}
 
 void GameEngine::switchState()
 {

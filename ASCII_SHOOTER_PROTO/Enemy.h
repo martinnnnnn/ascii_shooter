@@ -13,7 +13,7 @@ public:
 	Enemy(GameObject*);
 	~Enemy();
 
-	virtual void init(int life = 0, std::string = "Enemy1.txt", float speed = 1.0);
+	virtual void init(int life = 2, std::string = "Enemy1.txt", float speed = 1.0);
 	virtual void update();
 
 	virtual void operator()(DESTROY const& e) {}

@@ -20,7 +20,7 @@ public:
 
 	inline int getLife() { return _life; }
 
-	virtual void operator()(DESTROY const& e) {}
+	//virtual void operator()(DESTROY const& e) {}
 	virtual void operator()(CHANGE_LIFE const& e) { changeLife(e.value); }
 
 

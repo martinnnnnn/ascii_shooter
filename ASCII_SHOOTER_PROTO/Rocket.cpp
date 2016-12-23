@@ -36,7 +36,7 @@ void Rocket::initComponent(int lifeValue, vector2 velocity)
 	addComponent(graphics);
 
 
-	MovementComponent* movement = new MovementComponent(velocity.x * _speed, velocity.y * _speed);
+	MovementComponent* movement = new MovementComponent(velocity.x * 10, velocity.y * 10);
 	_gameObject->addComponent(movement);
 
 	ColliderComponent* collider = new ColliderComponent(1.0, 1.0);

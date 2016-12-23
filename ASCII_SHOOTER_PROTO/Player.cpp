@@ -156,7 +156,7 @@ void Player::fire2()
 		vel.y = (float) (0.5 - i);
 		rocket = GameEngine::instance().getNewGameObject("PlayerRocket", firePos);
 		rocketComp = new Rocket(rocket);
-		rocketComp->init(1, vel, 3.0f);
+		rocketComp->init(1, vel);
 		rocket->addComponent(rocketComp);
 	}
 }

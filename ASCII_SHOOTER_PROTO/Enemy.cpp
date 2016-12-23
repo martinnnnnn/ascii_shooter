@@ -59,6 +59,6 @@ void Enemy::move()
 	//MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	//if (movement)
 	//{
-	//	movement->_velocity = { -1 * _speed, 0 * _speed };
+	//	movement->_velocity = { 0 * _speed, 0 * _speed };
 	//}
 }

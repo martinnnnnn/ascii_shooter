@@ -54,7 +54,7 @@ void Game::handleInputs()
 
 void Game::initPlayer()
 {
-	GameObject* playerObj = GameEngine::instance().getNewGameObject("Player", vector2{ 20.0, 10.0 });
+	GameObject* playerObj = GameEngine::instance().getNewGameObject("Player", vector2{ 20, 20 });
 	Player* player = new Player(playerObj);
 	player->init();
 	playerObj->addComponent(player);
@@ -79,7 +79,7 @@ void Game::handleEnemies()
 	{
 		_previous = _timer->getElapsedMs();
 
-		spawnEnemy({ static_cast<float>(SCREEN_WIDTH), static_cast<float>(_uniformDistribution(_generator)) });
+		spawnEnemy({ float(SCREEN_WIDTH), float(_uniformDistribution(_generator)) });
 	}
 }
 

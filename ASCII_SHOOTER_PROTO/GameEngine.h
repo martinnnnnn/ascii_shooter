@@ -36,9 +36,6 @@ public:
 	void changeState() { _newState = true; }
 
 	void run();
-	/*void pauseRun();
-	void startRun();
-	void endRun();*/
 
 	inline std::vector<GameObject*>* getObjects() { return _currentObjects; }
 	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
@@ -59,7 +56,6 @@ protected:
 	void operator=(GameEngine const&) = delete;
 
 	void initTime();
-	//void handleGameState();
 	void switchState();
 
 	void takeCareOfDeadBodies();
