@@ -2,11 +2,21 @@
 
 
 
-MessageHandler::MessageHandler()
+GOMessageHandler::GOMessageHandler()
 {
 }
 
 
-MessageHandler::~MessageHandler()
+GOMessageHandler::~GOMessageHandler()
+{
+}
+
+
+SCMessageHandler::SCMessageHandler()
+{
+}
+
+
+SCMessageHandler::~SCMessageHandler()
 {
 }

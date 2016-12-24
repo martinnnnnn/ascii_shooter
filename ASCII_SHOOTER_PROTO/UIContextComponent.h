@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Component.h"
-
+#include "MessageHandler.h"
 #include "Structures.h"
 
 

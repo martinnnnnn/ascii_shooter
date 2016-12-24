@@ -6,7 +6,7 @@
 
 class GameObject;
 
-class GameComponent : public Component, public MessageHandler
+class GameComponent : public Component, public GOMessageHandler
 {
 
 public:
@@ -18,11 +18,12 @@ public:
 	virtual void wake() {}
 	virtual void update() = 0;
 
-	void sendMessage(Message);
-	virtual void receiveMessage(Message);
+	void sendMessage(GOMessage);
+	virtual void receiveMessage(GOMessage);
 
 	virtual void operator()(DESTROY const& e) {}
 	virtual void operator()(CHANGE_LIFE const& e) {}
+	virtual void operator()(UICONTEXT const& e) {}
 
 protected:
 

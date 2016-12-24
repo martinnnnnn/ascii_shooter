@@ -18,16 +18,21 @@ public:
 
 	virtual void init();
 	virtual void update();
-	inline void setContext(UICONTEXT context) { _context = context; }
+	void setContext(UICONTEXT context);
 
-	virtual void operator()(DESTROY const& e) {}
-	virtual void operator()(CHANGE_LIFE const& e) {}
+	virtual void operator()(UICONTEXT const& e);
 
 protected:
 
 	UI* _ui;
 	UICONTEXT _context;
 	int _bulletPosition;
-	std::vector<vector2> _positions[UICONTEXT::UICONTEXT_END - 1];
+
+	std::vector<vector2>* _currentPositions;
+
+	std::vector<vector2> _positionsMenu;
+	std::vector<vector2> _positionsPause;
+	std::vector<vector2> _positionsOption;
+	std::vector<vector2> _positionsEnd;
 };
 

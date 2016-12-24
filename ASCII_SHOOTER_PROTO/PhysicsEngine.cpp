@@ -37,7 +37,7 @@ void PhysicsEngine::update()
 	
 	vector<GameObject*>* gameObjects = GameEngine::instance().getObjects();
 
-	for (int i = 0; i < gameObjects->size(); ++i)
+	for (unsigned int i = 0; i < gameObjects->size(); ++i)
 	{
 		GameObject* current = (*gameObjects)[i];
 		if (current->isDead())
@@ -54,7 +54,7 @@ void PhysicsEngine::update()
 		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
 		if (currentCollider)
 		{
-			for (int j = i+1; j < gameObjects->size(); ++j)
+			for (unsigned int j = i+1; j < gameObjects->size(); ++j)
 			{
 				GameObject* other = (*gameObjects)[j];
 				if (current->isDead())

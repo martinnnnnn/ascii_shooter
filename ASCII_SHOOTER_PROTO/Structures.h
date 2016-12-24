@@ -33,17 +33,6 @@ struct PhysicsIgnore
 };
 
 
-enum UICONTEXT
-{
-	MENU,
-	PAUSE,
-	OPTION,
-	END,
-	QUIT,
-	UICONTEXT_END
-};
-
-
 enum KEY
 {
 	KEY_START,

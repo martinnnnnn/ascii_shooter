@@ -34,50 +34,50 @@
     <Filter Include="Header Files\Component\GameComponent\Scripts">
       <UniqueIdentifier>{23c10338-71af-4b82-bd39-95e276b20442}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Component\GameComponent\Scripts\Managers">
-      <UniqueIdentifier>{27d9d2ff-3f82-40b8-8ed0-0409f85c60fe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Component\GameComponent\Scripts\Movables">
-      <UniqueIdentifier>{d870a091-2acf-44ad-bace-58b928916e97}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Component\GameComponent\Scripts\Utils">
       <UniqueIdentifier>{49bf6909-f141-47ff-8a8e-bf7ae8c51cb8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components">
-      <UniqueIdentifier>{4b9f50e4-bb52-4e45-8bc5-e3f829a971e9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\EngineComponents">
-      <UniqueIdentifier>{4c161e91-a242-4d1a-9a43-0fbaf3b196bf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\GameComponents">
-      <UniqueIdentifier>{be3c8307-8899-42b0-a9fe-6470365ab99a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\GameComponents\Scripts">
-      <UniqueIdentifier>{ac40b7c8-8dcd-4248-b153-b54f05207d8f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\GameComponents\Scripts\Managers">
-      <UniqueIdentifier>{c0f9c25f-5152-4675-8e6d-845715baec0d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Engines">
       <UniqueIdentifier>{5181ec2d-121e-42b3-a2ac-742a5176104e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Components\GameComponents\Scripts\Movables">
-      <UniqueIdentifier>{097f8285-8ea6-409b-93f9-1bde2a6c14a8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\GameComponents\Scripts\Utils">
-      <UniqueIdentifier>{18880918-c6c8-41c5-b504-44ce4274749e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Component\GameComponent\Scripts\UI">
       <UniqueIdentifier>{970bb50d-2674-4666-aa75-c9f97e6a9f98}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components\GameComponents\Scripts\UI">
-      <UniqueIdentifier>{9b3e8193-d4aa-4782-8225-e327a8e9f6c7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\UI">
       <UniqueIdentifier>{6c01515b-3c37-4e65-b8b0-1689b72d9077}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\Game">
       <UniqueIdentifier>{e579009b-2dfc-49ba-b0b4-404ebe452735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component">
+      <UniqueIdentifier>{4b9f50e4-bb52-4e45-8bc5-e3f829a971e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\EngineComponents">
+      <UniqueIdentifier>{4c161e91-a242-4d1a-9a43-0fbaf3b196bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent">
+      <UniqueIdentifier>{be3c8307-8899-42b0-a9fe-6470365ab99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts">
+      <UniqueIdentifier>{ac40b7c8-8dcd-4248-b153-b54f05207d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts\Utils">
+      <UniqueIdentifier>{18880918-c6c8-41c5-b504-44ce4274749e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts\UI">
+      <UniqueIdentifier>{9b3e8193-d4aa-4782-8225-e327a8e9f6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts\Manager">
+      <UniqueIdentifier>{c0f9c25f-5152-4675-8e6d-845715baec0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component\GameComponent\Scripts\Manager">
+      <UniqueIdentifier>{27d9d2ff-3f82-40b8-8ed0-0409f85c60fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Component\GameComponent\Scripts\Movable">
+      <UniqueIdentifier>{d870a091-2acf-44ad-bace-58b928916e97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Component\GameComponent\Scripts\Movable">
+      <UniqueIdentifier>{097f8285-8ea6-409b-93f9-1bde2a6c14a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -130,16 +130,16 @@
       <Filter>Header Files\Component\GameComponent</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files\Component\GameComponent\Scripts\Movables</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
-      <Filter>Header Files\Component\GameComponent\Scripts\Movables</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClInclude>
     <ClInclude Include="Rocket.h">
-      <Filter>Header Files\Component\GameComponent\Scripts\Movables</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Header Files\Component\GameComponent\Scripts\Managers</Filter>
+      <Filter>Header Files\Component\GameComponent\Scripts\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Life.h">
       <Filter>Header Files\Component\GameComponent\Scripts\Utils</Filter>
@@ -152,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="UIBullet.h">
       <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +171,7 @@
       <Filter>Source Files\Engines</Filter>
     </ClCompile>
     <ClCompile Include="Component.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Source Files\Component</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
       <Filter>Source Files\Utils</Filter>
@@ -186,40 +189,43 @@
       <Filter>Source Files\Engines</Filter>
     </ClCompile>
     <ClCompile Include="ColliderComponent.cpp">
-      <Filter>Source Files\Components\EngineComponents</Filter>
+      <Filter>Source Files\Component\EngineComponents</Filter>
     </ClCompile>
     <ClCompile Include="GraphicsComponent.cpp">
-      <Filter>Source Files\Components\EngineComponents</Filter>
+      <Filter>Source Files\Component\EngineComponents</Filter>
     </ClCompile>
     <ClCompile Include="MovementComponent.cpp">
-      <Filter>Source Files\Components\EngineComponents</Filter>
+      <Filter>Source Files\Component\EngineComponents</Filter>
     </ClCompile>
     <ClCompile Include="GameComponent.cpp">
-      <Filter>Source Files\Components\GameComponents</Filter>
+      <Filter>Source Files\Component\GameComponent</Filter>
     </ClCompile>
     <ClCompile Include="Rocket.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\Movables</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\Movables</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\Movables</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\Movable</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\Managers</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Life.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\Utils</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\Utils</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\UI</Filter>
     </ClCompile>
     <ClCompile Include="UIContextComponent.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\UI</Filter>
     </ClCompile>
     <ClCompile Include="UIBullet.cpp">
-      <Filter>Source Files\Components\GameComponents\Scripts\UI</Filter>
+      <Filter>Source Files\Component\GameComponent\Scripts\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Engines</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

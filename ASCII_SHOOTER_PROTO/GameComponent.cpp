@@ -16,12 +16,12 @@ GameComponent::~GameComponent()
 
 
 
-void GameComponent::sendMessage(Message message)
+void GameComponent::sendMessage(GOMessage message)
 {
 	_gameObject->sendMessage(message);
 }
 
-void GameComponent::receiveMessage(Message message)
+void GameComponent::receiveMessage(GOMessage message)
 {
 	boost::apply_visitor(*this, message);
 }

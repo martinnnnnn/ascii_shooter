@@ -22,8 +22,7 @@ public:
 	void setContext(UICONTEXT context);
 
 
-	virtual void operator()(DESTROY const& e) {}
-	virtual void operator()(CHANGE_LIFE const& e) {}
+	virtual void operator()(UICONTEXT const& e);
 
 
 protected:

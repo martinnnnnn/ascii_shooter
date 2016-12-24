@@ -28,6 +28,10 @@ GameObject::GameObject(string tag, vector2 position)
 
 GameObject::~GameObject()
 {
+	for (Component* c : _components)
+	{
+		delete c;
+	}
 }
 
 void GameObject::update()
@@ -69,7 +73,7 @@ vector<Component*>& GameObject::getComponents()
 	return _components;
 }
 
-void GameObject::sendMessage(Message message)
+void GameObject::sendMessage(GOMessage message)
 {
 	for (Component* c : _components)
 	{

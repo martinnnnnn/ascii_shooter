@@ -3,6 +3,7 @@
 #include "PhysicsEngine.h"
 #include "InputEngine.h"
 #include "GameObject.h"
+#include "Scene.h"
 
 #include "GraphicsComponent.h"
 #include "MovementComponent.h"
@@ -25,7 +26,10 @@ GameEngine::GameEngine()
 	_physics->initPhysics();
 	_inputs = new InputEngine();
 
-
+	_switchScene = false;
+	_currentScene = nullptr;
+	_previousScene = nullptr;
+	_nextScene = nullptr;
 }
 
 
@@ -36,18 +40,26 @@ GameEngine::~GameEngine()
 GameObject* GameEngine::getNewGameObject(string name, vector2 position)
 {
 	GameObject* o = new GameObject(name, position);
-	_currentNewObjects->push_back(o);
+	_newObjects.push_back(o);
 	return o;
 }
 
 void GameEngine::addNewObjects()
 {
-	for (GameObject* obj : *_currentNewObjects)
+	for (GameObject* obj : _newObjects)
 	{
-		_currentObjects->push_back(obj);
+		_currentScene->addObject(obj);
+		//_currentObjects->push_back(obj);
 	}
-	_currentNewObjects->clear();
+	_newObjects.clear();
 }
+
+
+vector<GameObject*>* GameEngine::getObjects() 
+{
+	return _currentScene->getObjects(); 
+}
+
 
 void GameEngine::passObject(GameObject* obj)
 {
@@ -57,7 +69,7 @@ void GameEngine::passObject(GameObject* obj)
 
 GameObject* GameEngine::findObjectWithTag(string tag)
 {
-	for (GameObject* obj : *_currentObjects)
+	for (GameObject* obj : *(_currentScene->getObjects()))
 	{
 		if (obj->getTag() == tag)
 		{
@@ -68,45 +80,131 @@ GameObject* GameEngine::findObjectWithTag(string tag)
 }
 
 
-
-void GameEngine::gameInit()
+void GameEngine::addScene(Scene* scene)
 {
-	_currentObjects = &_gameObjects;
-	_currentNewObjects = &_newGameObjects;
-
-	_currentObjects->clear();
-	_currentNewObjects->clear();
-
-	GameObject* game = GameEngine::instance().getNewGameObject("Game");
-	Game* gameScript = new Game(game);
-	gameScript->init();
-	game->addComponent(gameScript);
-
-	initTime();
+	if (_scenes.empty())
+	{
+		_currentScene = scene;
+	}
+	_scenes.push_back(scene);
 }
 
-void GameEngine::uiInit()
+void GameEngine::defineStartingScene(std::string name)
 {
-	_currentObjects = &_uiObjects;
-	_currentNewObjects = &_newUiObjects;
-
-	_currentObjects->clear();
-	_currentNewObjects->clear();
-
-	GameObject* ui = GameEngine::instance().getNewGameObject("UI");
-	UI* uiScript = new UI(ui);
-	uiScript->init();
-	ui->addComponent(uiScript);
-
-	initTime();
+	for (Scene* scene : _scenes)
+	{
+		if (scene->_name == name)
+		{
+			_previousScene = _currentScene;
+			_currentScene = scene;
+		}
+	}
 }
+
+void GameEngine::defineStartingScene(Scene* sc)
+{
+	for (Scene* scene : _scenes)
+	{
+		if (scene == sc)
+		{
+			_previousScene = _currentScene;
+			_currentScene = scene;
+		}
+	}
+}
+
+Scene* GameEngine::getCurrentScene()
+{
+	return _currentScene;
+}
+
+Scene* GameEngine::getScene(std::string name)
+{
+	for (Scene* scene : _scenes)
+	{
+		if (scene->_name == name)
+		{
+			return scene;
+		}
+	}
+	return nullptr;
+}
+
+
+void GameEngine::switchScene(std::string name)
+{
+	Scene* newScene = getScene(name);
+	if (newScene)
+	{
+		_switchScene = true;
+		_nextScene = newScene;
+	}
+}
+
+
+void GameEngine::goToNextScene()
+{
+	_previousScene = _currentScene;
+	if (_nextScene) _currentScene = _nextScene;
+	_nextScene = nullptr;
+
+	resetTime();
+	_switchScene = false;
+}
+
+void GameEngine::goToPreviousScene()
+{
+	_nextScene = _previousScene;
+	goToNextScene();
+}
+
+void GameEngine::sendMessage(SCMessage message)
+{
+	for (Scene* scene : _scenes)
+	{
+		//scene->receiveMessage(message);
+	}
+}
+
+//
+//void GameEngine::gameInit()
+//{
+//	_currentObjects = &_gameObjects;
+//	_currentNewObjects = &_newGameObjects;
+//
+//	_currentObjects->clear();
+//	_currentNewObjects->clear();
+//
+//	GameObject* game = GameEngine::instance().getNewGameObject("Game");
+//	Game* gameScript = new Game(game);
+//	gameScript->init();
+//	game->addComponent(gameScript);
+//
+//	initTime();
+//}
+//
+//void GameEngine::uiInit()
+//{
+//	_currentObjects = &_uiObjects;
+//	_currentNewObjects = &_newUiObjects;
+//
+//	_currentObjects->clear();
+//	_currentNewObjects->clear();
+//
+//	GameObject* ui = GameEngine::instance().getNewGameObject("UI");
+//	UI* uiScript = new UI(ui);
+//	uiScript->init();
+//	ui->addComponent(uiScript);
+//
+//	initTime();
+//}
 
 
 void GameEngine::run()
 {
 	while (!_quit)
 	{
-		if (_newState) switchState();
+		if (_switchScene) goToNextScene();
 
 		_current = _timer.getElapsedMs();
 		_elapsed = _current - _previous;
@@ -115,7 +213,7 @@ void GameEngine::run()
 
 
 		addNewObjects();
-		takeCareOfDeadBodies();
+		cleanCurrentScene();
 
 		update();
 
@@ -129,7 +227,7 @@ void GameEngine::run()
 }
 
 
-void GameEngine::initTime()
+void GameEngine::resetTime()
 {
 	_timer.start();
 	_previous = _timer.getElapsedMs();
@@ -138,55 +236,48 @@ void GameEngine::initTime()
 
 
 
-void GameEngine::switchState()
+//void GameEngine::switchState()
+//{
+//	_newState = false;
+//	_state = (_state == GAME) ? GAMESTATE_UI : GAME;
+//
+//	switch (_state)
+//	{
+//	case GAME:
+//		_currentObjects = &_gameObjects;
+//		_currentNewObjects = &_newGameObjects;
+//		break;
+//	case GAMESTATE_UI:
+//		_currentObjects = &_uiObjects;
+//		_currentNewObjects = &_newUiObjects;
+//		break;
+//	}
+//
+//	for (GameObject* obj : _passingGameObjects)
+//	{
+//		_currentNewObjects->push_back(obj);
+//	}
+//	_passingGameObjects.clear();
+//
+//	initTime();
+//
+//	for (GameObject* obj : *_currentObjects)
+//	{
+//		obj->wake();
+//	}
+//}
+
+
+
+void GameEngine::cleanCurrentScene()
 {
-	_newState = false;
-	_state = (_state == GAME) ? GAMESTATE_UI : GAME;
-
-	switch (_state)
-	{
-	case GAME:
-		_currentObjects = &_gameObjects;
-		_currentNewObjects = &_newGameObjects;
-		break;
-	case GAMESTATE_UI:
-		_currentObjects = &_uiObjects;
-		_currentNewObjects = &_newUiObjects;
-		break;
-	}
-
-	for (GameObject* obj : _passingGameObjects)
-	{
-		_currentNewObjects->push_back(obj);
-	}
-	_passingGameObjects.clear();
-
-	initTime();
-
-	for (GameObject* obj : *_currentObjects)
-	{
-		obj->wake();
-	}
-}
-
-
-
-void GameEngine::takeCareOfDeadBodies()
-{
-	for (unsigned int i = 0; i < _currentObjects->size(); i++)
-	{
-		if ((*_currentObjects)[i]->isDead())
-		{
-			delete (*_currentObjects)[i];
-			_currentObjects->erase(_currentObjects->begin() + i);
-		}
-	}
+	_currentScene->takeCareOfDeadBodies();
 }
 
 void GameEngine::update()
 {
 	_inputs->update();
-	for (GameObject* obj : *_currentObjects)
+	for (GameObject* obj : *(_currentScene->getObjects()))
 	{
 		obj->update();
 

@@ -19,14 +19,15 @@ UI::~UI()
 
 void UI::init()
 {
-	_context = UICONTEXT::MENU;
+	_context.c = "Menu";
 
 	_graphics = new GraphicsComponent();
 	addComponent(_graphics);
 
+	GameObject* obj = GameEngine::instance().getNewGameObject("UIBullet");
 	_uiBullet = new UIBullet(_gameObject);
 	_uiBullet->init();
-	addComponent(_uiBullet);
+	obj->addComponent(_uiBullet);
 
 	setGraphics();
 }
@@ -40,17 +41,6 @@ void UI::update()
 
 void UI::wake()
 {
-	GameObject* context = GameEngine::instance().findObjectWithTag("UIContext");
-	if (context)
-	{
-		UIContextComponent* contextComp = context->getComponent<UIContextComponent>();
-		if (contextComp)
-		{
-			_context = contextComp->_context;
-		}
-		context->kill();
-	}
-
 	setGraphics();
 	setBulletPositions();
 }
@@ -66,24 +56,32 @@ void UI::setContext(UICONTEXT context)
 void UI::setGraphics()
 {
 
-	switch (_context)
+	string sprite = "";
+	if (_context.c == "Menu")
 	{
-	case UICONTEXT::MENU:
-		_graphics->setSprite("Menu.txt");
-		break;
-	case UICONTEXT::PAUSE:
-		_graphics->setSprite("Pause.txt");
-		break;
-	case UICONTEXT::OPTION:
-		_graphics->setSprite("Option.txt");
-		break;
-	case UICONTEXT::END:
-		_graphics->setSprite("End.txt");
-		break;
+		sprite = "Menu.txt";
 	}
+	else if (_context.c == "Pause")
+	{
+		sprite = "Pause.txt";
+	}
+	else if (_context.c == "Option")
+	{
+		sprite = "Option.txt";
+	}
+	else if (_context.c == "End")
+	{
+		sprite = "End.txt";
+	}
+	_graphics->setSprite(sprite);
 }
 
 void UI::setBulletPositions()
 {
 	_uiBullet->setContext(_context);
+}
+
+void UI::operator()(UICONTEXT const& e)
+{
+	setContext(e);
 }

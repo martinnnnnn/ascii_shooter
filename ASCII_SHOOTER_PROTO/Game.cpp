@@ -10,8 +10,11 @@
 #include "Parametres.h"
 #include "NYTimer.h"
 #include "UIContextComponent.h"
+#include "MessageHandler.h"
+#include "Scene.h"
 
 #include <random>
+#include <string>
 
 using namespace std;
 
@@ -42,13 +45,8 @@ void Game::handleInputs()
 {
 	if (GameEngine::instance()._inputs->isKeyDown(KEY_PAUSE))
 	{
-		GameObject* context = new GameObject("UIContext");
-		UIContextComponent* contextComp = new UIContextComponent();
-		contextComp->_context = PAUSE;
-		context->addComponent(contextComp);
-		GameEngine::instance().passObject(context);
-
-		GameEngine::instance().changeState();
+		GameEngine::instance().getScene("UI")->sendMessage(UICONTEXT{ "Pause" });
+		GameEngine::instance().switchScene("UI");
 	}
 }
 

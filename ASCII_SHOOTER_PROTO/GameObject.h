@@ -45,7 +45,7 @@ public:
 
 	void setName(std::string name) { _name = name; }
 
-	void sendMessage(Message);
+	void sendMessage(GOMessage);
 
 	bool tagged(std::string tag);
 	std::string getTag();

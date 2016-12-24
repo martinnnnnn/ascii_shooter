@@ -3,6 +3,7 @@
 //#include "GameObject.h"
 #include "NYTimer.h"
 #include "Structures.h"
+#include "MessageHandler.h"
 
 #include <vector>
 #include <string>
@@ -11,12 +12,13 @@ class GameObject;
 class PhysicsEngine;
 class GraphicsEngine;
 class InputEngine;
+class Scene;
 
-enum GAME_STATE
-{
-	GAME,
-	GAMESTATE_UI
-};
+//enum GAME_STATE
+//{
+//	GAME,
+//	GAMESTATE_UI
+//};
 
 class GameEngine
 {
@@ -31,14 +33,21 @@ public:
 		return *instance;
 	}
 
-	void gameInit();
-	void uiInit();
-	void changeState() { _newState = true; }
+	void addScene(Scene* scene);
+	void defineStartingScene(std::string name);
+	void defineStartingScene(Scene* scene);
+	Scene* getCurrentScene();
+	Scene* getScene(std::string name);
+
+	void switchScene(std::string newScene);
+	void sendMessage(SCMessage message);
 
 	void run();
 
-	inline std::vector<GameObject*>* getObjects() { return _currentObjects; }
+	std::vector<GameObject*>* getObjects();
 	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
+	void addNewObjects();
+
 	void passObject(GameObject*);
 
 	GameObject* findObjectWithTag(std::string tag);
@@ -55,33 +64,31 @@ protected:
 	GameEngine(GameEngine const&) = delete;
 	void operator=(GameEngine const&) = delete;
 
-	void initTime();
-	void switchState();
+	void resetTime();
 
-	void takeCareOfDeadBodies();
+	void goToNextScene();
+	void goToPreviousScene();
+	bool _switchScene;
+
+	void cleanCurrentScene();
 
 	void update();
 	void updatePhysics();
 	void render();
-	void addNewObjects();
 
+	std::vector<GameObject*> _newObjects;
 
-	std::vector<GameObject*>* _currentObjects;
-	std::vector<GameObject*>* _currentNewObjects;
+	vector<Scene*> _scenes;
+	Scene* _previousScene;
+	Scene* _currentScene;
+	Scene* _nextScene;
 
-	std::vector<GameObject*> _gameObjects;
-	std::vector<GameObject*> _newGameObjects;
-
-	std::vector<GameObject*> _uiObjects;
-	std::vector<GameObject*> _newUiObjects;
 
 	std::vector<GameObject*> _passingGameObjects;
 
 	GraphicsEngine* _graphics;
 	PhysicsEngine* _physics;
 
-	GAME_STATE _state;
-	bool _newState = false;
 
 	double _previous;
 	double _lag;
