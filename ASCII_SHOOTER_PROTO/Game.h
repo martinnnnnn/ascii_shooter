@@ -18,14 +18,11 @@ public:
 
 	virtual void update();
 
-	void handleInputs();
-
-	//virtual void operator()(DESTROY const& e) {}
-	//virtual void operator()(CHANGE_LIFE const& e) {}
-
 protected:
 
 	void initPlayer();
+	
+	void handleInputs();
 
 	void initEnemyGenerator();
 	void handleEnemies();

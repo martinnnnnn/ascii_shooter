@@ -26,11 +26,13 @@ int main(void)
 	GameObject* game = GameEngine::instance().getNewGameObject("Game");
 	Game* gameScript = new Game(game);
 	gameScript->init();
+	game->addComponent(gameScript);
 	GameEngine::instance().addNewObjects();
 
 	GameEngine::instance().defineStartingScene("UI");
 	GameObject* ui = GameEngine::instance().getNewGameObject("UI");
 	UI* uiScript = new UI(ui);
+	ui->addComponent(uiScript);
 	uiScript->init();
 
 

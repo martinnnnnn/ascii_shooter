@@ -53,7 +53,7 @@ void GraphicsEngine::draw()
 		int posX = (int)obj->_position.x;
 		int posY = (int)obj->_position.y;
 
-		if (posX < 0 || posX > SCREEN_WIDTH || posY < 0 || posY > SCREEN_HEIGHT)
+		if (posX < 0 || posX >= SCREEN_WIDTH || posY < 0 || posY >= SCREEN_HEIGHT)
 		{
 			continue;
 		}

@@ -17,8 +17,6 @@ public:
 	virtual void init(int life = 5, std::string path = "Ship1.txt", float speed = 20, float fireRate = 100.0);
 	virtual void update();
 
-	virtual void operator()(DESTROY const& e) {}
-	virtual void operator()(CHANGE_LIFE const& e) {}
 
 protected:
 

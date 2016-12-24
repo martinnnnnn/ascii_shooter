@@ -14,10 +14,8 @@ public:
 
 	virtual void update();
 
-	void init(int life = 1, vector2 velocity = { 1, 0 }, float speed = 9.0);
+	void init(int life = 1, vector2 velocity = { 1, 0 }, float speed = 6.0);
 
-	virtual void operator()(DESTROY const& e) {}
-	virtual void operator()(CHANGE_LIFE const& e) {}
 
 protected:
 
