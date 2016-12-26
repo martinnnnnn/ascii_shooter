@@ -1,0 +1,68 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a366e0d372a100b7de351caf14cede996}{}\label{class_game_a366e0d372a100b7de351caf14cede996} 
+{\bfseries Game} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\item 
+\hypertarget{class_game_a6f3a33940524b6ba9d83f627ccb14bbf}{}\label{class_game_a6f3a33940524b6ba9d83f627ccb14bbf} 
+virtual void {\bfseries init} ()
+\item 
+\hypertarget{class_game_a79df6376b332d63c9eca0dcee30305c3}{}\label{class_game_a79df6376b332d63c9eca0dcee30305c3} 
+virtual void {\bfseries update} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a405c0bb8156590c93304f11cf1f08065}{}\label{class_game_a405c0bb8156590c93304f11cf1f08065} 
+void {\bfseries init\+Player} ()
+\item 
+\hypertarget{class_game_ab6ac1ec04e03f55c0af1d4f9d0540cc7}{}\label{class_game_ab6ac1ec04e03f55c0af1d4f9d0540cc7} 
+void {\bfseries handle\+Inputs} ()
+\item 
+\hypertarget{class_game_a8e042746fe9490afb380d6bddcfbe140}{}\label{class_game_a8e042746fe9490afb380d6bddcfbe140} 
+void {\bfseries init\+Enemy\+Generator} ()
+\item 
+\hypertarget{class_game_a14753444a9131fdd5985443584b05b08}{}\label{class_game_a14753444a9131fdd5985443584b05b08} 
+void {\bfseries handle\+Enemies} ()
+\item 
+\hypertarget{class_game_a2e05059d70edc32d1d37a9fc1c179b86}{}\label{class_game_a2e05059d70edc32d1d37a9fc1c179b86} 
+void {\bfseries spawn\+Enemy} (\hyperlink{structvector2}{vector2} position)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a24743764a183ce755b12282940d5aa9d}{}\label{class_game_a24743764a183ce755b12282940d5aa9d} 
+double {\bfseries \+\_\+enemy\+Spawn\+Rate}
+\item 
+\hypertarget{class_game_a28155935797d67083587e848effc1eb8}{}\label{class_game_a28155935797d67083587e848effc1eb8} 
+\hyperlink{class_n_y_timer}{N\+Y\+Timer} $\ast$ {\bfseries \+\_\+timer}
+\item 
+\hypertarget{class_game_a4bcab81144d9676362e8e964337e43a1}{}\label{class_game_a4bcab81144d9676362e8e964337e43a1} 
+double {\bfseries \+\_\+previous}
+\item 
+\hypertarget{class_game_a546c6124b218181cac529da2bcf47de4}{}\label{class_game_a546c6124b218181cac529da2bcf47de4} 
+double {\bfseries \+\_\+elapsed}
+\item 
+\hypertarget{class_game_a82b8447c7ca1d8a6114f97fb15bbcc00}{}\label{class_game_a82b8447c7ca1d8a6114f97fb15bbcc00} 
+std\+::default\+\_\+random\+\_\+engine {\bfseries \+\_\+generator}
+\item 
+\hypertarget{class_game_a7731391cbc79c28c8fbecf3ee4bf5ca5}{}\label{class_game_a7731391cbc79c28c8fbecf3ee4bf5ca5} 
+std\+::bernoulli\+\_\+distribution {\bfseries \+\_\+bernouilli\+Distribution}
+\item 
+\hypertarget{class_game_a20a7cd8706d26ec0c45bbe52f84b2e81}{}\label{class_game_a20a7cd8706d26ec0c45bbe52f84b2e81} 
+std\+::uniform\+\_\+int\+\_\+distribution$<$ int $>$ {\bfseries \+\_\+uniform\+Distribution}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game.\+h\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game.\+cpp\end{DoxyCompactItemize}

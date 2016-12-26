@@ -1,0 +1,74 @@
+\hypertarget{class_game_object}{}\section{Game\+Object Class Reference}
+\label{class_game_object}\index{Game\+Object@{Game\+Object}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_object_adbdcffa0cd72ae987c033e61f6b12880}{}\label{class_game_object_adbdcffa0cd72ae987c033e61f6b12880} 
+{\bfseries Game\+Object} (std\+::string tag, \hyperlink{structvector2}{vector2} position=\{ 0, 0 \})
+\item 
+\hypertarget{class_game_object_adad7d284b670db722a2fda8e6a7997e3}{}\label{class_game_object_adad7d284b670db722a2fda8e6a7997e3} 
+void {\bfseries update} ()
+\item 
+\hypertarget{class_game_object_ac59b76cad79c58e3ac0d4f40c4f1d4b2}{}\label{class_game_object_ac59b76cad79c58e3ac0d4f40c4f1d4b2} 
+void {\bfseries wake} ()
+\item 
+\hypertarget{class_game_object_a0d68cf2723dd5cedc12579c08c97df04}{}\label{class_game_object_a0d68cf2723dd5cedc12579c08c97df04} 
+void {\bfseries add\+Component} (\hyperlink{class_component}{Component} $\ast$)
+\item 
+\hypertarget{class_game_object_addbe774c69d6fb3b50acbef5f74d7319}{}\label{class_game_object_addbe774c69d6fb3b50acbef5f74d7319} 
+std\+::vector$<$ \hyperlink{class_component}{Component} $\ast$ $>$ \& {\bfseries get\+Components} ()
+\item 
+\hypertarget{class_game_object_a1c50376c7f24439359a3962f57dfd513}{}\label{class_game_object_a1c50376c7f24439359a3962f57dfd513} 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ {\bfseries get\+Component} ()
+\item 
+\hypertarget{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee}{}\label{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee} 
+std\+::string {\bfseries get\+Name} ()
+\item 
+\hypertarget{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe}{}\label{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe} 
+void {\bfseries set\+Name} (std\+::string name)
+\item 
+\hypertarget{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{}\label{class_game_object_a4ef97dbdc30378013b28f4708cb708a0} 
+void {\bfseries send\+Message} (G\+O\+Message)
+\item 
+\hypertarget{class_game_object_ac214d8070daddbffd595afdc69c02fd0}{}\label{class_game_object_ac214d8070daddbffd595afdc69c02fd0} 
+bool {\bfseries tagged} (std\+::string tag)
+\item 
+\hypertarget{class_game_object_a099a32d11225032f9a1a35d15a307a27}{}\label{class_game_object_a099a32d11225032f9a1a35d15a307a27} 
+std\+::string {\bfseries get\+Tag} ()
+\item 
+\hypertarget{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349}{}\label{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349} 
+void {\bfseries set\+Tag} (std\+::string tag)
+\item 
+\hypertarget{class_game_object_af54107b086de78b1fc6190088bdfb468}{}\label{class_game_object_af54107b086de78b1fc6190088bdfb468} 
+void {\bfseries kill} ()
+\item 
+\hypertarget{class_game_object_af509340fc9f95d8d39afe7ec63d90128}{}\label{class_game_object_af509340fc9f95d8d39afe7ec63d90128} 
+bool {\bfseries is\+Dead} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b}{}\label{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b} 
+static bool {\bfseries find\+Tag} (std\+::string tag)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_object_a86822412aab633fe5a2a78678fdf55b7}{}\label{class_game_object_a86822412aab633fe5a2a78678fdf55b7} 
+\hyperlink{structvector2}{vector2} {\bfseries \+\_\+position}
+\item 
+\hypertarget{class_game_object_ac1f91cb46f40c3b254505d66a9da1653}{}\label{class_game_object_ac1f91cb46f40c3b254505d66a9da1653} 
+bool {\bfseries \+\_\+enabled}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_object_af3e9291ac62f2c143d14f2885058182e}{}\label{class_game_object_af3e9291ac62f2c143d14f2885058182e} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+\+Tags} = \{ \char`\"{}Default\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game\+Object.\+h\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game\+Object.\+cpp\end{DoxyCompactItemize}

@@ -14,12 +14,12 @@ class GraphicsEngine;
 class InputEngine;
 class Scene;
 
-//enum GAME_STATE
-//{
-//	GAME,
-//	GAMESTATE_UI
-//};
 
+
+/** GameEngine
+Takes care of initiating the other engines and running the game
+Takes care of switching between scenes
+*/
 class GameEngine
 {
 

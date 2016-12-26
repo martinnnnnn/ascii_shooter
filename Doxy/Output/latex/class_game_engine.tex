@@ -1,0 +1,150 @@
+\hypertarget{class_game_engine}{}\section{Game\+Engine Class Reference}
+\label{class_game_engine}\index{Game\+Engine@{Game\+Engine}}
+
+
+{\ttfamily \#include $<$Game\+Engine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a5505704cb9ba58c5d029d8a736eff73d}{}\label{class_game_engine_a5505704cb9ba58c5d029d8a736eff73d} 
+void {\bfseries add\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\item 
+\hypertarget{class_game_engine_aba1c35007c56a3082102f67c08ea5580}{}\label{class_game_engine_aba1c35007c56a3082102f67c08ea5580} 
+void {\bfseries define\+Starting\+Scene} (std\+::string name)
+\item 
+\hypertarget{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb}{}\label{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb} 
+void {\bfseries define\+Starting\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\item 
+\hypertarget{class_game_engine_a8116aae790eaf236907d5d75401cd628}{}\label{class_game_engine_a8116aae790eaf236907d5d75401cd628} 
+\hyperlink{class_scene}{Scene} $\ast$ {\bfseries get\+Current\+Scene} ()
+\item 
+\hypertarget{class_game_engine_ac70d59f0de33c34f84863a550408a476}{}\label{class_game_engine_ac70d59f0de33c34f84863a550408a476} 
+\hyperlink{class_scene}{Scene} $\ast$ {\bfseries get\+Scene} (std\+::string name)
+\item 
+\hypertarget{class_game_engine_a000c4cc070830d727f349b094ab402e3}{}\label{class_game_engine_a000c4cc070830d727f349b094ab402e3} 
+void {\bfseries switch\+Scene} (std\+::string new\+Scene)
+\item 
+\hypertarget{class_game_engine_aef45d9ee461773587e266c57783de1a3}{}\label{class_game_engine_aef45d9ee461773587e266c57783de1a3} 
+void {\bfseries send\+Message} (S\+C\+Message message)
+\item 
+\hypertarget{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}{}\label{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae} 
+void {\bfseries run} ()
+\item 
+\hypertarget{class_game_engine_a0ddc45d96adc0373346663302e429b12}{}\label{class_game_engine_a0ddc45d96adc0373346663302e429b12} 
+std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ $\ast$ {\bfseries get\+Objects} ()
+\item 
+\hypertarget{class_game_engine_a5881933816240d7c21d66383ad3abdae}{}\label{class_game_engine_a5881933816240d7c21d66383ad3abdae} 
+\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries get\+New\+Game\+Object} (std\+::string name, \hyperlink{structvector2}{vector2} position=\{ 0, 0 \})
+\item 
+\hypertarget{class_game_engine_a93ae1a7543981d2d3d0e70b14174135f}{}\label{class_game_engine_a93ae1a7543981d2d3d0e70b14174135f} 
+void {\bfseries add\+New\+Objects} ()
+\item 
+\hypertarget{class_game_engine_a49e995c66c1c09394c75d31cbea4b691}{}\label{class_game_engine_a49e995c66c1c09394c75d31cbea4b691} 
+void {\bfseries pass\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\item 
+\hypertarget{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586}{}\label{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586} 
+\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries find\+Object\+With\+Tag} (std\+::string tag)
+\item 
+\hypertarget{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}{}\label{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6} 
+void {\bfseries quit} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d}{}\label{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d} 
+static \hyperlink{class_game_engine}{Game\+Engine} \& {\bfseries instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a8d1a51bb0bd082dfddfbcc25bae08ace}{}\label{class_game_engine_a8d1a51bb0bd082dfddfbcc25bae08ace} 
+\hyperlink{class_input_engine}{Input\+Engine} $\ast$ {\bfseries \+\_\+inputs}
+\item 
+\hypertarget{class_game_engine_a84532de3912402092e41bded12137b44}{}\label{class_game_engine_a84532de3912402092e41bded12137b44} 
+\hyperlink{class_n_y_timer}{N\+Y\+Timer} {\bfseries \+\_\+timer}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a3577e939b14e8cb0677d508f2f6a6912}{}\label{class_game_engine_a3577e939b14e8cb0677d508f2f6a6912} 
+{\bfseries Game\+Engine} (\hyperlink{class_game_engine}{Game\+Engine} const \&)=delete
+\item 
+\hypertarget{class_game_engine_af1220370747be0fc7c4ca78c089c08c3}{}\label{class_game_engine_af1220370747be0fc7c4ca78c089c08c3} 
+void {\bfseries operator=} (\hyperlink{class_game_engine}{Game\+Engine} const \&)=delete
+\item 
+\hypertarget{class_game_engine_af45dfb1c31ce79d53b00eace85c68063}{}\label{class_game_engine_af45dfb1c31ce79d53b00eace85c68063} 
+void {\bfseries reset\+Time} ()
+\item 
+\hypertarget{class_game_engine_a2a1ee54e0b6fc398feab0597fabf2713}{}\label{class_game_engine_a2a1ee54e0b6fc398feab0597fabf2713} 
+void {\bfseries go\+To\+Next\+Scene} ()
+\item 
+\hypertarget{class_game_engine_a3caea6165710b1cf54c392ee803891c7}{}\label{class_game_engine_a3caea6165710b1cf54c392ee803891c7} 
+void {\bfseries go\+To\+Previous\+Scene} ()
+\item 
+\hypertarget{class_game_engine_a9cf603b0eaae873e5513f752aa2b6fe5}{}\label{class_game_engine_a9cf603b0eaae873e5513f752aa2b6fe5} 
+void {\bfseries clean\+Current\+Scene} ()
+\item 
+\hypertarget{class_game_engine_ae03241b464040b659b6a91f27920e8c3}{}\label{class_game_engine_ae03241b464040b659b6a91f27920e8c3} 
+void {\bfseries update} ()
+\item 
+\hypertarget{class_game_engine_aa79933550f7680ffe62035f5c3181b55}{}\label{class_game_engine_aa79933550f7680ffe62035f5c3181b55} 
+void {\bfseries update\+Physics} ()
+\item 
+\hypertarget{class_game_engine_a267bf9164ba09e32b7a24ba4afb527d4}{}\label{class_game_engine_a267bf9164ba09e32b7a24ba4afb527d4} 
+void {\bfseries render} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_engine_a6bb48df06765a1d31310e0bbcf582b2b}{}\label{class_game_engine_a6bb48df06765a1d31310e0bbcf582b2b} 
+bool {\bfseries \+\_\+switch\+Scene}
+\item 
+\hypertarget{class_game_engine_a0ebfd3cc173547a668e763b72449dcc3}{}\label{class_game_engine_a0ebfd3cc173547a668e763b72449dcc3} 
+std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ {\bfseries \+\_\+new\+Objects}
+\item 
+\hypertarget{class_game_engine_a857a6cf409bd4697a0ee31238e74b670}{}\label{class_game_engine_a857a6cf409bd4697a0ee31238e74b670} 
+vector$<$ \hyperlink{class_scene}{Scene} $\ast$ $>$ {\bfseries \+\_\+scenes}
+\item 
+\hypertarget{class_game_engine_a0ed9d4b010faefc0fc16b6381c0fd77c}{}\label{class_game_engine_a0ed9d4b010faefc0fc16b6381c0fd77c} 
+\hyperlink{class_scene}{Scene} $\ast$ {\bfseries \+\_\+previous\+Scene}
+\item 
+\hypertarget{class_game_engine_a8d2b7530557db9bcff501fe39cc65539}{}\label{class_game_engine_a8d2b7530557db9bcff501fe39cc65539} 
+\hyperlink{class_scene}{Scene} $\ast$ {\bfseries \+\_\+current\+Scene}
+\item 
+\hypertarget{class_game_engine_a774d8b94d3f52f0387de3eba6804dfa9}{}\label{class_game_engine_a774d8b94d3f52f0387de3eba6804dfa9} 
+\hyperlink{class_scene}{Scene} $\ast$ {\bfseries \+\_\+next\+Scene}
+\item 
+\hypertarget{class_game_engine_aa5a6689bfdebff663b691dfbf64596ec}{}\label{class_game_engine_aa5a6689bfdebff663b691dfbf64596ec} 
+std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ {\bfseries \+\_\+passing\+Game\+Objects}
+\item 
+\hypertarget{class_game_engine_a356588004d68586f945ae85bc5060700}{}\label{class_game_engine_a356588004d68586f945ae85bc5060700} 
+\hyperlink{class_graphics_engine}{Graphics\+Engine} $\ast$ {\bfseries \+\_\+graphics}
+\item 
+\hypertarget{class_game_engine_a913f0eb92dda8fc1cd4cec59b9f7c580}{}\label{class_game_engine_a913f0eb92dda8fc1cd4cec59b9f7c580} 
+\hyperlink{class_physics_engine}{Physics\+Engine} $\ast$ {\bfseries \+\_\+physics}
+\item 
+\hypertarget{class_game_engine_a71cb9124b614680cdc4fbe6823900445}{}\label{class_game_engine_a71cb9124b614680cdc4fbe6823900445} 
+double {\bfseries \+\_\+previous}
+\item 
+\hypertarget{class_game_engine_abe7083245b75ccd6969b54cde562167b}{}\label{class_game_engine_abe7083245b75ccd6969b54cde562167b} 
+double {\bfseries \+\_\+lag}
+\item 
+\hypertarget{class_game_engine_a27abc89c39a79dd719084c2a9267d61d}{}\label{class_game_engine_a27abc89c39a79dd719084c2a9267d61d} 
+double {\bfseries \+\_\+current}
+\item 
+\hypertarget{class_game_engine_a0a2ef0a08be4b7ac9f02e7db06f0bb50}{}\label{class_game_engine_a0a2ef0a08be4b7ac9f02e7db06f0bb50} 
+double {\bfseries \+\_\+elapsed}
+\item 
+\hypertarget{class_game_engine_a6f8d9c72d09c8894b8ccbad014376285}{}\label{class_game_engine_a6f8d9c72d09c8894b8ccbad014376285} 
+bool {\bfseries \+\_\+quit} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game_engine}{Game\+Engine} Takes care of initiating the other engines and running the game Takes care of switching between scenes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game\+Engine.\+h\item 
+F\+:/\+\_\+\+\_\+\+M\+A\+R\+T\+I\+N/\+\_\+\+\_\+\+E\+N\+J\+M\+I\+N/\+Projets/ascii/shooter/\+A\+S\+C\+I\+I\+\_\+\+S\+H\+O\+O\+T\+E\+R\+\_\+\+P\+R\+O\+T\+O/Game\+Engine.\+cpp\end{DoxyCompactItemize}
