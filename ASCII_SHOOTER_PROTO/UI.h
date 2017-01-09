@@ -11,9 +11,11 @@ class UI : public GameComponent
 
 public:
 
-
+	/**
+	*	cf. constructeur de GameComponent
+	*/
 	UI(GameObject*);
-	~UI();
+	virtual ~UI();
 
 	virtual void init();
 	virtual void update();

@@ -1,5 +1,14 @@
 \hypertarget{class_life}{}\section{Life Class Reference}
 \label{class_life}\index{Life@{Life}}
+
+
+Script gerant le vie d\textquotesingle{}un gameobject.  
+
+
+
+
+{\ttfamily \#include $<$Life.\+h$>$}
+
 Inheritance diagram for Life\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,19 @@ Inheritance diagram for Life\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_life_ad5a065168648ef6114eee8851c63a9e0}{}\label{class_life_ad5a065168648ef6114eee8851c63a9e0} 
-{\bfseries Life} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\hyperlink{class_life_ad5a065168648ef6114eee8851c63a9e0}{Life} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
 \item 
-\hypertarget{class_life_a38250d67d459d3887e8d5adddf6b5129}{}\label{class_life_a38250d67d459d3887e8d5adddf6b5129} 
-virtual void {\bfseries init} (int life=1)
-\item 
+virtual void \hyperlink{class_life_a38250d67d459d3887e8d5adddf6b5129}{init} (int life=1)
+\begin{DoxyCompactList}\small\item\em initialise la vie \end{DoxyCompactList}\item 
 \hypertarget{class_life_a0e00f2735584f3ddebb397742b520d3b}{}\label{class_life_a0e00f2735584f3ddebb397742b520d3b} 
-virtual void {\bfseries update} ()
-\item 
-\hypertarget{class_life_a5058223a20871cf287b7f75ce2eb44ef}{}\label{class_life_a5058223a20871cf287b7f75ce2eb44ef} 
-void {\bfseries change\+Life} (int value)
-\item 
-\hypertarget{class_life_a6bbbcb718407c98ce6c031c81685a659}{}\label{class_life_a6bbbcb718407c98ce6c031c81685a659} 
-int {\bfseries get\+Life} ()
-\item 
-\hypertarget{class_life_ab33e0ff7003ed8c066d61ddb65ffc321}{}\label{class_life_ab33e0ff7003ed8c066d61ddb65ffc321} 
-virtual void {\bfseries operator()} (\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE} const \&e)
-\end{DoxyCompactItemize}
+virtual void \hyperlink{class_life_a0e00f2735584f3ddebb397742b520d3b}{update} ()
+\begin{DoxyCompactList}\small\item\em verifie que la vie est positive, supprime le \hyperlink{class_game_object}{Game\+Object} sinon \end{DoxyCompactList}\item 
+void \hyperlink{class_life_a5058223a20871cf287b7f75ce2eb44ef}{change\+Life} (int value)
+\begin{DoxyCompactList}\small\item\em modifie la vie par valeur passee en parametre \end{DoxyCompactList}\item 
+int \hyperlink{class_life_a6bbbcb718407c98ce6c031c81685a659}{get\+Life} ()
+\begin{DoxyCompactList}\small\item\em Donne la valeur de la vie. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_life_ab33e0ff7003ed8c066d61ddb65ffc321}{operator()} (\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE} const \&e)
+\begin{DoxyCompactList}\small\item\em Prend en charge la reception d\textquotesingle{}un message \hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,6 +38,83 @@ virtual void {\bfseries operator()} (\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\
 int {\bfseries \+\_\+life}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Script gerant le vie d\textquotesingle{}un gameobject. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_life_ad5a065168648ef6114eee8851c63a9e0}{}\label{class_life_ad5a065168648ef6114eee8851c63a9e0} 
+\index{Life@{Life}!Life@{Life}}
+\index{Life@{Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{Life()}{Life()}}
+{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+cf. constructeur de \hyperlink{class_game_component}{Game\+Component} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_life_a5058223a20871cf287b7f75ce2eb44ef}{}\label{class_life_a5058223a20871cf287b7f75ce2eb44ef} 
+\index{Life@{Life}!change\+Life@{change\+Life}}
+\index{change\+Life@{change\+Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{change\+Life()}{changeLife()}}
+{\footnotesize\ttfamily void Life\+::change\+Life (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+modifie la vie par valeur passee en parametre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em une} & valeur positive augmente la vie, une valeur negative la diminue \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_life_a6bbbcb718407c98ce6c031c81685a659}{}\label{class_life_a6bbbcb718407c98ce6c031c81685a659} 
+\index{Life@{Life}!get\+Life@{get\+Life}}
+\index{get\+Life@{get\+Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{get\+Life()}{getLife()}}
+{\footnotesize\ttfamily int Life\+::get\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Donne la valeur de la vie. 
+
+\begin{DoxyReturn}{Returns}
+la valeur de la vie 
+\end{DoxyReturn}
+\hypertarget{class_life_a38250d67d459d3887e8d5adddf6b5129}{}\label{class_life_a38250d67d459d3887e8d5adddf6b5129} 
+\index{Life@{Life}!init@{init}}
+\index{init@{init}!Life@{Life}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Life\+::init (\begin{DoxyParamCaption}\item[{int}]{life = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialise la vie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em la} & valeur initiale de la vie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_life_ab33e0ff7003ed8c066d61ddb65ffc321}{}\label{class_life_ab33e0ff7003ed8c066d61ddb65ffc321} 
+\index{Life@{Life}!operator()@{operator()}}
+\index{operator()@{operator()}!Life@{Life}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void Life\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE} const \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Prend en charge la reception d\textquotesingle{}un message \hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contient} & une valeur de modification de la vie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_g_o_message_handler}{G\+O\+Message\+Handler}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

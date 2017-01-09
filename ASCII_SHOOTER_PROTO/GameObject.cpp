@@ -50,18 +50,18 @@ void GameObject::update()
 	}
 }
 
-void GameObject::wake()
-{
-
-	for (Component* comp : _components)
-	{
-		GameComponent* script = dynamic_cast<GameComponent*>(comp);
-		if (script)
-		{
-			script->wake();
-		}
-	}
-}
+//void GameObject::wake()
+//{
+//
+//	for (Component* comp : _components)
+//	{
+//		GameComponent* script = dynamic_cast<GameComponent*>(comp);
+//		if (script)
+//		{
+//			script->wake();
+//		}
+//	}
+//}
 
 void GameObject::addComponent(Component* c)
 {
@@ -110,7 +110,7 @@ string GameObject::getTag()
 	return _tag;
 }
 
-bool GameObject::tagged(string tag)
+bool GameObject::isTagged(string tag)
 {
 	return (_tag == tag);
 }

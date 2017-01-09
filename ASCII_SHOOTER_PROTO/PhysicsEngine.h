@@ -4,6 +4,8 @@
 
 #include <vector>
 
+/** \brief Classe prenant en charge la gestion de la physique du jeu
+*/
 class PhysicsEngine
 {
 
@@ -12,10 +14,14 @@ public:
 	PhysicsEngine();
 	~PhysicsEngine();
 	
+	/** \brief initialise la matrice d'ignore physics
+	*/
 	void initPhysics();
 
+	/** \brief verifie les collisions entre tous les objets
+	*/
 	void update();
-
+	
 private:
 
 	void initIgnoreMatrix();

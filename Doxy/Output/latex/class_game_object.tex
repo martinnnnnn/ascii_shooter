@@ -1,72 +1,251 @@
 \hypertarget{class_game_object}{}\section{Game\+Object Class Reference}
 \label{class_game_object}\index{Game\+Object@{Game\+Object}}
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_game_object_adbdcffa0cd72ae987c033e61f6b12880}{}\label{class_game_object_adbdcffa0cd72ae987c033e61f6b12880} 
 {\bfseries Game\+Object} (std\+::string tag, \hyperlink{structvector2}{vector2} position=\{ 0, 0 \})
 \item 
-\hypertarget{class_game_object_adad7d284b670db722a2fda8e6a7997e3}{}\label{class_game_object_adad7d284b670db722a2fda8e6a7997e3} 
-void {\bfseries update} ()
+void \hyperlink{class_game_object_adad7d284b670db722a2fda8e6a7997e3}{update} ()
+\begin{DoxyCompactList}\small\item\em Update le \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_object_a0d68cf2723dd5cedc12579c08c97df04}{add\+Component} (\hyperlink{class_component}{Component} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ajoute un \hyperlink{class_component}{Component} au \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_component}{Component} $\ast$ $>$ \& \hyperlink{class_game_object_addbe774c69d6fb3b50acbef5f74d7319}{get\+Components} ()
+\begin{DoxyCompactList}\small\item\em Recupere la liste des \hyperlink{class_component}{Component}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_game_object_a1c50376c7f24439359a3962f57dfd513}{get\+Component} ()
+\begin{DoxyCompactList}\small\item\em Recupere un \hyperlink{class_component}{Component}  Le type de \hyperlink{class_component}{Component} que l\textquotesingle{}on veut recuperer. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Donne le nom du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe}{set\+Name} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Set le nom du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{send\+Message} (G\+O\+Message)
+\begin{DoxyCompactList}\small\item\em Envoie d\textquotesingle{}un message. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_object_aaac5b633ac19e0facea0b7cb6f93ccef}{is\+Tagged} (std\+::string tag)
+\begin{DoxyCompactList}\small\item\em Test sur le tag de l\textquotesingle{}object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_game_object_a099a32d11225032f9a1a35d15a307a27}{get\+Tag} ()
 \item 
-\hypertarget{class_game_object_ac59b76cad79c58e3ac0d4f40c4f1d4b2}{}\label{class_game_object_ac59b76cad79c58e3ac0d4f40c4f1d4b2} 
-void {\bfseries wake} ()
-\item 
-\hypertarget{class_game_object_a0d68cf2723dd5cedc12579c08c97df04}{}\label{class_game_object_a0d68cf2723dd5cedc12579c08c97df04} 
-void {\bfseries add\+Component} (\hyperlink{class_component}{Component} $\ast$)
-\item 
-\hypertarget{class_game_object_addbe774c69d6fb3b50acbef5f74d7319}{}\label{class_game_object_addbe774c69d6fb3b50acbef5f74d7319} 
-std\+::vector$<$ \hyperlink{class_component}{Component} $\ast$ $>$ \& {\bfseries get\+Components} ()
-\item 
-\hypertarget{class_game_object_a1c50376c7f24439359a3962f57dfd513}{}\label{class_game_object_a1c50376c7f24439359a3962f57dfd513} 
-{\footnotesize template$<$class T $>$ }\\T $\ast$ {\bfseries get\+Component} ()
-\item 
-\hypertarget{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee}{}\label{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee} 
-std\+::string {\bfseries get\+Name} ()
-\item 
-\hypertarget{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe}{}\label{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe} 
-void {\bfseries set\+Name} (std\+::string name)
-\item 
-\hypertarget{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{}\label{class_game_object_a4ef97dbdc30378013b28f4708cb708a0} 
-void {\bfseries send\+Message} (G\+O\+Message)
-\item 
-\hypertarget{class_game_object_ac214d8070daddbffd595afdc69c02fd0}{}\label{class_game_object_ac214d8070daddbffd595afdc69c02fd0} 
-bool {\bfseries tagged} (std\+::string tag)
-\item 
-\hypertarget{class_game_object_a099a32d11225032f9a1a35d15a307a27}{}\label{class_game_object_a099a32d11225032f9a1a35d15a307a27} 
-std\+::string {\bfseries get\+Tag} ()
-\item 
-\hypertarget{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349}{}\label{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349} 
-void {\bfseries set\+Tag} (std\+::string tag)
-\item 
-\hypertarget{class_game_object_af54107b086de78b1fc6190088bdfb468}{}\label{class_game_object_af54107b086de78b1fc6190088bdfb468} 
-void {\bfseries kill} ()
-\item 
-\hypertarget{class_game_object_af509340fc9f95d8d39afe7ec63d90128}{}\label{class_game_object_af509340fc9f95d8d39afe7ec63d90128} 
-bool {\bfseries is\+Dead} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349}{set\+Tag} (std\+::string tag)
+\begin{DoxyCompactList}\small\item\em Set le tag du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_object_af54107b086de78b1fc6190088bdfb468}{kill} ()
+\begin{DoxyCompactList}\small\item\em Marque le \hyperlink{class_game_object}{Game\+Object} comme mort, il sera supprime par le \hyperlink{class_game_engine}{Game\+Engine} lors de la tick suivante. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_object_af509340fc9f95d8d39afe7ec63d90128}{is\+Dead} ()
+\begin{DoxyCompactList}\small\item\em Donne l\textquotesingle{}etat de vie du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b}{}\label{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b} 
-static bool {\bfseries find\+Tag} (std\+::string tag)
-\end{DoxyCompactItemize}
+static bool \hyperlink{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b}{find\+Tag} (std\+::string tag)
+\begin{DoxyCompactList}\small\item\em Methode de classe qui recherche si le tag existe (si un object a deja utilise le tag) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_game_object_a86822412aab633fe5a2a78678fdf55b7}{}\label{class_game_object_a86822412aab633fe5a2a78678fdf55b7} 
-\hyperlink{structvector2}{vector2} {\bfseries \+\_\+position}
-\item 
+\hyperlink{structvector2}{vector2} \hyperlink{class_game_object_a86822412aab633fe5a2a78678fdf55b7}{\+\_\+position}
+\begin{DoxyCompactList}\small\item\em Position de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
 \hypertarget{class_game_object_ac1f91cb46f40c3b254505d66a9da1653}{}\label{class_game_object_ac1f91cb46f40c3b254505d66a9da1653} 
-bool {\bfseries \+\_\+enabled}
-\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{class_game_object_af3e9291ac62f2c143d14f2885058182e}{}\label{class_game_object_af3e9291ac62f2c143d14f2885058182e} 
-static std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+\+Tags} = \{ \char`\"{}Default\char`\"{} \}
-\end{DoxyCompactItemize}
+bool \hyperlink{class_game_object_ac1f91cb46f40c3b254505d66a9da1653}{\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em etat d\textquotesingle{}activation de l\textquotesingle{}objet \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Recuperation a partir du \hyperlink{class_game_engine}{Game\+Engine}, qui ajoute directement l\textquotesingle{}object a la scene courante Conteneur de componsants, Ajout de composants au \hyperlink{class_game_object}{Game\+Object}, qui representent \+:
+\begin{DoxyItemize}
+\item Soit des fonctions de base (physique, graphique)
+\item Soit des scripts permet d\textquotesingle{}obtenir des comportements pour complexes 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_object_a0d68cf2723dd5cedc12579c08c97df04}{}\label{class_game_object_a0d68cf2723dd5cedc12579c08c97df04} 
+\index{Game\+Object@{Game\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{add\+Component()}{addComponent()}}
+{\footnotesize\ttfamily void Game\+Object\+::add\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{class_component}{Component} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Ajoute un \hyperlink{class_component}{Component} au \hyperlink{class_game_object}{Game\+Object}. 
+
+Le \hyperlink{class_component}{Component} passe en parametre est ajoute a la liste de componsants du \hyperlink{class_game_object}{Game\+Object}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointeur} & sur \hyperlink{class_component}{Component} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b}{}\label{class_game_object_a2ceae5dbcdd0e8621d08c6c461068a2b} 
+\index{Game\+Object@{Game\+Object}!find\+Tag@{find\+Tag}}
+\index{find\+Tag@{find\+Tag}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{find\+Tag()}{findTag()}}
+{\footnotesize\ttfamily bool Game\+Object\+::find\+Tag (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Methode de classe qui recherche si le tag existe (si un object a deja utilise le tag) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em le} & tag a rechercher \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_object_a1c50376c7f24439359a3962f57dfd513}{}\label{class_game_object_a1c50376c7f24439359a3962f57dfd513} 
+\index{Game\+Object@{Game\+Object}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Component()}{getComponent()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Game\+Object\+::get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupere un \hyperlink{class_component}{Component}  Le type de \hyperlink{class_component}{Component} que l\textquotesingle{}on veut recuperer. 
+
+\begin{DoxyReturn}{Returns}
+Le premier \hyperlink{class_component}{Component} qui a pour type le Type T passe en parametre 
+\end{DoxyReturn}
+\hypertarget{class_game_object_addbe774c69d6fb3b50acbef5f74d7319}{}\label{class_game_object_addbe774c69d6fb3b50acbef5f74d7319} 
+\index{Game\+Object@{Game\+Object}!get\+Components@{get\+Components}}
+\index{get\+Components@{get\+Components}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Components()}{getComponents()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{class_component}{Component} $\ast$ $>$ \& Game\+Object\+::get\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recupere la liste des \hyperlink{class_component}{Component}. 
+
+\begin{DoxyReturn}{Returns}
+Une référence vers le vector contenant les \hyperlink{class_component}{Component} du Game\+Objet 
+\end{DoxyReturn}
+\hypertarget{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee}{}\label{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee} 
+\index{Game\+Object@{Game\+Object}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Game\+Object\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Donne le nom du \hyperlink{class_game_object}{Game\+Object}. 
+
+Le nom du \hyperlink{class_game_object}{Game\+Object} n\textquotesingle{}ai pas utilise par l\textquotesingle{}enjmin, il ne sert qu\textquotesingle{}a organiser le code si le client le desire
+
+\begin{DoxyReturn}{Returns}
+Le nom du \hyperlink{class_game_object}{Game\+Object} 
+\end{DoxyReturn}
+\hypertarget{class_game_object_a099a32d11225032f9a1a35d15a307a27}{}\label{class_game_object_a099a32d11225032f9a1a35d15a307a27} 
+\index{Game\+Object@{Game\+Object}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{get\+Tag()}{getTag()}}
+{\footnotesize\ttfamily string Game\+Object\+::get\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Le tag du \hyperlink{class_game_object}{Game\+Object} 
+\end{DoxyReturn}
+\hypertarget{class_game_object_af509340fc9f95d8d39afe7ec63d90128}{}\label{class_game_object_af509340fc9f95d8d39afe7ec63d90128} 
+\index{Game\+Object@{Game\+Object}!is\+Dead@{is\+Dead}}
+\index{is\+Dead@{is\+Dead}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{is\+Dead()}{isDead()}}
+{\footnotesize\ttfamily bool Game\+Object\+::is\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Donne l\textquotesingle{}etat de vie du \hyperlink{class_game_object}{Game\+Object}. 
+
+Si la valeur de retour est false, le \hyperlink{class_game_object}{Game\+Object} sera supprime au tick suivant
+
+\begin{DoxyReturn}{Returns}
+true si le \hyperlink{class_game_object}{Game\+Object} est vivant, false sinon. 
+\end{DoxyReturn}
+\hypertarget{class_game_object_aaac5b633ac19e0facea0b7cb6f93ccef}{}\label{class_game_object_aaac5b633ac19e0facea0b7cb6f93ccef} 
+\index{Game\+Object@{Game\+Object}!is\+Tagged@{is\+Tagged}}
+\index{is\+Tagged@{is\+Tagged}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{is\+Tagged()}{isTagged()}}
+{\footnotesize\ttfamily bool Game\+Object\+::is\+Tagged (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})}
+
+
+
+Test sur le tag de l\textquotesingle{}object. 
+
+Compare le tag de l\textquotesingle{}objet avec celui passe en parametre
+
+
+\begin{DoxyParams}{Parameters}
+{\em le} & tag a comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si les tags sont identiques, faux sinon 
+\end{DoxyReturn}
+\hypertarget{class_game_object_af54107b086de78b1fc6190088bdfb468}{}\label{class_game_object_af54107b086de78b1fc6190088bdfb468} 
+\index{Game\+Object@{Game\+Object}!kill@{kill}}
+\index{kill@{kill}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily void Game\+Object\+::kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Marque le \hyperlink{class_game_object}{Game\+Object} comme mort, il sera supprime par le \hyperlink{class_game_engine}{Game\+Engine} lors de la tick suivante. 
+
+\hypertarget{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{}\label{class_game_object_a4ef97dbdc30378013b28f4708cb708a0} 
+\index{Game\+Object@{Game\+Object}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{send\+Message()}{sendMessage()}}
+{\footnotesize\ttfamily void Game\+Object\+::send\+Message (\begin{DoxyParamCaption}\item[{G\+O\+Message}]{message }\end{DoxyParamCaption})}
+
+
+
+Envoie d\textquotesingle{}un message. 
+
+Fait passer le message a tous les \hyperlink{class_component}{Component} contenus dans le \hyperlink{class_game_object}{Game\+Object}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & message a envoyer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe}{}\label{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe} 
+\index{Game\+Object@{Game\+Object}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set le nom du \hyperlink{class_game_object}{Game\+Object}. 
+
+Le nom du \hyperlink{class_game_object}{Game\+Object} n\textquotesingle{}ai pas utilise par l\textquotesingle{}enjmin, il ne sert qu\textquotesingle{}a organiser le code si le client le desire
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & nom du \hyperlink{class_game_object}{Game\+Object} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349}{}\label{class_game_object_a2c5d76ea1ebd18e6c3e74cdd680ed349} 
+\index{Game\+Object@{Game\+Object}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{set\+Tag()}{setTag()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Tag (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})}
+
+
+
+Set le tag du \hyperlink{class_game_object}{Game\+Object}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em le} & nouveau nom du tag \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_object_adad7d284b670db722a2fda8e6a7997e3}{}\label{class_game_object_adad7d284b670db722a2fda8e6a7997e3} 
+\index{Game\+Object@{Game\+Object}!update@{update}}
+\index{update@{update}!Game\+Object@{Game\+Object}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+Object\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update le \hyperlink{class_game_object}{Game\+Object}. 
+
+Methode d\textquotesingle{}update, appelee a chaque tick par l\textquotesingle{}engine et qui appelle a son tour les update de tous les composants contenus dans le Game\+Obect 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -1,5 +1,14 @@
 \hypertarget{class_game_component}{}\section{Game\+Component Class Reference}
 \label{class_game_component}\index{Game\+Component@{Game\+Component}}
+
+
+Classe de base des scripts utilisateurs.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Component.\+h$>$}
+
 Inheritance diagram for Game\+Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,33 +18,22 @@ Inheritance diagram for Game\+Component\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_component_a2323370728584eb85a822086605e0a09}{}\label{class_game_component_a2323370728584eb85a822086605e0a09} 
-{\bfseries Game\+Component} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
-\item 
+\hyperlink{class_game_component_a2323370728584eb85a822086605e0a09}{Game\+Component} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{class_game_component}{Game\+Component} qui enregistre le \hyperlink{class_game_object}{Game\+Object} qui le contient. \end{DoxyCompactList}\item 
 \hypertarget{class_game_component_ae602abc2eed3c565f410548aad7ee14e}{}\label{class_game_component_ae602abc2eed3c565f410548aad7ee14e} 
-virtual void {\bfseries init} ()
-\item 
+virtual void \hyperlink{class_game_component_ae602abc2eed3c565f410548aad7ee14e}{init} ()
+\begin{DoxyCompactList}\small\item\em Initialise le \hyperlink{class_game_component}{Game\+Component}. \end{DoxyCompactList}\item 
 \hypertarget{class_game_component_a3334ffc79f717357970abfbdb7eb4024}{}\label{class_game_component_a3334ffc79f717357970abfbdb7eb4024} 
-virtual void {\bfseries wake} ()
-\item 
+virtual void \hyperlink{class_game_component_a3334ffc79f717357970abfbdb7eb4024}{wake} ()
+\begin{DoxyCompactList}\small\item\em Reset le \hyperlink{class_game_component}{Game\+Component}. \end{DoxyCompactList}\item 
 \hypertarget{class_game_component_a65fc004cd4dc7593052327ff874bb2f0}{}\label{class_game_component_a65fc004cd4dc7593052327ff874bb2f0} 
-virtual void {\bfseries update} ()=0
-\item 
+virtual void \hyperlink{class_game_component_a65fc004cd4dc7593052327ff874bb2f0}{update} ()=0
+\begin{DoxyCompactList}\small\item\em Update le \hyperlink{class_game_component}{Game\+Component} a chaque tick. \end{DoxyCompactList}\item 
 \hypertarget{class_game_component_a30bad20d9395895883bb75b998e9c974}{}\label{class_game_component_a30bad20d9395895883bb75b998e9c974} 
-void {\bfseries send\+Message} (G\+O\+Message)
-\item 
-\hypertarget{class_game_component_a449c4a683e9bb42e0ab939a06e7b0640}{}\label{class_game_component_a449c4a683e9bb42e0ab939a06e7b0640} 
-virtual void {\bfseries receive\+Message} (G\+O\+Message)
-\item 
-\hypertarget{class_game_component_a08f10c1b2271188ac5234f7b43443b8b}{}\label{class_game_component_a08f10c1b2271188ac5234f7b43443b8b} 
-virtual void {\bfseries operator()} (\hyperlink{struct_d_e_s_t_r_o_y}{D\+E\+S\+T\+R\+OY} const \&e)
-\item 
-\hypertarget{class_game_component_a64f76f90b5f53dd87bf3318aef852c95}{}\label{class_game_component_a64f76f90b5f53dd87bf3318aef852c95} 
-virtual void {\bfseries operator()} (\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE} const \&e)
-\item 
-\hypertarget{class_game_component_a1c7bb1ad02f664b16cd7edf5b49db3fd}{}\label{class_game_component_a1c7bb1ad02f664b16cd7edf5b49db3fd} 
-virtual void {\bfseries operator()} (\hyperlink{struct_u_i_c_o_n_t_e_x_t}{U\+I\+C\+O\+N\+T\+E\+XT} const \&e)
-\end{DoxyCompactItemize}
+void \hyperlink{class_game_component_a30bad20d9395895883bb75b998e9c974}{send\+Message} (G\+O\+Message)
+\begin{DoxyCompactList}\small\item\em Envoie un message au \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_component_a449c4a683e9bb42e0ab939a06e7b0640}{receive\+Message} (G\+O\+Message)
+\begin{DoxyCompactList}\small\item\em Recoit et traite un message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,6 +46,47 @@ virtual void {\bfseries operator()} (\hyperlink{struct_u_i_c_o_n_t_e_x_t}{U\+I\+
 \hypertarget{class_game_component_af36779887688a4f6db73e3d594c0e516}{}\label{class_game_component_af36779887688a4f6db73e3d594c0e516} 
 \hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries \+\_\+game\+Object}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de base des scripts utilisateurs. 
+
+Offre une interface pour les fonctionalites de base des scripts utilisateurs 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_component_a2323370728584eb85a822086605e0a09}{}\label{class_game_component_a2323370728584eb85a822086605e0a09} 
+\index{Game\+Component@{Game\+Component}!Game\+Component@{Game\+Component}}
+\index{Game\+Component@{Game\+Component}!Game\+Component@{Game\+Component}}
+\subsubsection{\texorpdfstring{Game\+Component()}{GameComponent()}}
+{\footnotesize\ttfamily Game\+Component\+::\+Game\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \hyperlink{class_game_component}{Game\+Component} qui enregistre le \hyperlink{class_game_object}{Game\+Object} qui le contient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & pointeur vers un \hyperlink{class_game_object}{Game\+Object} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_component_a449c4a683e9bb42e0ab939a06e7b0640}{}\label{class_game_component_a449c4a683e9bb42e0ab939a06e7b0640} 
+\index{Game\+Component@{Game\+Component}!receive\+Message@{receive\+Message}}
+\index{receive\+Message@{receive\+Message}!Game\+Component@{Game\+Component}}
+\subsubsection{\texorpdfstring{receive\+Message()}{receiveMessage()}}
+{\footnotesize\ttfamily void Game\+Component\+::receive\+Message (\begin{DoxyParamCaption}\item[{G\+O\+Message}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Recoit et traite un message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & message a traiter \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

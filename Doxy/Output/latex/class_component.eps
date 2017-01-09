@@ -178,7 +178,6 @@ boxfont setfont
 (GameComponent) cw
 (GraphicsComponent) cw
 (MovementComponent) cw
-(UIContextComponent) cw
 (Enemy) cw
 (Game) cw
 (Life) cw
@@ -197,12 +196,11 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Component) 4.000000 2.000000 box
+ (Component) 3.500000 2.000000 box
  (ColliderComponent) 0.000000 1.000000 box
  (GameComponent) 3.000000 1.000000 box
  (GraphicsComponent) 4.000000 1.000000 box
  (MovementComponent) 5.000000 1.000000 box
- (UIContextComponent) 6.000000 1.000000 box
  (Enemy) 0.000000 0.000000 box
  (Game) 1.000000 0.000000 box
  (Life) 2.000000 0.000000 box
@@ -214,9 +212,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 4.000000 1.250000 out
+1 3.500000 1.250000 out
 solid
-0.000000 6.000000 2.000000 conn
+0.000000 5.000000 2.000000 conn
 solid
 0 0.000000 1.750000 in
 solid
@@ -229,8 +227,6 @@ solid
 0 4.000000 1.750000 in
 solid
 0 5.000000 1.750000 in
-solid
-0 6.000000 1.750000 in
 solid
 0 0.000000 0.750000 in
 solid

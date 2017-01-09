@@ -15,6 +15,7 @@ using namespace std;
 
 void FileReader::readSprite(string path, vector<pixel>& sprite)
 {
+	sprite.clear();
 	ifstream file(path);
 	string str;
 	int i = 0;
@@ -36,6 +37,7 @@ void FileReader::readSprite(string path, vector<pixel>& sprite)
 
 void FileReader::readPhysicsIgnore(string path, vector<PhysicsIgnore>& ignore)
 {
+	ignore.clear();
 	ifstream file(path);
 	string str;
 

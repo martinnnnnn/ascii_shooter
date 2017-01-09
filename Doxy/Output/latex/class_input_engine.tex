@@ -1,14 +1,46 @@
 \hypertarget{class_input_engine}{}\section{Input\+Engine Class Reference}
 \label{class_input_engine}\index{Input\+Engine@{Input\+Engine}}
+
+
+Classe prenant en charge la gestion des inputs utilisateur.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Engine.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_input_engine_ab4eacde9d5826d436bc2f62b241f5fd9}{}\label{class_input_engine_ab4eacde9d5826d436bc2f62b241f5fd9} 
-void {\bfseries update} ()
-\item 
+void \hyperlink{class_input_engine_ab4eacde9d5826d436bc2f62b241f5fd9}{update} ()
+\begin{DoxyCompactList}\small\item\em enregistre les inputs a chaque tour de gameloop \end{DoxyCompactList}\item 
+bool \hyperlink{class_input_engine_a83ec547886c948af86305bc9fd576b63}{is\+Key\+Down} (K\+EY)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si un input a ete utilise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe prenant en charge la gestion des inputs utilisateur. 
+
+\subsection{Member Function Documentation}
 \hypertarget{class_input_engine_a83ec547886c948af86305bc9fd576b63}{}\label{class_input_engine_a83ec547886c948af86305bc9fd576b63} 
-bool {\bfseries is\+Key\+Down} (K\+EY)
-\end{DoxyCompactItemize}
+\index{Input\+Engine@{Input\+Engine}!is\+Key\+Down@{is\+Key\+Down}}
+\index{is\+Key\+Down@{is\+Key\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection{\texorpdfstring{is\+Key\+Down()}{isKeyDown()}}
+{\footnotesize\ttfamily bool Input\+Engine\+::is\+Key\+Down (\begin{DoxyParamCaption}\item[{K\+EY}]{key }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si un input a ete utilise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em la} & touche que l\textquotesingle{}on veut verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si la touche correspondante a ete pressee, faux sinon 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

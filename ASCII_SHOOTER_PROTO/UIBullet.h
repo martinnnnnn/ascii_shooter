@@ -13,14 +13,18 @@ class UIBullet : public GameComponent
 
 public:
 
+	/**
+	*	cf. constructeur de GameComponent
+	*/
 	UIBullet(GameObject*);
-	~UIBullet();
+	virtual ~UIBullet();
+
 
 	virtual void init();
 	virtual void update();
 	void setContext(UICONTEXT context);
 
-	virtual void operator()(UICONTEXT const& e);
+	//virtual void operator()(UICONTEXT const& e);
 
 protected:
 

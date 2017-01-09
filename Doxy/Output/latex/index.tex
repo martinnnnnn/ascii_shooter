@@ -1,0 +1,20 @@
+\begin{DoxyAuthor}{Authors}
+Whitney Burner 
+
+Raphael Bailly 
+
+Martin Penard
+\end{DoxyAuthor}
+Jeu A\+S\+C\+II de shoot \textquotesingle{}em up. Pour lancer le jeu, simplement lancer l\textquotesingle{}executable, Pour utiliser le moteur du jeu \+:
+\begin{DoxyItemize}
+\item Creer les scenes necessaires au jeu
+\item Ajouter les scenes au singleton \hyperlink{class_game_engine}{Game\+Engine}
+\item Ajouter un (ou des) \hyperlink{class_game_object}{Game\+Object} a une scene \+:
+\begin{DoxyItemize}
+\item Definir la scene comme scene de debut avec Game\+Engine\+::instance().define\+Starting\+Scene()
+\item Ajouter le ou les nouveaux objects au \hyperlink{class_game_engine}{Game\+Engine}
+\item Ajouter le ou les scripts (\hyperlink{class_game_component}{Game\+Component}) au \hyperlink{class_game_object}{Game\+Object}
+\end{DoxyItemize}
+\item Definir la scene par lequel le jeu doit vraiment commencer
+\item Appeler Game\+Engine\+::instance().run() 
+\end{DoxyItemize}

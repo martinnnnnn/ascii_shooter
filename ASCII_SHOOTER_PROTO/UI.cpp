@@ -3,7 +3,6 @@
 #include "GameObject.h"
 #include "GameEngine.h"
 #include "InputEngine.h"
-#include "UIContextComponent.h"
 #include "GraphicsComponent.h"
 #include "UIBullet.h"
 

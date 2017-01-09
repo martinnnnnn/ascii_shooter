@@ -1,15 +1,46 @@
 \hypertarget{class_graphics_engine}{}\section{Graphics\+Engine Class Reference}
 \label{class_graphics_engine}\index{Graphics\+Engine@{Graphics\+Engine}}
+
+
+Classe permettant l\textquotesingle{}affichage du jeu.  
+
+
+
+
+{\ttfamily \#include $<$Graphics\+Engine.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_graphics_engine_a854823b6346b54852e1c3bfdc20cf8c9}{}\label{class_graphics_engine_a854823b6346b54852e1c3bfdc20cf8c9} 
-void {\bfseries init\+Console} ()
-\item 
-\hypertarget{class_graphics_engine_adef77faf4662503f4b6d2036ac9184fa}{}\label{class_graphics_engine_adef77faf4662503f4b6d2036ac9184fa} 
-void {\bfseries render} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_graphics_engine_a854823b6346b54852e1c3bfdc20cf8c9}{init\+Console} ()
+\begin{DoxyCompactList}\small\item\em initialise la console \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_engine_adef77faf4662503f4b6d2036ac9184fa}{render} ()
+\begin{DoxyCompactList}\small\item\em prend en charge l\textquotesingle{}affichage du jeu \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Classe permettant l\textquotesingle{}affichage du jeu. 
+
+Initialise la console et le buffer affiche les objets affichables dans la console a chaque tour de gameloop 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_engine_adef77faf4662503f4b6d2036ac9184fa}{}\label{class_graphics_engine_adef77faf4662503f4b6d2036ac9184fa} 
+\index{Graphics\+Engine@{Graphics\+Engine}!render@{render}}
+\index{render@{render}!Graphics\+Engine@{Graphics\+Engine}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Graphics\+Engine\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prend en charge l\textquotesingle{}affichage du jeu 
+
+execute les actions suivantes \+:
+\begin{DoxyItemize}
+\item clear le buffer
+\item draw les objets dans le buffer
+\item ecrit le buffer dans la console 
+\end{DoxyItemize}
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

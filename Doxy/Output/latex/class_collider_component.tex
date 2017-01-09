@@ -1,5 +1,14 @@
 \hypertarget{class_collider_component}{}\section{Collider\+Component Class Reference}
 \label{class_collider_component}\index{Collider\+Component@{Collider\+Component}}
+
+
+\hyperlink{class_component}{Component} contenant la hitbox du \hyperlink{class_game_object}{Game\+Object} qui le contient.  
+
+
+
+
+{\ttfamily \#include $<$Collider\+Component.\+h$>$}
+
 Inheritance diagram for Collider\+Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,18 +18,57 @@ Inheritance diagram for Collider\+Component\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd}{}\label{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd} 
-{\bfseries Collider\+Component} (float x, float y)
-\item 
-\hypertarget{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a}{}\label{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a} 
-{\bfseries Collider\+Component} (\hyperlink{structvector2}{vector2} hitbox)
-\end{DoxyCompactItemize}
+\hypertarget{class_collider_component_a881902a4586b64d363793a028339d1b7}{}\label{class_collider_component_a881902a4586b64d363793a028339d1b7} 
+\hyperlink{class_collider_component_a881902a4586b64d363793a028339d1b7}{Collider\+Component} ()
+\begin{DoxyCompactList}\small\item\em Creer un Collider de base de taille (0,0) \end{DoxyCompactList}\item 
+\hyperlink{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd}{Collider\+Component} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Creer un Collider de taille (x,y) \end{DoxyCompactList}\item 
+\hyperlink{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a}{Collider\+Component} (\hyperlink{structvector2}{vector2} hitbox)
+\begin{DoxyCompactList}\small\item\em Creer un Collider a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_collider_component_a9d1e72e0e45b58f19d644aae2fd2ee4c}{}\label{class_collider_component_a9d1e72e0e45b58f19d644aae2fd2ee4c} 
 \hyperlink{structvector2}{vector2} {\bfseries \+\_\+hitbox}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_component}{Component} contenant la hitbox du \hyperlink{class_game_object}{Game\+Object} qui le contient. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd}{}\label{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd} 
+\index{Collider\+Component@{Collider\+Component}!Collider\+Component@{Collider\+Component}}
+\index{Collider\+Component@{Collider\+Component}!Collider\+Component@{Collider\+Component}}
+\subsubsection{\texorpdfstring{Collider\+Component()}{ColliderComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Collider\+Component\+::\+Collider\+Component (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creer un Collider de taille (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: taille x de la hitbox \\
+\hline
+{\em y} & \+: taille y de la hitbox \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a}{}\label{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a} 
+\index{Collider\+Component@{Collider\+Component}!Collider\+Component@{Collider\+Component}}
+\index{Collider\+Component@{Collider\+Component}!Collider\+Component@{Collider\+Component}}
+\subsubsection{\texorpdfstring{Collider\+Component()}{ColliderComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Collider\+Component\+::\+Collider\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{structvector2}{vector2}}]{hitbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creer un Collider a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structvector2}{vector2}} & qui sera copie dans la hitbox du Collider \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

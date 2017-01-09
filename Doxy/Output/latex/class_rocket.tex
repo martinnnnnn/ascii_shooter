@@ -9,14 +9,11 @@ Inheritance diagram for Rocket\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_rocket_aa1ab185c1ec59b4983114b41efd59ea0}{}\label{class_rocket_aa1ab185c1ec59b4983114b41efd59ea0} 
-{\bfseries Rocket} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\hyperlink{class_rocket_aa1ab185c1ec59b4983114b41efd59ea0}{Rocket} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
 \item 
-\hypertarget{class_rocket_aa0f4dcf673358e841e4b4b2fa0b1462e}{}\label{class_rocket_aa0f4dcf673358e841e4b4b2fa0b1462e} 
-virtual void {\bfseries update} ()
-\item 
-\hypertarget{class_rocket_ace1889a9c70f40bafb955dbc48ecc9d0}{}\label{class_rocket_ace1889a9c70f40bafb955dbc48ecc9d0} 
-void {\bfseries init} (int life=1, \hyperlink{structvector2}{vector2} velocity=\{ 1, 0 \}, float speed=6.\+0)
+void \hyperlink{class_rocket_ace1889a9c70f40bafb955dbc48ecc9d0}{init} (int life=1, \hyperlink{structvector2}{vector2} velocity=\{ 1, 0 \}, float speed=6.\+0)
+\begin{DoxyCompactList}\small\item\em initialise le joueur avec les valeurs necessaires \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_rocket_aa0f4dcf673358e841e4b4b2fa0b1462e}{update} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -36,6 +33,47 @@ void {\bfseries move} ()
 \hypertarget{class_rocket_aa0c252aa8094bc942d743aed643fcf08}{}\label{class_rocket_aa0c252aa8094bc942d743aed643fcf08} 
 float {\bfseries \+\_\+speed}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_rocket_aa1ab185c1ec59b4983114b41efd59ea0}{}\label{class_rocket_aa1ab185c1ec59b4983114b41efd59ea0} 
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{Rocket()}{Rocket()}}
+{\footnotesize\ttfamily Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+cf. constructeur de \hyperlink{class_game_component}{Game\+Component} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_rocket_ace1889a9c70f40bafb955dbc48ecc9d0}{}\label{class_rocket_ace1889a9c70f40bafb955dbc48ecc9d0} 
+\index{Rocket@{Rocket}!init@{init}}
+\index{init@{init}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Rocket\+::init (\begin{DoxyParamCaption}\item[{int}]{life = {\ttfamily 1},  }\item[{\hyperlink{structvector2}{vector2}}]{velocity = {\ttfamily \{~1,~0~\}},  }\item[{float}]{speed = {\ttfamily 6.0} }\end{DoxyParamCaption})}
+
+
+
+initialise le joueur avec les valeurs necessaires 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vie} & initiale du missile \\
+\hline
+{\em vitesse} & initiale du joueur \\
+\hline
+{\em fire} & rate du joueur \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_rocket_aa0f4dcf673358e841e4b4b2fa0b1462e}{}\label{class_rocket_aa0f4dcf673358e841e4b4b2fa0b1462e} 
+\index{Rocket@{Rocket}!update@{update}}
+\index{update@{update}!Rocket@{Rocket}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Rocket\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+la position du missile 
+
+Implements \hyperlink{class_game_component_a65fc004cd4dc7593052327ff874bb2f0}{Game\+Component}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

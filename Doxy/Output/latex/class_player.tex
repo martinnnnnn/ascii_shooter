@@ -9,15 +9,13 @@ Inheritance diagram for Player\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_player_ac9e2313c9f0599f111d51b1ededc7b59}{}\label{class_player_ac9e2313c9f0599f111d51b1ededc7b59} 
-{\bfseries Player} (\hyperlink{class_game_object}{Game\+Object} $\ast$g)
+\hyperlink{class_player_ac9e2313c9f0599f111d51b1ededc7b59}{Player} (\hyperlink{class_game_object}{Game\+Object} $\ast$g)
 \item 
-\hypertarget{class_player_abde7e5d5c9b248e9d151b63342a1651f}{}\label{class_player_abde7e5d5c9b248e9d151b63342a1651f} 
-virtual void {\bfseries init} (int life=5, std\+::string path=\char`\"{}Ship1.\+txt\char`\"{}, float speed=20, float fire\+Rate=100.\+0)
-\item 
+virtual void \hyperlink{class_player_abde7e5d5c9b248e9d151b63342a1651f}{init} (int life=5, std\+::string path=\char`\"{}Ship1.\+txt\char`\"{}, float speed=20, float fire\+Rate=100.\+0)
+\begin{DoxyCompactList}\small\item\em initialise le joueur avec les valeurs necessaires \end{DoxyCompactList}\item 
 \hypertarget{class_player_a82c3476f3e65a4e2ac6bcd040771bdd4}{}\label{class_player_a82c3476f3e65a4e2ac6bcd040771bdd4} 
-virtual void {\bfseries update} ()
-\end{DoxyCompactItemize}
+virtual void \hyperlink{class_player_a82c3476f3e65a4e2ac6bcd040771bdd4}{update} ()
+\begin{DoxyCompactList}\small\item\em gere le deplacement et le tire du joueur \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,6 +67,39 @@ double {\bfseries \+\_\+previous2}
 \hypertarget{class_player_a407fc2edf69c09187c1f2b9ac1bb9310}{}\label{class_player_a407fc2edf69c09187c1f2b9ac1bb9310} 
 double {\bfseries \+\_\+elapsed2}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_player_ac9e2313c9f0599f111d51b1ededc7b59}{}\label{class_player_ac9e2313c9f0599f111d51b1ededc7b59} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{g }\end{DoxyParamCaption})}
+
+cf. constructeur de \hyperlink{class_game_component}{Game\+Component} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_abde7e5d5c9b248e9d151b63342a1651f}{}\label{class_player_abde7e5d5c9b248e9d151b63342a1651f} 
+\index{Player@{Player}!init@{init}}
+\index{init@{init}!Player@{Player}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Player\+::init (\begin{DoxyParamCaption}\item[{int}]{life = {\ttfamily 5},  }\item[{std\+::string}]{path = {\ttfamily \char`\"{}Ship1.txt\char`\"{}},  }\item[{float}]{speed = {\ttfamily 20},  }\item[{float}]{fire\+Rate = {\ttfamily 100.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialise le joueur avec les valeurs necessaires 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vie} & initiale du joueur \\
+\hline
+{\em path} & vers le sprite du joueur \\
+\hline
+{\em vitesse} & initiale du joueur \\
+\hline
+{\em fire} & rate du joueur \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

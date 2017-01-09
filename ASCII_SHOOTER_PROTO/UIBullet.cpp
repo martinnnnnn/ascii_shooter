@@ -148,7 +148,7 @@ void UIBullet::update()
 	}
 }
 
-void UIBullet::operator()(UICONTEXT const& e)
-{
-	setContext(e);
-}
+//void UIBullet::operator()(UICONTEXT const& e)
+//{
+//	setContext(e);
+//}

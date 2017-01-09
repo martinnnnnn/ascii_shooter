@@ -11,11 +11,19 @@ class Game : public GameComponent
 
 public:
 
+	/**
+	*	cf. constructeur de GameComponent
+	*/
 	Game(GameObject*);
-	~Game();
 
+	virtual ~Game();
+
+	/**	\brief initialise le joueur et le generateur d'enemis */
 	virtual void init();
 
+	/**	\brief gere les inputs pour mettre le jeu en pause
+	*	Gere l'apparition des enemis
+	*/
 	virtual void update();
 
 protected:

@@ -17,8 +17,7 @@ class Scene;
 
 
 /** GameEngine
-Takes care of initiating the other engines and running the game
-Takes care of switching between scenes
+Takes care of initiating the other engines, handleling the scenes and running the game
 */
 class GameEngine
 {

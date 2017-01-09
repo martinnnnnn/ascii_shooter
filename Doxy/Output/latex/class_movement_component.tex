@@ -1,5 +1,14 @@
 \hypertarget{class_movement_component}{}\section{Movement\+Component Class Reference}
 \label{class_movement_component}\index{Movement\+Component@{Movement\+Component}}
+
+
+\hyperlink{class_component}{Component} une velocite.  
+
+
+
+
+{\ttfamily \#include $<$Movement\+Component.\+h$>$}
+
 Inheritance diagram for Movement\+Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,18 +18,57 @@ Inheritance diagram for Movement\+Component\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{}\label{class_movement_component_ac9432753c0b29b1206e04c139e56c757} 
-{\bfseries Movement\+Component} (\hyperlink{structvector2}{vector2} v)
-\item 
-\hypertarget{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{}\label{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1} 
-{\bfseries Movement\+Component} (float x, float y)
-\end{DoxyCompactItemize}
+\hypertarget{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f}{}\label{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f} 
+\hyperlink{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f}{Movement\+Component} ()
+\begin{DoxyCompactList}\small\item\em Creer un Movement de base de taille (0,0) \end{DoxyCompactList}\item 
+\hyperlink{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{Movement\+Component} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Creer un Movement de taille (x,y) \end{DoxyCompactList}\item 
+\hyperlink{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{Movement\+Component} (\hyperlink{structvector2}{vector2} v)
+\begin{DoxyCompactList}\small\item\em Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_movement_component_aedea2037e7a30160bc7f847055b08088}{}\label{class_movement_component_aedea2037e7a30160bc7f847055b08088} 
 \hyperlink{structvector2}{vector2} {\bfseries \+\_\+velocity}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_component}{Component} une velocite. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{}\label{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1} 
+\index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
+\index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
+\subsubsection{\texorpdfstring{Movement\+Component()}{MovementComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creer un Movement de taille (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: velocite x du Movement \\
+\hline
+{\em y} & \+: velocite y du Movement \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{}\label{class_movement_component_ac9432753c0b29b1206e04c139e56c757} 
+\index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
+\index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
+\subsubsection{\texorpdfstring{Movement\+Component()}{MovementComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{structvector2}{vector2}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{structvector2}{vector2}} & qui sera copie dans la velocite du Movement \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

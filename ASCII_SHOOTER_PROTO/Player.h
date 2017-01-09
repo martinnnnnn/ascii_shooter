@@ -11,10 +11,21 @@ class Player : public GameComponent
 
 public:
 
+	/**
+	*	cf. constructeur de GameComponent
+	*/
 	Player(GameObject* g);
 	virtual ~Player();
 
+	/** \brief initialise le joueur avec les valeurs necessaires
+	*	\param vie initiale du joueur
+	*	\param path vers le sprite du joueur
+	*	\param vitesse initiale du joueur
+	*	\param fire rate du joueur
+	*/
 	virtual void init(int life = 5, std::string path = "Ship1.txt", float speed = 20, float fireRate = 100.0);
+	
+	/** \brief gere le deplacement et le tire du joueur */
 	virtual void update();
 
 

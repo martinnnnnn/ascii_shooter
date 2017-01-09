@@ -1,4 +1,21 @@
+/**
+@mainpage ASCII PROJECT - COURS C++
+@authors Whitney Burner
+@authors Raphael Bailly
+@authors Martin Penard
 
+Jeu ASCII de shoot 'em up.
+Pour lancer le jeu, simplement lancer l'executable,
+Pour utiliser le moteur du jeu :
+	- Creer les scenes necessaires au jeu
+	- Ajouter les scenes au singleton GameEngine
+	- Ajouter un (ou des) GameObject a une scene :
+		- Definir la scene comme scene de debut avec GameEngine::instance().defineStartingScene()
+		- Ajouter le ou les nouveaux objects au GameEngine
+		- Ajouter le ou les scripts (GameComponent) au GameObject
+	- Definir la scene par lequel le jeu doit vraiment commencer
+	- Appeler GameEngine::instance().run()
+*/
 
 #include "GameEngine.h"
 #include "Game.h"

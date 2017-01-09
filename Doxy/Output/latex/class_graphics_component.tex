@@ -1,5 +1,14 @@
 \hypertarget{class_graphics_component}{}\section{Graphics\+Component Class Reference}
 \label{class_graphics_component}\index{Graphics\+Component@{Graphics\+Component}}
+
+
+\hyperlink{class_component}{Component} contenant un sprite a afficher dans la console.  
+
+
+
+
+{\ttfamily \#include $<$Graphics\+Component.\+h$>$}
+
 Inheritance diagram for Graphics\+Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,18 +18,58 @@ Inheritance diagram for Graphics\+Component\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_graphics_component_af9c775bcb7f51c76c25d32b3152cd5b2}{}\label{class_graphics_component_af9c775bcb7f51c76c25d32b3152cd5b2} 
-{\bfseries Graphics\+Component} (std\+::string path)
-\item 
-\hypertarget{class_graphics_component_ab3e309ee0a8dcbc1b927d38bf2e1d8c9}{}\label{class_graphics_component_ab3e309ee0a8dcbc1b927d38bf2e1d8c9} 
-void {\bfseries set\+Sprite} (std\+::string path)
-\end{DoxyCompactItemize}
+\hypertarget{class_graphics_component_a67fc1b715989a5e18d32e26b27a55c50}{}\label{class_graphics_component_a67fc1b715989a5e18d32e26b27a55c50} 
+\hyperlink{class_graphics_component_a67fc1b715989a5e18d32e26b27a55c50}{Graphics\+Component} ()
+\begin{DoxyCompactList}\small\item\em Creer un \hyperlink{class_graphics_component}{Graphics\+Component} par defaut, vide. \end{DoxyCompactList}\item 
+\hyperlink{class_graphics_component_af9c775bcb7f51c76c25d32b3152cd5b2}{Graphics\+Component} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Creer un \hyperlink{class_graphics_component}{Graphics\+Component} a partir d\textquotesingle{}un path vers un fichier texte. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_component_ab3e309ee0a8dcbc1b927d38bf2e1d8c9}{set\+Sprite} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Set le sprite du \hyperlink{class_graphics_component}{Graphics\+Component} a partir d\textquotesingle{}un path vers un fichier texte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_graphics_component_ab16775099a92f1442b2b2a1f41da997e}{}\label{class_graphics_component_ab16775099a92f1442b2b2a1f41da997e} 
 std\+::vector$<$ \hyperlink{structpixel}{pixel} $>$ {\bfseries \+\_\+sprite}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_component}{Component} contenant un sprite a afficher dans la console. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphics_component_af9c775bcb7f51c76c25d32b3152cd5b2}{}\label{class_graphics_component_af9c775bcb7f51c76c25d32b3152cd5b2} 
+\index{Graphics\+Component@{Graphics\+Component}!Graphics\+Component@{Graphics\+Component}}
+\index{Graphics\+Component@{Graphics\+Component}!Graphics\+Component@{Graphics\+Component}}
+\subsubsection{\texorpdfstring{Graphics\+Component()}{GraphicsComponent()}}
+{\footnotesize\ttfamily Graphics\+Component\+::\+Graphics\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Creer un \hyperlink{class_graphics_component}{Graphics\+Component} a partir d\textquotesingle{}un path vers un fichier texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & vers le fichier contenant un sprite sous format .txt \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_component_ab3e309ee0a8dcbc1b927d38bf2e1d8c9}{}\label{class_graphics_component_ab3e309ee0a8dcbc1b927d38bf2e1d8c9} 
+\index{Graphics\+Component@{Graphics\+Component}!set\+Sprite@{set\+Sprite}}
+\index{set\+Sprite@{set\+Sprite}!Graphics\+Component@{Graphics\+Component}}
+\subsubsection{\texorpdfstring{set\+Sprite()}{setSprite()}}
+{\footnotesize\ttfamily void Graphics\+Component\+::set\+Sprite (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Set le sprite du \hyperlink{class_graphics_component}{Graphics\+Component} a partir d\textquotesingle{}un path vers un fichier texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & vers le fichier contenant un sprite sous format .txt \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

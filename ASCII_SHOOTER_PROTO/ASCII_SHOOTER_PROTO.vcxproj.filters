@@ -99,9 +99,6 @@
     <ClInclude Include="NYTimer.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
     <ClInclude Include="Parametres.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
@@ -147,9 +144,6 @@
     <ClInclude Include="UI.h">
       <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
     </ClInclude>
-    <ClInclude Include="UIContextComponent.h">
-      <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
-    </ClInclude>
     <ClInclude Include="UIBullet.h">
       <Filter>Header Files\Component\GameComponent\Scripts\UI</Filter>
     </ClInclude>
@@ -172,9 +166,6 @@
     </ClCompile>
     <ClCompile Include="Component.cpp">
       <Filter>Source Files\Component</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector.cpp">
-      <Filter>Source Files\Utils</Filter>
     </ClCompile>
     <ClCompile Include="FileReader.cpp">
       <Filter>Source Files\Utils</Filter>
@@ -216,9 +207,6 @@
       <Filter>Source Files\Component\GameComponent\Scripts\Utils</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
-      <Filter>Source Files\Component\GameComponent\Scripts\UI</Filter>
-    </ClCompile>
-    <ClCompile Include="UIContextComponent.cpp">
       <Filter>Source Files\Component\GameComponent\Scripts\UI</Filter>
     </ClCompile>
     <ClCompile Include="UIBullet.cpp">

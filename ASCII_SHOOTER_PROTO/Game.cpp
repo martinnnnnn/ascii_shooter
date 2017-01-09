@@ -9,7 +9,6 @@
 #include "Enemy.h"
 #include "Parametres.h"
 #include "NYTimer.h"
-#include "UIContextComponent.h"
 #include "MessageHandler.h"
 #include "Scene.h"
 

@@ -1,8 +1,8 @@
 #pragma once
 
-class GameObject;
 
-
+/** \brief Interface de Component
+*/
 class Component 
 {
 public:

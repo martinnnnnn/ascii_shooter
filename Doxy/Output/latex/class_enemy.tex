@@ -9,20 +9,11 @@ Inheritance diagram for Enemy\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_enemy_ae7858f3f39ec6e48b741b7a8eaff6c1d}{}\label{class_enemy_ae7858f3f39ec6e48b741b7a8eaff6c1d} 
-{\bfseries Enemy} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\hyperlink{class_enemy_ae7858f3f39ec6e48b741b7a8eaff6c1d}{Enemy} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
 \item 
-\hypertarget{class_enemy_a2966f61498d00e488697a80ef4447ebe}{}\label{class_enemy_a2966f61498d00e488697a80ef4447ebe} 
-virtual void {\bfseries init} (int life=2, std\+::string=\char`\"{}Enemy1.\+txt\char`\"{}, float speed=1.\+0)
-\item 
-\hypertarget{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64}{}\label{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64} 
-virtual void {\bfseries update} ()
-\item 
-\hypertarget{class_enemy_a932135eb4e5987c4e873b4e55a5bf215}{}\label{class_enemy_a932135eb4e5987c4e873b4e55a5bf215} 
-virtual void {\bfseries operator()} (\hyperlink{struct_d_e_s_t_r_o_y}{D\+E\+S\+T\+R\+OY} const \&e)
-\item 
-\hypertarget{class_enemy_a187b85da2861026493d68c81fb4ce5b9}{}\label{class_enemy_a187b85da2861026493d68c81fb4ce5b9} 
-virtual void {\bfseries operator()} (\hyperlink{struct_c_h_a_n_g_e___l_i_f_e}{C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+FE} const \&e)
+virtual void \hyperlink{class_enemy_a2966f61498d00e488697a80ef4447ebe}{init} (int life=2, std\+::string=\char`\"{}Enemy1.\+txt\char`\"{}, float speed=1.\+0)
+\begin{DoxyCompactList}\small\item\em initialise l\textquotesingle{}enemy avec les valeurs necessaires \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64}{update} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -42,6 +33,47 @@ void {\bfseries move} ()
 \hypertarget{class_enemy_a5ad8a827b28dd24331a434d1993d5c01}{}\label{class_enemy_a5ad8a827b28dd24331a434d1993d5c01} 
 float {\bfseries \+\_\+speed}
 \end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_enemy_ae7858f3f39ec6e48b741b7a8eaff6c1d}{}\label{class_enemy_ae7858f3f39ec6e48b741b7a8eaff6c1d} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+cf. constructeur de \hyperlink{class_game_component}{Game\+Component} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_enemy_a2966f61498d00e488697a80ef4447ebe}{}\label{class_enemy_a2966f61498d00e488697a80ef4447ebe} 
+\index{Enemy@{Enemy}!init@{init}}
+\index{init@{init}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Enemy\+::init (\begin{DoxyParamCaption}\item[{int}]{life = {\ttfamily 2},  }\item[{std\+::string}]{ = {\ttfamily \char`\"{}Enemy1.txt\char`\"{}},  }\item[{float}]{speed = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+initialise l\textquotesingle{}enemy avec les valeurs necessaires 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vie} & initiale de l\textquotesingle{}enemy \\
+\hline
+{\em path} & vers le sprite de l\textquotesingle{}enemy \\
+\hline
+{\em vitesse} & initiale de l\textquotesingle{}enemy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64}{}\label{class_enemy_ad55ee71b5a8c23fbd00b3c368b90cc64} 
+\index{Enemy@{Enemy}!update@{update}}
+\index{update@{update}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Enemy\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+la position de l\textquotesingle{}enemy 
+
+Implements \hyperlink{class_game_component_a65fc004cd4dc7593052327ff874bb2f0}{Game\+Component}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
