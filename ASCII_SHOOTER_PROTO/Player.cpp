@@ -106,7 +106,8 @@ void Player::move()
 	MovementComponent* movement = _gameObject->getComponent<MovementComponent>();
 	if (movement)
 	{
-		movement->_velocity = vel;
+		//movement->_velocity = vel;
+		movement->setVelocity(vel);
 	}
 }
 

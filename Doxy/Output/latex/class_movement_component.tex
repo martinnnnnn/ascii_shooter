@@ -24,13 +24,13 @@ Inheritance diagram for Movement\+Component\+:\begin{figure}[H]
 \hyperlink{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{Movement\+Component} (float x, float y)
 \begin{DoxyCompactList}\small\item\em Creer un Movement de taille (x,y) \end{DoxyCompactList}\item 
 \hyperlink{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{Movement\+Component} (\hyperlink{structvector2}{vector2} v)
-\begin{DoxyCompactList}\small\item\em Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{class_movement_component_aedea2037e7a30160bc7f847055b08088}{}\label{class_movement_component_aedea2037e7a30160bc7f847055b08088} 
-\hyperlink{structvector2}{vector2} {\bfseries \+\_\+velocity}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\item 
+\hyperlink{structvector2}{vector2} \& \hyperlink{class_movement_component_a1b3cc0445b34ceafb79d694ecafbcd2c}{get\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em Getter de la velocite. \end{DoxyCompactList}\item 
+void \hyperlink{class_movement_component_a713784d4a7ccca4e4ad946f73d2db6cd}{set\+Velocity} (const \hyperlink{structvector2}{vector2} \&v)
+\begin{DoxyCompactList}\small\item\em Setter de la velocite par copie. \end{DoxyCompactList}\item 
+void \hyperlink{class_movement_component_add7629692ed68862ff1fd1f3515e2ea6}{set\+Velocity} (const float x, const float y)
+\begin{DoxyCompactList}\small\item\em Setter de la velocite a partir de 2 float. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -67,6 +67,52 @@ Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vecto
 
 \begin{DoxyParams}{Parameters}
 {\em \hyperlink{structvector2}{vector2}} & qui sera copie dans la velocite du Movement \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_movement_component_a1b3cc0445b34ceafb79d694ecafbcd2c}{}\label{class_movement_component_a1b3cc0445b34ceafb79d694ecafbcd2c} 
+\index{Movement\+Component@{Movement\+Component}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!Movement\+Component@{Movement\+Component}}
+\subsubsection{\texorpdfstring{get\+Velocity()}{getVelocity()}}
+{\footnotesize\ttfamily \hyperlink{structvector2}{vector2}\& Movement\+Component\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de la velocite. 
+
+\begin{DoxyReturn}{Returns}
+une reference vers la velocite 
+\end{DoxyReturn}
+\hypertarget{class_movement_component_a713784d4a7ccca4e4ad946f73d2db6cd}{}\label{class_movement_component_a713784d4a7ccca4e4ad946f73d2db6cd} 
+\index{Movement\+Component@{Movement\+Component}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Movement\+Component@{Movement\+Component}}
+\subsubsection{\texorpdfstring{set\+Velocity()}{setVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Movement\+Component\+::set\+Velocity (\begin{DoxyParamCaption}\item[{const \hyperlink{structvector2}{vector2} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la velocite par copie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em la} & velocite a copier \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_movement_component_add7629692ed68862ff1fd1f3515e2ea6}{}\label{class_movement_component_add7629692ed68862ff1fd1f3515e2ea6} 
+\index{Movement\+Component@{Movement\+Component}!set\+Velocity@{set\+Velocity}}
+\index{set\+Velocity@{set\+Velocity}!Movement\+Component@{Movement\+Component}}
+\subsubsection{\texorpdfstring{set\+Velocity()}{setVelocity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Movement\+Component\+::set\+Velocity (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la velocite a partir de 2 float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valeurs} & x et y a assigner a la velocite \\
 \hline
 \end{DoxyParams}
 

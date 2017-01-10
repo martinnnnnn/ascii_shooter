@@ -48,7 +48,7 @@ void PhysicsEngine::update()
 		MovementComponent* movement = current->getComponent<MovementComponent>();
 		if (movement)
 		{
-			updatePosition(current->_position, movement->_velocity);
+			updatePosition(current->_position, movement->getVelocity());
 		}
 
 		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
@@ -64,7 +64,7 @@ void PhysicsEngine::update()
 				ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
 				if (otherCollider)
 				{
-					if (intersect(current->_position, currentCollider->_hitbox, other->_position, otherCollider->_hitbox))
+					if (intersect(current->_position, currentCollider->getHitBox(), other->_position, otherCollider->getHitBox()))
 					{
 						if (!ignore(current->getTag(), other->getTag()))
 						{

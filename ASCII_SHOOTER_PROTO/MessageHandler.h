@@ -13,6 +13,9 @@ typedef boost::variant<
 	UICONTEXT
 	> GOMessage;
 
+/**
+*
+*/
 class GOMessageHandler : public boost::static_visitor<void>
 {
 public:

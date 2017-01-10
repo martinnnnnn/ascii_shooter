@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ascii: ColliderComponent Class Reference</title>
+<title>ASCII : The Game: ColliderComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ascii
+   <div id="projectname">ASCII : The Game
    </div>
   </td>
  </tr>
@@ -60,7 +60,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_collider_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ColliderComponent Class Reference</div>  </div>
@@ -93,9 +93,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a952c8989df7be45036d88ff5c5ab3e0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collider_component.html#a952c8989df7be45036d88ff5c5ab3e0a">ColliderComponent</a> (<a class="el" href="structvector2.html">vector2</a> hitbox)</td></tr>
 <tr class="memdesc:a952c8989df7be45036d88ff5c5ab3e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creer un Collider a partir d'un <a class="el" href="structvector2.html">vector2</a>.  <a href="#a952c8989df7be45036d88ff5c5ab3e0a">More...</a><br /></td></tr>
 <tr class="separator:a952c8989df7be45036d88ff5c5ab3e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac745e518856d98ae5f0d53b356c390f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collider_component.html#ac745e518856d98ae5f0d53b356c390f7">setHitBox</a> (const <a class="el" href="structvector2.html">vector2</a> &amp;hb)</td></tr>
+<tr class="memdesc:ac745e518856d98ae5f0d53b356c390f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de la hitbox par copie.  <a href="#ac745e518856d98ae5f0d53b356c390f7">More...</a><br /></td></tr>
+<tr class="separator:ac745e518856d98ae5f0d53b356c390f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bf46d6f8049e2832e07a896a91f7b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collider_component.html#a21bf46d6f8049e2832e07a896a91f7b0">setHitBox</a> (const float x, const float y)</td></tr>
+<tr class="memdesc:a21bf46d6f8049e2832e07a896a91f7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de la hitbox a partir de 2 float.  <a href="#a21bf46d6f8049e2832e07a896a91f7b0">More...</a><br /></td></tr>
+<tr class="separator:a21bf46d6f8049e2832e07a896a91f7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c16141d83ab4d8c249d8f61355f691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvector2.html">vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collider_component.html#ad0c16141d83ab4d8c249d8f61355f691">getHitBox</a> ()</td></tr>
+<tr class="memdesc:ad0c16141d83ab4d8c249d8f61355f691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de la hitbox.  <a href="#ad0c16141d83ab4d8c249d8f61355f691">More...</a><br /></td></tr>
+<tr class="separator:ad0c16141d83ab4d8c249d8f61355f691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a9d1e72e0e45b58f19d644aae2fd2ee4c"><td class="memItemLeft" align="right" valign="top"><a id="a9d1e72e0e45b58f19d644aae2fd2ee4c"></a>
 <a class="el" href="structvector2.html">vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_hitbox</b></td></tr>
 <tr class="separator:a9d1e72e0e45b58f19d644aae2fd2ee4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +185,113 @@ Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="structvector2.html">vector2</a></td><td>qui sera copie dans la hitbox du Collider </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad0c16141d83ab4d8c249d8f61355f691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c16141d83ab4d8c249d8f61355f691">&sect;&nbsp;</a></span>getHitBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvector2.html">vector2</a>&amp; ColliderComponent::getHitBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter de la hitbox. </p>
+<dl class="section return"><dt>Returns</dt><dd>une référence la hitbox </dd></dl>
+
+</div>
+</div>
+<a id="ac745e518856d98ae5f0d53b356c390f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac745e518856d98ae5f0d53b356c390f7">&sect;&nbsp;</a></span>setHitBox() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColliderComponent::setHitBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structvector2.html">vector2</a> &amp;&#160;</td>
+          <td class="paramname"><em>hb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter de la hitbox par copie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">la</td><td>hitbox a copier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a21bf46d6f8049e2832e07a896a91f7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bf46d6f8049e2832e07a896a91f7b0">&sect;&nbsp;</a></span>setHitBox() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColliderComponent::setHitBox </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter de la hitbox a partir de 2 float. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valeurs</td><td>x et y de la hitbox </td></tr>
   </table>
   </dd>
 </dl>

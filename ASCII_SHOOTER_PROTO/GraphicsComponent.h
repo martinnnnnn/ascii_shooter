@@ -30,12 +30,19 @@ public:
 	*/
 	void setSprite(std::string path);
 
+	/** \brief Get le sprite
+	*	\return le sprite
+	*/
+	std::vector<pixel>& getSprite()
+	{
+		return _sprite;
+	}
 
-	std::vector<pixel> _sprite;
 
 private:
 
 
+	std::vector<pixel> _sprite;
 
 };
 

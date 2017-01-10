@@ -62,7 +62,7 @@ void GraphicsEngine::draw()
 
 		if (graphics)
 		{
-			for (pixel px : graphics->_sprite)
+			for (pixel px : graphics->getSprite())
 			{
 				map[posY + px.y][posX + px.x] = px.c;
 			}

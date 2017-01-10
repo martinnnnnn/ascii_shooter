@@ -24,8 +24,14 @@ Inheritance diagram for Collider\+Component\+:\begin{figure}[H]
 \hyperlink{class_collider_component_a879db27a552a7dd9642a8fc6e36616cd}{Collider\+Component} (float x, float y)
 \begin{DoxyCompactList}\small\item\em Creer un Collider de taille (x,y) \end{DoxyCompactList}\item 
 \hyperlink{class_collider_component_a952c8989df7be45036d88ff5c5ab3e0a}{Collider\+Component} (\hyperlink{structvector2}{vector2} hitbox)
-\begin{DoxyCompactList}\small\item\em Creer un Collider a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\begin{DoxyCompactList}\small\item\em Creer un Collider a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\item 
+void \hyperlink{class_collider_component_ac745e518856d98ae5f0d53b356c390f7}{set\+Hit\+Box} (const \hyperlink{structvector2}{vector2} \&hb)
+\begin{DoxyCompactList}\small\item\em Setter de la hitbox par copie. \end{DoxyCompactList}\item 
+void \hyperlink{class_collider_component_a21bf46d6f8049e2832e07a896a91f7b0}{set\+Hit\+Box} (const float x, const float y)
+\begin{DoxyCompactList}\small\item\em Setter de la hitbox a partir de 2 float. \end{DoxyCompactList}\item 
+\hyperlink{structvector2}{vector2} \& \hyperlink{class_collider_component_ad0c16141d83ab4d8c249d8f61355f691}{get\+Hit\+Box} ()
+\begin{DoxyCompactList}\small\item\em Getter de la hitbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_collider_component_a9d1e72e0e45b58f19d644aae2fd2ee4c}{}\label{class_collider_component_a9d1e72e0e45b58f19d644aae2fd2ee4c} 
@@ -67,6 +73,52 @@ Creer un Collider a partir d\textquotesingle{}un \hyperlink{structvector2}{vecto
 
 \begin{DoxyParams}{Parameters}
 {\em \hyperlink{structvector2}{vector2}} & qui sera copie dans la hitbox du Collider \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_collider_component_ad0c16141d83ab4d8c249d8f61355f691}{}\label{class_collider_component_ad0c16141d83ab4d8c249d8f61355f691} 
+\index{Collider\+Component@{Collider\+Component}!get\+Hit\+Box@{get\+Hit\+Box}}
+\index{get\+Hit\+Box@{get\+Hit\+Box}!Collider\+Component@{Collider\+Component}}
+\subsubsection{\texorpdfstring{get\+Hit\+Box()}{getHitBox()}}
+{\footnotesize\ttfamily \hyperlink{structvector2}{vector2}\& Collider\+Component\+::get\+Hit\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de la hitbox. 
+
+\begin{DoxyReturn}{Returns}
+une référence la hitbox 
+\end{DoxyReturn}
+\hypertarget{class_collider_component_ac745e518856d98ae5f0d53b356c390f7}{}\label{class_collider_component_ac745e518856d98ae5f0d53b356c390f7} 
+\index{Collider\+Component@{Collider\+Component}!set\+Hit\+Box@{set\+Hit\+Box}}
+\index{set\+Hit\+Box@{set\+Hit\+Box}!Collider\+Component@{Collider\+Component}}
+\subsubsection{\texorpdfstring{set\+Hit\+Box()}{setHitBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Collider\+Component\+::set\+Hit\+Box (\begin{DoxyParamCaption}\item[{const \hyperlink{structvector2}{vector2} \&}]{hb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la hitbox par copie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em la} & hitbox a copier \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collider_component_a21bf46d6f8049e2832e07a896a91f7b0}{}\label{class_collider_component_a21bf46d6f8049e2832e07a896a91f7b0} 
+\index{Collider\+Component@{Collider\+Component}!set\+Hit\+Box@{set\+Hit\+Box}}
+\index{set\+Hit\+Box@{set\+Hit\+Box}!Collider\+Component@{Collider\+Component}}
+\subsubsection{\texorpdfstring{set\+Hit\+Box()}{setHitBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Collider\+Component\+::set\+Hit\+Box (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter de la hitbox a partir de 2 float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valeurs} & x et y de la hitbox \\
 \hline
 \end{DoxyParams}
 

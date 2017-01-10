@@ -28,11 +28,35 @@ public:
 
 	virtual ~ColliderComponent() {}
 
+	/**	\brief Setter de la hitbox par copie
+	*	\param la hitbox a copier
+	*/
+	void setHitBox(const vector2 & hb)
+	{
+		_hitbox = hb;
+	}
 
-	vector2 _hitbox;
+	/** \brief Setter de la hitbox a partir de 2 float
+	*	\param valeurs x et y de la hitbox
+	*/
+	void setHitBox(const float x, const float y)
+	{
+		_hitbox.x = x;
+		_hitbox.y = y;
+	}
+
+	/** \brief Getter de la hitbox
+	*	\return une référence la hitbox
+	*/
+	vector2& getHitBox()
+	{
+		return _hitbox;
+	}
+
 
 protected:
 
+	vector2 _hitbox;
 
 
 };

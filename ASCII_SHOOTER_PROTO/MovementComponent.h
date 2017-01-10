@@ -27,10 +27,36 @@ public:
 
 	virtual ~MovementComponent();
 
-	vector2 _velocity;
+	/**	\brief Getter de la velocite
+	*	\return une reference vers la velocite
+	*/
+	vector2& getVelocity()
+	{
+		return _velocity;
+	}
+
+	/**	\brief Setter de la velocite par copie
+	*	\param la velocite a copier
+	*/
+	void setVelocity(const vector2& v)
+	{
+		_velocity.x = v.x;
+		_velocity.y = v.y;
+	}
+
+	/**	\brief Setter de la velocite a partir de 2 float
+	*	\param valeurs x et y a assigner a la velocite
+	*/
+	void setVelocity(const float x, const float y)
+	{
+		_velocity.x = x;
+		_velocity.y = y;
+	}
+
 
 private:
 
+	vector2 _velocity;
 
 };
 

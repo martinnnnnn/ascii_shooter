@@ -1,0 +1,16 @@
+digraph "GameEngine"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GameEngine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _physics" ];
+  Node2 [label="PhysicsEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_physics_engine.html",tooltip="Classe prenant en charge la gestion de la physique du jeu. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _graphics" ];
+  Node3 [label="GraphicsEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_graphics_engine.html",tooltip="Classe permettant l&#39;affichage du jeu. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _currentScene\n_nextScene\n_previousScene" ];
+  Node4 [label="Scene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _inputs" ];
+  Node5 [label="InputEngine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_input_engine.html",tooltip="Classe prenant en charge la gestion des inputs utilisateur. "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _timer" ];
+  Node6 [label="NYTimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_y_timer.html"];
+}
