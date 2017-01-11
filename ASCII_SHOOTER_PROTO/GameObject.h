@@ -91,7 +91,7 @@ public:
 	*
 	*	\param Le message a envoyer
 	*/
-	void sendMessage(GOMessage);
+	void sendMessage(const GOMessage) const;
 
 	/** \brief Test sur le tag de l'object
 	*

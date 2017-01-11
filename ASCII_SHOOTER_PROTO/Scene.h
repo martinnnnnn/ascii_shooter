@@ -30,7 +30,7 @@ public:
 	//void receiveMessage(SCMessage message);
 	//void sendMessage(SCMessage message);
 
-	void sendMessage(GOMessage);
+	void sendGOMessage(const GOMessage) const;
 
 
 	std::string _name;

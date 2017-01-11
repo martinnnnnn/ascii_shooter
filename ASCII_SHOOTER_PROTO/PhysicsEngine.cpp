@@ -35,7 +35,7 @@ void PhysicsEngine::initIgnoreMatrix()
 void PhysicsEngine::update()
 {
 	
-	vector<GameObject*>& gameObjects = GameEngine::instance().getObjects();
+	vector<GameObject*>& gameObjects = GameEngine::instance().getCurrentObjects();
 
 	for (unsigned int i = 0; i < gameObjects.size(); ++i)
 	{

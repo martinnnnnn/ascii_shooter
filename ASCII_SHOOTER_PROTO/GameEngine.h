@@ -40,10 +40,12 @@ public:
 
 	void switchScene(std::string newScene);
 	void sendMessage(SCMessage message);
+	void sendGOMessage(const std::string sceneName, const GOMessage msg);
+	void sendGOMessage(const Scene* scene, const GOMessage msg);
 
 	void run();
 
-	std::vector<GameObject*>& getObjects();
+	std::vector<GameObject*>& getCurrentObjects();
 	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
 	void addNewObjects();
 

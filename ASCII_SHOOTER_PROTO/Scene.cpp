@@ -88,9 +88,9 @@ vector<GameObject*>& Scene::getObjects()
 //}
 
 
-void Scene::sendMessage(GOMessage message)
+void Scene::sendGOMessage(const GOMessage message) const
 {
-	for (GameObject* obj : _objects)
+	for (GameObject* const obj : _objects)
 	{
 		obj->sendMessage(message);
 	}

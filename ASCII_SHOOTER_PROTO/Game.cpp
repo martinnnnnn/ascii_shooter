@@ -44,7 +44,7 @@ void Game::handleInputs()
 {
 	if (GameEngine::instance()._inputs->isKeyDown(KEY_PAUSE))
 	{
-		GameEngine::instance().getScene("UI")->sendMessage(UICONTEXT{ "Pause" });
+		GameEngine::instance().sendGOMessage("UI", UICONTEXT{ "Pause" });
 		GameEngine::instance().switchScene("UI");
 	}
 }

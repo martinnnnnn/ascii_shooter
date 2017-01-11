@@ -73,7 +73,7 @@ vector<Component*>& GameObject::getComponents()
 	return _components;
 }
 
-void GameObject::sendMessage(GOMessage message)
+void GameObject::sendMessage(const GOMessage message) const
 {
 	for (Component* c : _components)
 	{

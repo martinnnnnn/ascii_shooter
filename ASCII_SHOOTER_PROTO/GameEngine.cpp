@@ -54,7 +54,7 @@ void GameEngine::addNewObjects()
 }
 
 
-vector<GameObject*>& GameEngine::getObjects() 
+vector<GameObject*>& GameEngine::getCurrentObjects() 
 {
 	return _currentScene->getObjects(); 
 }
@@ -165,6 +165,20 @@ void GameEngine::sendMessage(SCMessage message)
 	}
 }
 
+
+void GameEngine::sendGOMessage(const string sceneName, const GOMessage msg)
+{
+	const Scene* scene = getScene(sceneName);
+	sendGOMessage(scene,msg);
+}
+
+void GameEngine::sendGOMessage(const Scene* scene, const GOMessage msg)
+{
+	if (scene)
+	{
+		scene->sendGOMessage(msg);
+	}
+}
 
 
 void GameEngine::run()
