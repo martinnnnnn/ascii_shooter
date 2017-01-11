@@ -54,7 +54,7 @@ void GameEngine::addNewObjects()
 }
 
 
-vector<GameObject*>* GameEngine::getObjects() 
+vector<GameObject*>& GameEngine::getObjects() 
 {
 	return _currentScene->getObjects(); 
 }
@@ -68,7 +68,7 @@ void GameEngine::passObject(GameObject* obj)
 
 GameObject* GameEngine::findObjectWithTag(string tag)
 {
-	for (GameObject* obj : *(_currentScene->getObjects()))
+	for (GameObject* obj : _currentScene->getObjects())
 	{
 		if (obj->getTag() == tag)
 		{
@@ -211,11 +211,7 @@ void GameEngine::cleanCurrentScene()
 void GameEngine::update()
 {
 	_inputs->update();
-	for (GameObject* obj : *(_currentScene->getObjects()))
-	{
-		obj->update();
-
-	}
+	_currentScene->update();
 }
 
 void GameEngine::updatePhysics()

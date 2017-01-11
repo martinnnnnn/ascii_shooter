@@ -18,13 +18,14 @@ public:
 
 
 	void init();
+	void update();
 	void clear();
 	void takeCareOfDeadBodies();
 
 	void addObject(GameObject*);
 	void removeObject(GameObject*);
 
-	std::vector<GameObject*>* getObjects();
+	std::vector<GameObject*>& getObjects();
 
 	//void receiveMessage(SCMessage message);
 	//void sendMessage(SCMessage message);

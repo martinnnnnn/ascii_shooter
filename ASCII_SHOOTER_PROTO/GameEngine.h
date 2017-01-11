@@ -43,7 +43,7 @@ public:
 
 	void run();
 
-	std::vector<GameObject*>* getObjects();
+	std::vector<GameObject*>& getObjects();
 	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
 	void addNewObjects();
 

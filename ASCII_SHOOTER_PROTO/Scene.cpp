@@ -23,6 +23,13 @@ void Scene::init()
 
 }
 
+void Scene::update()
+{
+	for (GameObject* obj : _objects)
+	{
+		obj->update();
+	}
+}
 
 void Scene::clear()
 {
@@ -64,9 +71,9 @@ void Scene::removeObject(GameObject* obj)
 	}
 }
 
-vector<GameObject*>* Scene::getObjects()
+vector<GameObject*>& Scene::getObjects()
 {
-	return &_objects;
+	return _objects;
 }
 
 //void Scene::receiveMessage(SCMessage message)
