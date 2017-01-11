@@ -23,9 +23,11 @@ void UI::init()
 	_graphics = new GraphicsComponent();
 	addComponent(_graphics);
 
+	_gameObject->_position = { 10, 5 };
+
 	GameObject* obj = GameEngine::instance().getNewGameObject("UIBullet");
-	_uiBullet = new UIBullet(_gameObject);
-	_uiBullet->init();
+	_uiBullet = new UIBullet(obj);
+	_uiBullet->init(this);
 	obj->addComponent(_uiBullet);
 
 	setGraphics();
@@ -45,9 +47,9 @@ void UI::wake()
 }
 
 
-void UI::setContext(UICONTEXT context)
+void UI::setContext(UICONTEXT const& context)
 {
-	_context = context;
+	_context.c = context.c;
 	setGraphics();
 	setBulletPositions();
 }

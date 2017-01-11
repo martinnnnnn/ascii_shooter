@@ -8,7 +8,6 @@
 #include <vector>
 #include <string>
 
-class GameEngine;
 class Component;
 
 /**

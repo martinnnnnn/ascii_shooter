@@ -146,9 +146,9 @@ void GameEngine::goToNextScene()
 	_previousScene = _currentScene;
 	if (_nextScene) _currentScene = _nextScene;
 	_nextScene = nullptr;
+	_switchScene = false;
 
 	resetTime();
-	_switchScene = false;
 }
 
 void GameEngine::goToPreviousScene()

@@ -20,9 +20,9 @@ public:
 	virtual ~UIBullet();
 
 
-	virtual void init();
+	virtual void init(UI*);
 	virtual void update();
-	void setContext(UICONTEXT context);
+	void setContext(UICONTEXT const& context);
 
 	//virtual void operator()(UICONTEXT const& e);
 
@@ -38,5 +38,9 @@ protected:
 	std::vector<vector2> _positionsPause;
 	std::vector<vector2> _positionsOption;
 	std::vector<vector2> _positionsEnd;
+
+	float _elapsed;
+	float _previous;
+	float _clickRate;
 };
 

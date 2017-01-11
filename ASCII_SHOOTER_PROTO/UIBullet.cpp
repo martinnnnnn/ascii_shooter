@@ -16,8 +16,12 @@ UIBullet::~UIBullet()
 }
 
 
-void UIBullet::init()
+void UIBullet::init(UI* ui)
 {
+	_ui = ui;
+	_previous = GameEngine::instance()._timer.getElapsedMs();
+	_clickRate = 200.0;
+
 	GraphicsComponent* graphics = new GraphicsComponent();
 	graphics->setSprite("UIBullet.txt");
 	addComponent(graphics);
@@ -38,18 +42,15 @@ void UIBullet::init()
 	_positionsEnd.push_back({ 15,30 });
 
 	setContext(UICONTEXT{ "Menu" });
-	_bulletPosition = 0;
-
 }
 
-void UIBullet::setContext(UICONTEXT context)
+void UIBullet::setContext(UICONTEXT const& context)
 {
 	_context = context;
 	_bulletPosition = 0;
 
 	if (_context.c == "Menu")
 	{
-		_bulletPosition = 0;
 		_currentPositions = &_positionsMenu;
 	}
 	else if (_context.c == "Pause")
@@ -70,18 +71,23 @@ void UIBullet::setContext(UICONTEXT context)
 
 void UIBullet::update()
 {
-	if (GameEngine::instance()._inputs->isKeyDown(KEY_UP))
+	_elapsed = GameEngine::instance()._timer.getElapsedMs() - _previous;
+
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_UP) && _elapsed > _clickRate)
 	{
-		_bulletPosition = (_bulletPosition + 1) % _currentPositions->size();
+		_previous = GameEngine::instance()._timer.getElapsedMs();
+		_bulletPosition = (_bulletPosition - 1);
+		if (_bulletPosition == -1) _bulletPosition = _currentPositions->size() -1;
 	}
 
-	if (GameEngine::instance()._inputs->isKeyDown(KEY_DOWN))
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_DOWN) && _elapsed > _clickRate)
 	{
-		_bulletPosition = (_bulletPosition - 1) % _currentPositions->size();
+		_previous = GameEngine::instance()._timer.getElapsedMs();
+		_bulletPosition = (_bulletPosition + 1) % _currentPositions->size();
 	}
 	_gameObject->_position = (*_currentPositions)[_bulletPosition];
 
-	if (GameEngine::instance()._inputs->isKeyDown(KEY_ENTER))
+	if (GameEngine::instance()._inputs->isKeyDown(KEY_ENTER) && _elapsed > _clickRate)
 	{
 
 		if (_context.c == "Menu")
@@ -101,7 +107,7 @@ void UIBullet::update()
 			}
 		}
 
-		if (_context.c == "Pause")
+		else if (_context.c == "Pause")
 		{
 			if (_bulletPosition == 0)
 			{
@@ -122,14 +128,14 @@ void UIBullet::update()
 				_ui->setContext(UICONTEXT{ "Menu" });
 			}
 		}
-		if (_context.c == "Option")
+		else if (_context.c == "Option")
 		{
 			if (_bulletPosition == 0)
 			{
 				GameEngine::instance().switchScene("GAME");
 			}
 		}
-		if (_context.c == "End")
+		else if (_context.c == "End")
 		{
 			if (_bulletPosition == 0)
 			{

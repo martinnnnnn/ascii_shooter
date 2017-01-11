@@ -21,7 +21,7 @@ public:
 	virtual void update();
 
 	virtual void wake();
-	void setContext(UICONTEXT context);
+	void setContext(UICONTEXT const& context);
 
 
 	virtual void operator()(UICONTEXT const& e);
