@@ -19,7 +19,7 @@ public:
 	*	\param vitesse initiale du joueur
 	*	\param fire rate du joueur
 	*/
-	void init(int life = 1, vector2 velocity = { 1, 0 }, float speed = 6.0);
+	void init(int life = 1, vector2 velocity = { 1, 0 }, float speed = 3.0);
 
 	/**	\update la position du missile */
 	virtual void update();

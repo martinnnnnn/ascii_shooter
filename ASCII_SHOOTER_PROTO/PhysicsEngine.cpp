@@ -88,13 +88,13 @@ void PhysicsEngine::updatePosition(vector2& pos, vector2 vel)
 bool PhysicsEngine::intersect(vector2 pos1, vector2 hitbox1, vector2 pos2, vector2 hitbox2)
 {
 	bool intersecting = false;
-	//if (pos1.x < pos2.x + hitbox2.x
-	//	&& pos2.x < pos1.x + hitbox1.x
-	//	&& pos1.y < pos2.y + hitbox2.y
-	//	&& pos2.y < pos1.y + hitbox1.y)
-	//{
-	//	intersecting =  true;
-	//}
+	if (pos1.x < pos2.x + hitbox2.x
+		&& pos2.x < pos1.x + hitbox1.x
+		&& pos1.y < pos2.y + hitbox2.y
+		&& pos2.y < pos1.y + hitbox1.y)
+	{
+		intersecting =  true;
+	}
 	return intersecting;
 }
 

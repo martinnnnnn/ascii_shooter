@@ -49,7 +49,6 @@ void GameEngine::addNewObjects()
 	for (GameObject* obj : _newObjects)
 	{
 		_currentScene->addObject(obj);
-		//_currentObjects->push_back(obj);
 	}
 	_newObjects.clear();
 }
@@ -166,38 +165,6 @@ void GameEngine::sendMessage(SCMessage message)
 	}
 }
 
-//
-//void GameEngine::gameInit()
-//{
-//	_currentObjects = &_gameObjects;
-//	_currentNewObjects = &_newGameObjects;
-//
-//	_currentObjects->clear();
-//	_currentNewObjects->clear();
-//
-//	GameObject* game = GameEngine::instance().getNewGameObject("Game");
-//	Game* gameScript = new Game(game);
-//	gameScript->init();
-//	game->addComponent(gameScript);
-//
-//	initTime();
-//}
-//
-//void GameEngine::uiInit()
-//{
-//	_currentObjects = &_uiObjects;
-//	_currentNewObjects = &_newUiObjects;
-//
-//	_currentObjects->clear();
-//	_currentNewObjects->clear();
-//
-//	GameObject* ui = GameEngine::instance().getNewGameObject("UI");
-//	UI* uiScript = new UI(ui);
-//	uiScript->init();
-//	ui->addComponent(uiScript);
-//
-//	initTime();
-//}
 
 
 void GameEngine::run()
@@ -233,39 +200,6 @@ void GameEngine::resetTime()
 	_previous = _timer.getElapsedMs();
 	_lag = 0.0;
 }
-
-
-
-//void GameEngine::switchState()
-//{
-//	_newState = false;
-//	_state = (_state == GAME) ? GAMESTATE_UI : GAME;
-//
-//	switch (_state)
-//	{
-//	case GAME:
-//		_currentObjects = &_gameObjects;
-//		_currentNewObjects = &_newGameObjects;
-//		break;
-//	case GAMESTATE_UI:
-//		_currentObjects = &_uiObjects;
-//		_currentNewObjects = &_newUiObjects;
-//		break;
-//	}
-//
-//	for (GameObject* obj : _passingGameObjects)
-//	{
-//		_currentNewObjects->push_back(obj);
-//	}
-//	_passingGameObjects.clear();
-//
-//	initTime();
-//
-//	for (GameObject* obj : *_currentObjects)
-//	{
-//		obj->wake();
-//	}
-//}
 
 
 
