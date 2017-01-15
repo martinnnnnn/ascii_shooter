@@ -39,7 +39,7 @@ public:
 	Scene* getScene(std::string name);
 
 	void switchScene(std::string newScene);
-	void sendMessage(SCMessage message);
+	void sendSCMessage(SCMessage message);
 	void sendGOMessage(const std::string sceneName, const GOMessage msg);
 	void sendGOMessage(const Scene* scene, const GOMessage msg);
 
@@ -49,7 +49,7 @@ public:
 	GameObject* getNewGameObject(std::string name, vector2 position = { 0,0 });
 	void addNewObjects();
 
-	void passObject(GameObject*);
+	//void passObject(GameObject*);
 
 	GameObject* findObjectWithTag(std::string tag);
 	//std::vector<GameObject*>& findObjectsWithTag(std::string tag);
@@ -85,7 +85,7 @@ protected:
 	Scene* _nextScene;
 
 
-	std::vector<GameObject*> _passingGameObjects;
+	//std::vector<GameObject*> _passingGameObjects;
 
 	GraphicsEngine* _graphics;
 	PhysicsEngine* _physics;

@@ -46,5 +46,6 @@ enum KEY
 	KEY_FIRE4,
 	KEY_PAUSE,
 	KEY_ENTER,
-	KEY_END
+
+	KEY_END,
 };

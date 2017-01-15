@@ -60,10 +60,10 @@ vector<GameObject*>& GameEngine::getCurrentObjects()
 }
 
 
-void GameEngine::passObject(GameObject* obj)
-{
-	_passingGameObjects.push_back(obj);
-}
+//void GameEngine::passObject(GameObject* obj)
+//{
+//	_passingGameObjects.push_back(obj);
+//}
 
 
 GameObject* GameEngine::findObjectWithTag(string tag)
@@ -157,7 +157,7 @@ void GameEngine::goToPreviousScene()
 	goToNextScene();
 }
 
-void GameEngine::sendMessage(SCMessage message)
+void GameEngine::sendSCMessage(SCMessage message)
 {
 	for (Scene* scene : _scenes)
 	{
