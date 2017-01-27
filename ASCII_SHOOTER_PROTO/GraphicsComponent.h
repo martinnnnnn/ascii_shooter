@@ -16,12 +16,12 @@ public:
 
 	/** \brief Creer un GraphicsComponent par defaut, vide
 	*/
-	GraphicsComponent() {}
+	GraphicsComponent(GameObject* obj) : Component(obj) {}
 
 	/** \brief Creer un GraphicsComponent a partir d'un path vers un fichier texte
 	* \param path vers le fichier contenant un sprite sous format .txt
 	*/
-	GraphicsComponent(std::string path);
+	GraphicsComponent(GameObject* obj, std::string path);
 
 	virtual ~GraphicsComponent();
 

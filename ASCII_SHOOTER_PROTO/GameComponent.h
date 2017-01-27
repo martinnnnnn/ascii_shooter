@@ -4,7 +4,7 @@
 #include "MessageHandler.h"
 
 
-class GameObject;
+//class GameObject;
 
 /** \brief Classe de base des scripts utilisateurs
 *	
@@ -19,7 +19,7 @@ public:
 	/** \brief Constructeur de GameComponent qui enregistre le GameObject qui le contient
 	*	\param Un pointeur vers un GameObject
 	*/
-	GameComponent(GameObject*);
+	GameComponent(GameObject* obj);
 	virtual ~GameComponent();
 
 	/** \brief Initialise le GameComponent */
@@ -41,7 +41,7 @@ public:
 
 protected:
 
-	GameObject* _gameObject;
+	/*GameObject* _gameObject;*/
 	Component* addComponent(Component*);
 };
 

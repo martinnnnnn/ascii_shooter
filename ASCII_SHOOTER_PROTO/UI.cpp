@@ -20,7 +20,7 @@ void UI::init()
 {
 	_context.c = "Menu";
 
-	_graphics = new GraphicsComponent();
+	_graphics = new GraphicsComponent(_gameObject);
 	addComponent(_graphics);
 
 	_gameObject->_position = { 10, 5 };

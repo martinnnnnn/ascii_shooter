@@ -42,10 +42,10 @@ void Player::initComponent(int lifeValue, string path)
 	_previous1 = _timer->getElapsedMs();
 	_previous2 = _timer->getElapsedMs();
 
-	GraphicsComponent* graphics = new GraphicsComponent(path);
+	GraphicsComponent* graphics = new GraphicsComponent(_gameObject, path);
 	addComponent(graphics);
 
-	MovementComponent* movement = new MovementComponent();
+	MovementComponent* movement = new MovementComponent(_gameObject);
 	addComponent(movement);
 
 	Life* life = new Life(_gameObject);

@@ -4,9 +4,9 @@
 //using namespace std;
 
 
-Component::Component(/*GameObject* obj*/)
+Component::Component(GameObject* obj)
 {
-	//_gameObject = obj;
+	_gameObject = obj;
 }
 
 

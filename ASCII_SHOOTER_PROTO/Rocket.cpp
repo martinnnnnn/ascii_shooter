@@ -32,15 +32,16 @@ void Rocket::init(int life, vector2 velocity, float speed)
 void Rocket::initComponent(int lifeValue, vector2 velocity)
 {
 
-	GraphicsComponent* graphics = new GraphicsComponent("Rocket.txt");
+	GraphicsComponent* graphics = new GraphicsComponent(_gameObject, "Rocket.txt");
 	addComponent(graphics);
 
 
-	MovementComponent* movement = new MovementComponent(velocity.x * 10, velocity.y * 10);
+	MovementComponent* movement = new MovementComponent(_gameObject, velocity.x * 10, velocity.y * 10);
 	_gameObject->addComponent(movement);
 
-	ColliderComponent* collider = new ColliderComponent(1.0, 1.0);
+	ColliderComponent* collider = new ColliderComponent(_gameObject, 1.0, 1.0);
 	addComponent(collider);
+	//_gameObject->addCollider(collider);
 
 	Life* life = new Life(_gameObject);
 	life->init(lifeValue);

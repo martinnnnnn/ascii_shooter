@@ -22,7 +22,7 @@ void UIBullet::init(UI* ui)
 	_previous = GameEngine::instance()._timer.getElapsedMs();
 	_clickRate = 200.0;
 
-	GraphicsComponent* graphics = new GraphicsComponent();
+	GraphicsComponent* graphics = new GraphicsComponent(_gameObject);
 	graphics->setSprite("UIBullet.txt");
 	addComponent(graphics);
 

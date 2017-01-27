@@ -4,9 +4,9 @@
 using namespace std;
 
 
-GameComponent::GameComponent(GameObject* obj)
+GameComponent::GameComponent(GameObject* obj) : Component(obj)
 {
-	_gameObject = obj;
+	//_gameObject = obj;
 }
 
 

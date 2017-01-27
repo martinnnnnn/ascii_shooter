@@ -37,6 +37,8 @@ void PhysicsEngine::update()
 	
 	vector<GameObject*>& gameObjects = GameEngine::instance().getCurrentObjects();
 
+	vector<ColliderComponent*> colliders;
+
 	for (unsigned int i = 0; i < gameObjects.size(); ++i)
 	{
 		GameObject* current = gameObjects[i];
@@ -51,32 +53,67 @@ void PhysicsEngine::update()
 			updatePosition(current->_position, movement->getVelocity());
 		}
 
-		ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
-		if (currentCollider)
+		ColliderComponent* comp = current->getComponent<ColliderComponent>();
+		if (comp != nullptr)
 		{
-			for (unsigned int j = i+1; j < gameObjects.size(); ++j)
+			colliders.push_back(comp);
+		}
+	}
+
+	for (int i = 0; i < colliders.size(); ++i)
+	{
+		for (int j = i + 1; j < colliders.size(); ++j)
+		{
+			if (colliders[j]->getGameObject()->isDead())
 			{
-				GameObject* other = gameObjects[j];
-				if (current->isDead())
+				continue;
+			}
+
+			GameObject* currentObj = colliders[i]->getGameObject();
+			GameObject* otherObj = colliders[j]->getGameObject();
+
+			if (intersect(currentObj->_position, colliders[i]->getHitBox(), otherObj->_position, colliders[j]->getHitBox()))
+			{
+				if (!ignore(currentObj->getTag(), otherObj->getTag()))
 				{
-					continue;
-				}
-				ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
-				if (otherCollider)
-				{
-					if (intersect(current->_position, currentCollider->getHitBox(), other->_position, otherCollider->getHitBox()))
-					{
-						if (!ignore(current->getTag(), other->getTag()))
-						{
-							current->sendMessage(CHANGE_LIFE{ -1 });
-							other->sendMessage(CHANGE_LIFE{ -1 });
-						}
-					}
+					currentObj->sendMessage(CHANGE_LIFE{ -1 });
+					otherObj->sendMessage(CHANGE_LIFE{ -1 });
 				}
 			}
+			
 		}
-		
 	}
+
+
+		//ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
+		//if (currentCollider)
+		//{
+		//	for (unsigned int j = i+1; j < gameObjects.size(); ++j)
+		//	{
+		//		GameObject* other = gameObjects[j];
+		//		if (other->isDead())
+		//		{
+		//			continue;
+		//		}
+		//		
+		//		//ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
+		//		ColliderComponent* otherCollider = other->getCollider();
+		//		
+		//		if (otherCollider)
+		//		{
+		//			if (intersect(current->_position, currentCollider->getHitBox(), other->_position, otherCollider->getHitBox()))
+		//			{
+		//				if (!ignore(current->getTag(), other->getTag()))
+		//				{
+		//					current->sendMessage(CHANGE_LIFE{ -1 });
+		//					other->sendMessage(CHANGE_LIFE{ -1 });
+		//				}
+		//			}
+		//		}
+		//	}
+		//}
+		
+	/*}*/
 }
 
 void PhysicsEngine::updatePosition(vector2& pos, vector2 vel)

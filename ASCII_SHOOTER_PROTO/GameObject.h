@@ -5,10 +5,12 @@
 #include "Structures.h"
 #include "MessageHandler.h"
 
+
 #include <vector>
 #include <string>
 
 class Component;
+class ColliderComponent;
 
 /**
 * 
@@ -67,6 +69,16 @@ public:
 			}
 		}
 		return nullptr;
+	}
+
+	void addCollider(ColliderComponent* c)
+	{
+		_collider = c;
+	}
+
+	ColliderComponent* getCollider()
+	{
+		return _collider;
 	}
 
 	/** \brief Donne le nom du GameObject
@@ -145,7 +157,7 @@ private:
 
 	static std::vector<std::string> _Tags;
 
-	
+	ColliderComponent* _collider;
 
 	std::vector<Component*> _components;
 

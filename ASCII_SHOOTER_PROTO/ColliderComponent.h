@@ -13,18 +13,18 @@ public:
 
 	/** \brief Creer un Collider de base de taille (0,0)
 	*/
-	ColliderComponent() { _hitbox = { 0.0,0.0 }; }
+	ColliderComponent(GameObject* obj) : Component(obj) { _hitbox = { 0.0,0.0 }; }
 
 	/** \brief Creer un Collider de taille (x,y)
 	* \param x : taille x de la hitbox
 	* \param y : taille y de la hitbox
 	*/
-	ColliderComponent(float x, float y) { _hitbox = { x,y }; }
+	ColliderComponent(GameObject* obj, float x, float y) : Component(obj) { _hitbox = { x,y }; }
 	
 	/** \brief Creer un Collider a partir d'un vector2
 	* \param vector2 qui sera copie dans la hitbox du Collider
 	*/
-	ColliderComponent(vector2 hitbox) { _hitbox = hitbox; }
+	ColliderComponent(GameObject* obj, vector2 hitbox) : Component(obj) { _hitbox = hitbox; }
 
 	virtual ~ColliderComponent() {}
 

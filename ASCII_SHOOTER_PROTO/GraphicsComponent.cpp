@@ -6,7 +6,7 @@
 
 using namespace std;
 
-GraphicsComponent::GraphicsComponent(std::string path) 
+GraphicsComponent::GraphicsComponent(GameObject* obj, std::string path)  : Component(obj)
 {
 	FileReader::readSprite(path, _sprite);
 }
