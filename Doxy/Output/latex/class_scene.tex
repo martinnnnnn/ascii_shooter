@@ -1,5 +1,14 @@
 \hypertarget{class_scene}{}\section{Scene Class Reference}
 \label{class_scene}\index{Scene@{Scene}}
+
+
+Classe gerant une scene, c\textquotesingle{}est a dire une liste de \hyperlink{class_game_object}{Game\+Object}.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -7,38 +16,101 @@
 {\bfseries Scene} (std\+::string name)
 \item 
 \hypertarget{class_scene_abb3b6efc6fdba03cd96436edaf08a967}{}\label{class_scene_abb3b6efc6fdba03cd96436edaf08a967} 
-void {\bfseries init} ()
-\item 
+void \hyperlink{class_scene_abb3b6efc6fdba03cd96436edaf08a967}{init} ()
+\begin{DoxyCompactList}\small\item\em Initialise la scene. \end{DoxyCompactList}\item 
+\hypertarget{class_scene_aa24c7e636c10e4e42650c1374b90bb80}{}\label{class_scene_aa24c7e636c10e4e42650c1374b90bb80} 
+void \hyperlink{class_scene_aa24c7e636c10e4e42650c1374b90bb80}{update} ()
+\begin{DoxyCompactList}\small\item\em Update tous les \hyperlink{class_game_object}{Game\+Object} possedes par la scene. \end{DoxyCompactList}\item 
 \hypertarget{class_scene_a70e5b1218abb729d70d9f41b107017f9}{}\label{class_scene_a70e5b1218abb729d70d9f41b107017f9} 
-void {\bfseries clear} ()
-\item 
+void \hyperlink{class_scene_a70e5b1218abb729d70d9f41b107017f9}{clear} ()
+\begin{DoxyCompactList}\small\item\em Supprime les \hyperlink{class_game_object}{Game\+Object} de la scene. \end{DoxyCompactList}\item 
 \hypertarget{class_scene_a95d3218f52081eea9e34d2d2bdff94df}{}\label{class_scene_a95d3218f52081eea9e34d2d2bdff94df} 
-void {\bfseries take\+Care\+Of\+Dead\+Bodies} ()
-\item 
-\hypertarget{class_scene_aed7c3cfbef1cfa439af13e56dfd5a07c}{}\label{class_scene_aed7c3cfbef1cfa439af13e56dfd5a07c} 
-void {\bfseries add\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
-\item 
-\hypertarget{class_scene_a9058ae3eed897e4e18f977abfd53e348}{}\label{class_scene_a9058ae3eed897e4e18f977abfd53e348} 
-void {\bfseries remove\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
-\item 
-\hypertarget{class_scene_a489e003d142172ed43136a35e49023bc}{}\label{class_scene_a489e003d142172ed43136a35e49023bc} 
-std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ $\ast$ {\bfseries get\+Objects} ()
-\item 
-\hypertarget{class_scene_a8e5f774bacf4ebf59c19947f5c2a8585}{}\label{class_scene_a8e5f774bacf4ebf59c19947f5c2a8585} 
-void {\bfseries send\+Message} (G\+O\+Message)
-\end{DoxyCompactItemize}
+void \hyperlink{class_scene_a95d3218f52081eea9e34d2d2bdff94df}{take\+Care\+Of\+Dead\+Bodies} ()
+\begin{DoxyCompactList}\small\item\em Supprime tous les \hyperlink{class_game_object}{Game\+Object} morts lors de l\textquotesingle{}update precedant. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_aed7c3cfbef1cfa439af13e56dfd5a07c}{add\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ajout un \hyperlink{class_game_object}{Game\+Object} a la scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_a9058ae3eed897e4e18f977abfd53e348}{remove\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
+\begin{DoxyCompactList}\small\item\em Supprime un \hyperlink{class_game_object}{Game\+Object} a la scene. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ \& \hyperlink{class_scene_a9e7d39e9d4b1d6b76997e1453738658d}{get\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}acceder aux \hyperlink{class_game_object}{Game\+Object} de la \hyperlink{class_scene}{Scene}. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_a75722f5960b037b0ec6d9cdf04ff9fa1}{send\+G\+O\+Message} (const G\+O\+Message) const
+\begin{DoxyCompactList}\small\item\em Envoie un G\+O\+Message a tous les \hyperlink{class_game_object}{Game\+Object} de la \hyperlink{class_scene}{Scene}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_scene_afbb5064e07cb2904ecd2cfb0096a00c9}{}\label{class_scene_afbb5064e07cb2904ecd2cfb0096a00c9} 
-std\+::string {\bfseries \+\_\+name}
-\end{DoxyCompactItemize}
+std\+::string \hyperlink{class_scene_afbb5064e07cb2904ecd2cfb0096a00c9}{\+\_\+name}
+\begin{DoxyCompactList}\small\item\em Le nom de la \hyperlink{class_scene}{Scene}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_scene_a08d7cc1bd05adcaedf8d264c8b9a3da2}{}\label{class_scene_a08d7cc1bd05adcaedf8d264c8b9a3da2} 
 std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ {\bfseries \+\_\+objects}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe gerant une scene, c\textquotesingle{}est a dire une liste de \hyperlink{class_game_object}{Game\+Object}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scene_aed7c3cfbef1cfa439af13e56dfd5a07c}{}\label{class_scene_aed7c3cfbef1cfa439af13e56dfd5a07c} 
+\index{Scene@{Scene}!add\+Object@{add\+Object}}
+\index{add\+Object@{add\+Object}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{add\+Object()}{addObject()}}
+{\footnotesize\ttfamily void Scene\+::add\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Ajout un \hyperlink{class_game_object}{Game\+Object} a la scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & \hyperlink{class_game_object}{Game\+Object} a ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scene_a9e7d39e9d4b1d6b76997e1453738658d}{}\label{class_scene_a9e7d39e9d4b1d6b76997e1453738658d} 
+\index{Scene@{Scene}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{get\+Objects()}{getObjects()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ \& Scene\+::get\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}acceder aux \hyperlink{class_game_object}{Game\+Object} de la \hyperlink{class_scene}{Scene}. 
+
+\begin{DoxyReturn}{Returns}
+Les Game\+Objects possedes par la \hyperlink{class_scene}{Scene} 
+\end{DoxyReturn}
+\hypertarget{class_scene_a9058ae3eed897e4e18f977abfd53e348}{}\label{class_scene_a9058ae3eed897e4e18f977abfd53e348} 
+\index{Scene@{Scene}!remove\+Object@{remove\+Object}}
+\index{remove\+Object@{remove\+Object}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{remove\+Object()}{removeObject()}}
+{\footnotesize\ttfamily void Scene\+::remove\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Supprime un \hyperlink{class_game_object}{Game\+Object} a la scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & \hyperlink{class_game_object}{Game\+Object} a supprimer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scene_a75722f5960b037b0ec6d9cdf04ff9fa1}{}\label{class_scene_a75722f5960b037b0ec6d9cdf04ff9fa1} 
+\index{Scene@{Scene}!send\+G\+O\+Message@{send\+G\+O\+Message}}
+\index{send\+G\+O\+Message@{send\+G\+O\+Message}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{send\+G\+O\+Message()}{sendGOMessage()}}
+{\footnotesize\ttfamily void Scene\+::send\+G\+O\+Message (\begin{DoxyParamCaption}\item[{const G\+O\+Message}]{message }\end{DoxyParamCaption}) const}
+
+
+
+Envoie un G\+O\+Message a tous les \hyperlink{class_game_object}{Game\+Object} de la \hyperlink{class_scene}{Scene}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & G\+O\+Message a envoyer \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

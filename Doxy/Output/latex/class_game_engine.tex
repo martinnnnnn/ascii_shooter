@@ -2,68 +2,62 @@
 \label{class_game_engine}\index{Game\+Engine@{Game\+Engine}}
 
 
+Classe Singleton prenant en charge les \hyperlink{class_scene}{Scene} et la boucle de jeu.  
+
+
+
+
 {\ttfamily \#include $<$Game\+Engine.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_game_engine_a5505704cb9ba58c5d029d8a736eff73d}{}\label{class_game_engine_a5505704cb9ba58c5d029d8a736eff73d} 
-void {\bfseries add\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
-\item 
-\hypertarget{class_game_engine_aba1c35007c56a3082102f67c08ea5580}{}\label{class_game_engine_aba1c35007c56a3082102f67c08ea5580} 
-void {\bfseries define\+Starting\+Scene} (std\+::string name)
-\item 
-\hypertarget{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb}{}\label{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb} 
-void {\bfseries define\+Starting\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
-\item 
-\hypertarget{class_game_engine_a8116aae790eaf236907d5d75401cd628}{}\label{class_game_engine_a8116aae790eaf236907d5d75401cd628} 
-\hyperlink{class_scene}{Scene} $\ast$ {\bfseries get\+Current\+Scene} ()
-\item 
-\hypertarget{class_game_engine_ac70d59f0de33c34f84863a550408a476}{}\label{class_game_engine_ac70d59f0de33c34f84863a550408a476} 
-\hyperlink{class_scene}{Scene} $\ast$ {\bfseries get\+Scene} (std\+::string name)
-\item 
-\hypertarget{class_game_engine_a000c4cc070830d727f349b094ab402e3}{}\label{class_game_engine_a000c4cc070830d727f349b094ab402e3} 
-void {\bfseries switch\+Scene} (std\+::string new\+Scene)
-\item 
-\hypertarget{class_game_engine_aef45d9ee461773587e266c57783de1a3}{}\label{class_game_engine_aef45d9ee461773587e266c57783de1a3} 
-void {\bfseries send\+Message} (S\+C\+Message message)
-\item 
+void \hyperlink{class_game_engine_a5505704cb9ba58c5d029d8a736eff73d}{add\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Ajoute une scene au \hyperlink{class_game_engine}{Game\+Engine}. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_aba1c35007c56a3082102f67c08ea5580}{define\+Starting\+Scene} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Definie la scene de depart, avant le lancement du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb}{define\+Starting\+Scene} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Ajoute une scene au \hyperlink{class_game_engine}{Game\+Engine}. \end{DoxyCompactList}\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_game_engine_a8116aae790eaf236907d5d75401cd628}{get\+Current\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}acceder a la scene courante, celle updatee par le \hyperlink{class_game_engine}{Game\+Engine}. \end{DoxyCompactList}\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_game_engine_ac70d59f0de33c34f84863a550408a476}{get\+Scene} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Recuperer une scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_a000c4cc070830d727f349b094ab402e3}{switch\+Scene} (std\+::string new\+Scene)
+\begin{DoxyCompactList}\small\item\em Change la scene courante. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_adabcb595b67641a2b090a4245a42febd}{send\+G\+O\+Message} (const std\+::string scene\+Name, const G\+O\+Message msg)
+\begin{DoxyCompactList}\small\item\em Change la scene courante. \end{DoxyCompactList}\item 
+void \hyperlink{class_game_engine_af079adf40fe6dd3eb152257abc2e2ca6}{send\+G\+O\+Message} (const \hyperlink{class_scene}{Scene} $\ast$scene, const G\+O\+Message msg)
+\begin{DoxyCompactList}\small\item\em Envoie un G\+O\+Message a une scene, qui le dispatchera a tous ses \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \hypertarget{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}{}\label{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae} 
-void {\bfseries run} ()
-\item 
-\hypertarget{class_game_engine_a0ddc45d96adc0373346663302e429b12}{}\label{class_game_engine_a0ddc45d96adc0373346663302e429b12} 
-std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ $\ast$ {\bfseries get\+Objects} ()
-\item 
-\hypertarget{class_game_engine_a5881933816240d7c21d66383ad3abdae}{}\label{class_game_engine_a5881933816240d7c21d66383ad3abdae} 
-\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries get\+New\+Game\+Object} (std\+::string name, \hyperlink{structvector2}{vector2} position=\{ 0, 0 \})
-\item 
+void \hyperlink{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}{run} ()
+\begin{DoxyCompactList}\small\item\em Lance la boucle de jeu. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ \& \hyperlink{class_game_engine_a3c121b430cbe2b77ba53ba4cfe295322}{get\+Current\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}acceder aux \hyperlink{class_game_object}{Game\+Object} courant, c\textquotesingle{}est a dire ceux possedes par la \hyperlink{class_scene}{Scene} courante. \end{DoxyCompactList}\item 
+\hyperlink{class_game_object}{Game\+Object} $\ast$ \hyperlink{class_game_engine_adaaa9e4c0b2cfd2f248164a16684c700}{get\+New\+Game\+Object} (std\+::string tag, \hyperlink{structvector2}{vector2} position=\{ 0, 0 \})
+\begin{DoxyCompactList}\small\item\em Instancie un nouvel \hyperlink{class_game_object}{Game\+Object}, l\textquotesingle{}ajoute a la scene courante et en retourne un pointeur. \end{DoxyCompactList}\item 
 \hypertarget{class_game_engine_a93ae1a7543981d2d3d0e70b14174135f}{}\label{class_game_engine_a93ae1a7543981d2d3d0e70b14174135f} 
-void {\bfseries add\+New\+Objects} ()
-\item 
-\hypertarget{class_game_engine_a49e995c66c1c09394c75d31cbea4b691}{}\label{class_game_engine_a49e995c66c1c09394c75d31cbea4b691} 
-void {\bfseries pass\+Object} (\hyperlink{class_game_object}{Game\+Object} $\ast$)
-\item 
-\hypertarget{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586}{}\label{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586} 
-\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries find\+Object\+With\+Tag} (std\+::string tag)
-\item 
+void \hyperlink{class_game_engine_a93ae1a7543981d2d3d0e70b14174135f}{add\+New\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Ajoute les Game\+Objects crees (A modifier \+:\+: Cette methode devrait etre privee) \end{DoxyCompactList}\item 
+\hyperlink{class_game_object}{Game\+Object} $\ast$ \hyperlink{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586}{find\+Object\+With\+Tag} (std\+::string tag)
+\begin{DoxyCompactList}\small\item\em Trouver un \hyperlink{class_game_object}{Game\+Object} possedant le tag passee en parametre. \end{DoxyCompactList}\item 
 \hypertarget{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}{}\label{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6} 
-void {\bfseries quit} ()
-\end{DoxyCompactItemize}
+void \hyperlink{class_game_engine_ad82b626def2e52b28f0d6c2d167589f6}{quit} ()
+\begin{DoxyCompactList}\small\item\em Quit le jeu, ferme le programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d}{}\label{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d} 
-static \hyperlink{class_game_engine}{Game\+Engine} \& {\bfseries instance} ()
-\end{DoxyCompactItemize}
+static \hyperlink{class_game_engine}{Game\+Engine} \& \hyperlink{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d}{instance} ()
+\begin{DoxyCompactList}\small\item\em Methode static permettant de recuperer l\textquotesingle{}instance du Singleton ou de la creer si elle n\textquotesingle{}existe pas encore. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_game_engine_a8d1a51bb0bd082dfddfbcc25bae08ace}{}\label{class_game_engine_a8d1a51bb0bd082dfddfbcc25bae08ace} 
-\hyperlink{class_input_engine}{Input\+Engine} $\ast$ {\bfseries \+\_\+inputs}
-\item 
+\hyperlink{class_input_engine}{Input\+Engine} $\ast$ \hyperlink{class_game_engine_a8d1a51bb0bd082dfddfbcc25bae08ace}{\+\_\+inputs}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}\hyperlink{class_input_engine}{Input\+Engine}. \end{DoxyCompactList}\item 
 \hypertarget{class_game_engine_a84532de3912402092e41bded12137b44}{}\label{class_game_engine_a84532de3912402092e41bded12137b44} 
-\hyperlink{class_n_y_timer}{N\+Y\+Timer} {\bfseries \+\_\+timer}
-\end{DoxyCompactItemize}
+\hyperlink{class_n_y_timer}{N\+Y\+Timer} \hyperlink{class_game_engine_a84532de3912402092e41bded12137b44}{\+\_\+timer}
+\begin{DoxyCompactList}\small\item\em Le timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -115,9 +109,6 @@ vector$<$ \hyperlink{class_scene}{Scene} $\ast$ $>$ {\bfseries \+\_\+scenes}
 \hypertarget{class_game_engine_a774d8b94d3f52f0387de3eba6804dfa9}{}\label{class_game_engine_a774d8b94d3f52f0387de3eba6804dfa9} 
 \hyperlink{class_scene}{Scene} $\ast$ {\bfseries \+\_\+next\+Scene}
 \item 
-\hypertarget{class_game_engine_aa5a6689bfdebff663b691dfbf64596ec}{}\label{class_game_engine_aa5a6689bfdebff663b691dfbf64596ec} 
-std\+::vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ {\bfseries \+\_\+passing\+Game\+Objects}
-\item 
 \hypertarget{class_game_engine_a356588004d68586f945ae85bc5060700}{}\label{class_game_engine_a356588004d68586f945ae85bc5060700} 
 \hyperlink{class_graphics_engine}{Graphics\+Engine} $\ast$ {\bfseries \+\_\+graphics}
 \item 
@@ -142,7 +133,186 @@ bool {\bfseries \+\_\+quit} = false
 
 
 \subsection{Detailed Description}
-\hyperlink{class_game_engine}{Game\+Engine} Takes care of initiating the other engines, handleling the scenes and running the game 
+Classe Singleton prenant en charge les \hyperlink{class_scene}{Scene} et la boucle de jeu. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_engine_aba1c35007c56a3082102f67c08ea5580}{}\label{class_game_engine_aba1c35007c56a3082102f67c08ea5580} 
+\index{Game\+Engine@{Game\+Engine}!define\+Starting\+Scene@{define\+Starting\+Scene}}
+\index{define\+Starting\+Scene@{define\+Starting\+Scene}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{define\+Starting\+Scene()}{defineStartingScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::define\+Starting\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definie la scene de depart, avant le lancement du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & nom de la scene de depart \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb}{}\label{class_game_engine_ad2bb379da2ce51978a989de4ca979ecb} 
+\index{Game\+Engine@{Game\+Engine}!define\+Starting\+Scene@{define\+Starting\+Scene}}
+\index{define\+Starting\+Scene@{define\+Starting\+Scene}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{define\+Starting\+Scene()}{defineStartingScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::define\+Starting\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_scene}{Scene} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Ajoute une scene au \hyperlink{class_game_engine}{Game\+Engine}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & pointeur vers la \hyperlink{class_scene}{Scene} de depart \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586}{}\label{class_game_engine_a92a0f7ffa3e36c93b51427dcf36a2586} 
+\index{Game\+Engine@{Game\+Engine}!find\+Object\+With\+Tag@{find\+Object\+With\+Tag}}
+\index{find\+Object\+With\+Tag@{find\+Object\+With\+Tag}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{find\+Object\+With\+Tag()}{findObjectWithTag()}}
+{\footnotesize\ttfamily \hyperlink{class_game_object}{Game\+Object} $\ast$ Game\+Engine\+::find\+Object\+With\+Tag (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})}
+
+
+
+Trouver un \hyperlink{class_game_object}{Game\+Object} possedant le tag passee en parametre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le premier \hyperlink{class_game_object}{Game\+Object} trouve correspondant au tag 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_a3c121b430cbe2b77ba53ba4cfe295322}{}\label{class_game_engine_a3c121b430cbe2b77ba53ba4cfe295322} 
+\index{Game\+Engine@{Game\+Engine}!get\+Current\+Objects@{get\+Current\+Objects}}
+\index{get\+Current\+Objects@{get\+Current\+Objects}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{get\+Current\+Objects()}{getCurrentObjects()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{class_game_object}{Game\+Object} $\ast$ $>$ \& Game\+Engine\+::get\+Current\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}acceder aux \hyperlink{class_game_object}{Game\+Object} courant, c\textquotesingle{}est a dire ceux possedes par la \hyperlink{class_scene}{Scene} courante. 
+
+\begin{DoxyReturn}{Returns}
+La liste de \hyperlink{class_game_object}{Game\+Object} courant 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_a8116aae790eaf236907d5d75401cd628}{}\label{class_game_engine_a8116aae790eaf236907d5d75401cd628} 
+\index{Game\+Engine@{Game\+Engine}!get\+Current\+Scene@{get\+Current\+Scene}}
+\index{get\+Current\+Scene@{get\+Current\+Scene}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{get\+Current\+Scene()}{getCurrentScene()}}
+{\footnotesize\ttfamily \hyperlink{class_scene}{Scene} $\ast$ Game\+Engine\+::get\+Current\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}acceder a la scene courante, celle updatee par le \hyperlink{class_game_engine}{Game\+Engine}. 
+
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la \hyperlink{class_scene}{Scene} courante 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_adaaa9e4c0b2cfd2f248164a16684c700}{}\label{class_game_engine_adaaa9e4c0b2cfd2f248164a16684c700} 
+\index{Game\+Engine@{Game\+Engine}!get\+New\+Game\+Object@{get\+New\+Game\+Object}}
+\index{get\+New\+Game\+Object@{get\+New\+Game\+Object}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{get\+New\+Game\+Object()}{getNewGameObject()}}
+{\footnotesize\ttfamily \hyperlink{class_game_object}{Game\+Object} $\ast$ Game\+Engine\+::get\+New\+Game\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{tag,  }\item[{\hyperlink{structvector2}{vector2}}]{position = {\ttfamily \{~0,0~\}} }\end{DoxyParamCaption})}
+
+
+
+Instancie un nouvel \hyperlink{class_game_object}{Game\+Object}, l\textquotesingle{}ajoute a la scene courante et en retourne un pointeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & tag a donner au \hyperlink{class_game_object}{Game\+Object} \\
+\hline
+{\em La} & position de depart du \hyperlink{class_game_object}{Game\+Object} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers le \hyperlink{class_game_object}{Game\+Object} cree 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_ac70d59f0de33c34f84863a550408a476}{}\label{class_game_engine_ac70d59f0de33c34f84863a550408a476} 
+\index{Game\+Engine@{Game\+Engine}!get\+Scene@{get\+Scene}}
+\index{get\+Scene@{get\+Scene}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{get\+Scene()}{getScene()}}
+{\footnotesize\ttfamily \hyperlink{class_scene}{Scene} $\ast$ Game\+Engine\+::get\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Recuperer une scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & nom de la \hyperlink{class_scene}{Scene} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un pointeur vers la \hyperlink{class_scene}{Scene} 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d}{}\label{class_game_engine_a5d5df5f1dabaaa1b98eeb1340f4f118d} 
+\index{Game\+Engine@{Game\+Engine}!instance@{instance}}
+\index{instance@{instance}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \hyperlink{class_game_engine}{Game\+Engine}\& Game\+Engine\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Methode static permettant de recuperer l\textquotesingle{}instance du Singleton ou de la creer si elle n\textquotesingle{}existe pas encore. 
+
+\begin{DoxyReturn}{Returns}
+Une reference vers l\textquotesingle{}instance de \hyperlink{class_game_engine}{Game\+Engine} 
+\end{DoxyReturn}
+\hypertarget{class_game_engine_adabcb595b67641a2b090a4245a42febd}{}\label{class_game_engine_adabcb595b67641a2b090a4245a42febd} 
+\index{Game\+Engine@{Game\+Engine}!send\+G\+O\+Message@{send\+G\+O\+Message}}
+\index{send\+G\+O\+Message@{send\+G\+O\+Message}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{send\+G\+O\+Message()}{sendGOMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::send\+G\+O\+Message (\begin{DoxyParamCaption}\item[{const std\+::string}]{scene\+Name,  }\item[{const G\+O\+Message}]{msg }\end{DoxyParamCaption})}
+
+
+
+Change la scene courante. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & nom de la scene a passer en scene courante\+Envoie un G\+O\+Message a une scene, qui le dispatchera a tous ses \hyperlink{class_game_object}{Game\+Object} \\
+\hline
+{\em Le} & nom de la scene \\
+\hline
+{\em Le} & G\+O\+Message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_engine_af079adf40fe6dd3eb152257abc2e2ca6}{}\label{class_game_engine_af079adf40fe6dd3eb152257abc2e2ca6} 
+\index{Game\+Engine@{Game\+Engine}!send\+G\+O\+Message@{send\+G\+O\+Message}}
+\index{send\+G\+O\+Message@{send\+G\+O\+Message}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{send\+G\+O\+Message()}{sendGOMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Game\+Engine\+::send\+G\+O\+Message (\begin{DoxyParamCaption}\item[{const \hyperlink{class_scene}{Scene} $\ast$}]{scene,  }\item[{const G\+O\+Message}]{msg }\end{DoxyParamCaption})}
+
+
+
+Envoie un G\+O\+Message a une scene, qui le dispatchera a tous ses \hyperlink{class_game_object}{Game\+Object}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & pointeur vers la \hyperlink{class_scene}{Scene} \\
+\hline
+{\em Le} & G\+O\+Message \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_game_engine_a000c4cc070830d727f349b094ab402e3}{}\label{class_game_engine_a000c4cc070830d727f349b094ab402e3} 
+\index{Game\+Engine@{Game\+Engine}!switch\+Scene@{switch\+Scene}}
+\index{switch\+Scene@{switch\+Scene}!Game\+Engine@{Game\+Engine}}
+\subsubsection{\texorpdfstring{switch\+Scene()}{switchScene()}}
+{\footnotesize\ttfamily void Game\+Engine\+::switch\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Scene }\end{DoxyParamCaption})}
+
+
+
+Change la scene courante. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Le} & nom de la scene a passer en scene courante \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

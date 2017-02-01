@@ -94,9 +94,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a58a24ffbffbcd03afa926b2c01d545fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a58a24ffbffbcd03afa926b2c01d545fe">setName</a> (std::string name)</td></tr>
 <tr class="memdesc:a58a24ffbffbcd03afa926b2c01d545fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set le nom du <a class="el" href="class_game_object.html">GameObject</a>.  <a href="#a58a24ffbffbcd03afa926b2c01d545fe">More...</a><br /></td></tr>
 <tr class="separator:a58a24ffbffbcd03afa926b2c01d545fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ef97dbdc30378013b28f4708cb708a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a4ef97dbdc30378013b28f4708cb708a0">sendMessage</a> (GOMessage)</td></tr>
-<tr class="memdesc:a4ef97dbdc30378013b28f4708cb708a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie d'un message.  <a href="#a4ef97dbdc30378013b28f4708cb708a0">More...</a><br /></td></tr>
-<tr class="separator:a4ef97dbdc30378013b28f4708cb708a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc20833ca1a65acd819888247216929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#abdc20833ca1a65acd819888247216929">sendMessage</a> (const GOMessage) const</td></tr>
+<tr class="memdesc:abdc20833ca1a65acd819888247216929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie d'un message.  <a href="#abdc20833ca1a65acd819888247216929">More...</a><br /></td></tr>
+<tr class="separator:abdc20833ca1a65acd819888247216929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac5b633ac19e0facea0b7cb6f93ccef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#aaac5b633ac19e0facea0b7cb6f93ccef">isTagged</a> (std::string tag)</td></tr>
 <tr class="memdesc:aaac5b633ac19e0facea0b7cb6f93ccef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test sur le tag de l'object.  <a href="#aaac5b633ac19e0facea0b7cb6f93ccef">More...</a><br /></td></tr>
 <tr class="separator:aaac5b633ac19e0facea0b7cb6f93ccef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,7 +106,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2c5d76ea1ebd18e6c3e74cdd680ed349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set le tag du <a class="el" href="class_game_object.html">GameObject</a>.  <a href="#a2c5d76ea1ebd18e6c3e74cdd680ed349">More...</a><br /></td></tr>
 <tr class="separator:a2c5d76ea1ebd18e6c3e74cdd680ed349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af54107b086de78b1fc6190088bdfb468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#af54107b086de78b1fc6190088bdfb468">kill</a> ()</td></tr>
-<tr class="memdesc:af54107b086de78b1fc6190088bdfb468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marque le <a class="el" href="class_game_object.html">GameObject</a> comme mort, il sera supprime par le <a class="el" href="class_game_engine.html">GameEngine</a> lors de la tick suivante.  <a href="#af54107b086de78b1fc6190088bdfb468">More...</a><br /></td></tr>
+<tr class="memdesc:af54107b086de78b1fc6190088bdfb468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marque le <a class="el" href="class_game_object.html">GameObject</a> comme mort, il sera supprime par le <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a> lors de la tick suivante.  <a href="#af54107b086de78b1fc6190088bdfb468">More...</a><br /></td></tr>
 <tr class="separator:af54107b086de78b1fc6190088bdfb468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af509340fc9f95d8d39afe7ec63d90128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#af509340fc9f95d8d39afe7ec63d90128">isDead</a> ()</td></tr>
 <tr class="memdesc:af509340fc9f95d8d39afe7ec63d90128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Donne l'etat de vie du <a class="el" href="class_game_object.html">GameObject</a>.  <a href="#af509340fc9f95d8d39afe7ec63d90128">More...</a><br /></td></tr>
@@ -130,7 +130,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ac1f91cb46f40c3b254505d66a9da1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Recuperation a partir du <a class="el" href="class_game_engine.html">GameEngine</a>, qui ajoute directement l'object a la scene courante Conteneur de componsants, Ajout de composants au <a class="el" href="class_game_object.html">GameObject</a>, qui representent :</p><ul>
+<div class="textblock"><p>Recuperation a partir du <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>, qui ajoute directement l'object a la scene courante Conteneur de componsants, Ajout de composants au <a class="el" href="class_game_object.html">GameObject</a>, qui representent :</p><ul>
 <li>Soit des fonctions de base (physique, graphique)</li>
 <li>Soit des scripts permet d'obtenir des comportements pour complexes </li>
 </ul>
@@ -373,12 +373,12 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Marque le <a class="el" href="class_game_object.html">GameObject</a> comme mort, il sera supprime par le <a class="el" href="class_game_engine.html">GameEngine</a> lors de la tick suivante. </p>
+<p>Marque le <a class="el" href="class_game_object.html">GameObject</a> comme mort, il sera supprime par le <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a> lors de la tick suivante. </p>
 
 </div>
 </div>
-<a id="a4ef97dbdc30378013b28f4708cb708a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ef97dbdc30378013b28f4708cb708a0">&sect;&nbsp;</a></span>sendMessage()</h2>
+<a id="abdc20833ca1a65acd819888247216929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc20833ca1a65acd819888247216929">&sect;&nbsp;</a></span>sendMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,9 +386,9 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">void GameObject::sendMessage </td>
           <td>(</td>
-          <td class="paramtype">GOMessage&#160;</td>
+          <td class="paramtype">const GOMessage&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

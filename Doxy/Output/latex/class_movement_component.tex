@@ -18,12 +18,12 @@ Inheritance diagram for Movement\+Component\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f}{}\label{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f} 
-\hyperlink{class_movement_component_a8c22ac85ae143a750b109a0afcd5832f}{Movement\+Component} ()
+\hypertarget{class_movement_component_abedebd5453aa86cf8a1cd7449990e16f}{}\label{class_movement_component_abedebd5453aa86cf8a1cd7449990e16f} 
+\hyperlink{class_movement_component_abedebd5453aa86cf8a1cd7449990e16f}{Movement\+Component} (\hyperlink{class_game_object}{Game\+Object} $\ast$obj)
 \begin{DoxyCompactList}\small\item\em Creer un Movement de base de taille (0,0) \end{DoxyCompactList}\item 
-\hyperlink{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{Movement\+Component} (float x, float y)
+\hyperlink{class_movement_component_a16ae8e5bac9a7f101fc18c26ba025e52}{Movement\+Component} (\hyperlink{class_game_object}{Game\+Object} $\ast$obj, float x, float y)
 \begin{DoxyCompactList}\small\item\em Creer un Movement de taille (x,y) \end{DoxyCompactList}\item 
-\hyperlink{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{Movement\+Component} (\hyperlink{structvector2}{vector2} v)
+\hyperlink{class_movement_component_a2cfc3e6dbe3cda60f8dc4d0694494f87}{Movement\+Component} (\hyperlink{class_game_object}{Game\+Object} $\ast$obj, \hyperlink{structvector2}{vector2} v)
 \begin{DoxyCompactList}\small\item\em Creer un Movement a partir d\textquotesingle{}un \hyperlink{structvector2}{vector2}. \end{DoxyCompactList}\item 
 \hyperlink{structvector2}{vector2} \& \hyperlink{class_movement_component_a1b3cc0445b34ceafb79d694ecafbcd2c}{get\+Velocity} ()
 \begin{DoxyCompactList}\small\item\em Getter de la velocite. \end{DoxyCompactList}\item 
@@ -31,17 +31,18 @@ void \hyperlink{class_movement_component_a713784d4a7ccca4e4ad946f73d2db6cd}{set\
 \begin{DoxyCompactList}\small\item\em Setter de la velocite par copie. \end{DoxyCompactList}\item 
 void \hyperlink{class_movement_component_add7629692ed68862ff1fd1f3515e2ea6}{set\+Velocity} (const float x, const float y)
 \begin{DoxyCompactList}\small\item\em Setter de la velocite a partir de 2 float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
 \hyperlink{class_component}{Component} une velocite. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1}{}\label{class_movement_component_a2fa2f87c3e4cdc69489e5ce06a131fd1} 
+\hypertarget{class_movement_component_a16ae8e5bac9a7f101fc18c26ba025e52}{}\label{class_movement_component_a16ae8e5bac9a7f101fc18c26ba025e52} 
 \index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
 \index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
 \subsubsection{\texorpdfstring{Movement\+Component()}{MovementComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -54,11 +55,11 @@ Creer un Movement de taille (x,y)
 {\em y} & \+: velocite y du Movement \\
 \hline
 \end{DoxyParams}
-\hypertarget{class_movement_component_ac9432753c0b29b1206e04c139e56c757}{}\label{class_movement_component_ac9432753c0b29b1206e04c139e56c757} 
+\hypertarget{class_movement_component_a2cfc3e6dbe3cda60f8dc4d0694494f87}{}\label{class_movement_component_a2cfc3e6dbe3cda60f8dc4d0694494f87} 
 \index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
 \index{Movement\+Component@{Movement\+Component}!Movement\+Component@{Movement\+Component}}
 \subsubsection{\texorpdfstring{Movement\+Component()}{MovementComponent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{structvector2}{vector2}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Movement\+Component\+::\+Movement\+Component (\begin{DoxyParamCaption}\item[{\hyperlink{class_game_object}{Game\+Object} $\ast$}]{obj,  }\item[{\hyperlink{structvector2}{vector2}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

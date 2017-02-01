@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findtag',['findTag',['../class_game_object.html#a2ceae5dbcdd0e8621d08c6c461068a2b',1,'GameObject']]]
+  ['enemy',['Enemy',['../class_enemy.html#ae7858f3f39ec6e48b741b7a8eaff6c1d',1,'Enemy']]]
 ];

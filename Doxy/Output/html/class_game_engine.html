@@ -70,66 +70,75 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe Singleton prenant en charge les <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> et la boucle de jeu.  
+ <a href="class_game_engine.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5505704cb9ba58c5d029d8a736eff73d"><td class="memItemLeft" align="right" valign="top"><a id="a5505704cb9ba58c5d029d8a736eff73d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addScene</b> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5505704cb9ba58c5d029d8a736eff73d">addScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:a5505704cb9ba58c5d029d8a736eff73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une scene au <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>. <br /></td></tr>
 <tr class="separator:a5505704cb9ba58c5d029d8a736eff73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba1c35007c56a3082102f67c08ea5580"><td class="memItemLeft" align="right" valign="top"><a id="aba1c35007c56a3082102f67c08ea5580"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>defineStartingScene</b> (std::string name)</td></tr>
+<tr class="memitem:aba1c35007c56a3082102f67c08ea5580"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#aba1c35007c56a3082102f67c08ea5580">defineStartingScene</a> (std::string name)</td></tr>
+<tr class="memdesc:aba1c35007c56a3082102f67c08ea5580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definie la scene de depart, avant le lancement du jeu.  <a href="#aba1c35007c56a3082102f67c08ea5580">More...</a><br /></td></tr>
 <tr class="separator:aba1c35007c56a3082102f67c08ea5580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2bb379da2ce51978a989de4ca979ecb"><td class="memItemLeft" align="right" valign="top"><a id="ad2bb379da2ce51978a989de4ca979ecb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>defineStartingScene</b> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memitem:ad2bb379da2ce51978a989de4ca979ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ad2bb379da2ce51978a989de4ca979ecb">defineStartingScene</a> (<a class="el" href="class_scene.html">Scene</a> *scene)</td></tr>
+<tr class="memdesc:ad2bb379da2ce51978a989de4ca979ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une scene au <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>.  <a href="#ad2bb379da2ce51978a989de4ca979ecb">More...</a><br /></td></tr>
 <tr class="separator:ad2bb379da2ce51978a989de4ca979ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8116aae790eaf236907d5d75401cd628"><td class="memItemLeft" align="right" valign="top"><a id="a8116aae790eaf236907d5d75401cd628"></a>
-<a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentScene</b> ()</td></tr>
+<tr class="memitem:a8116aae790eaf236907d5d75401cd628"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a8116aae790eaf236907d5d75401cd628">getCurrentScene</a> ()</td></tr>
+<tr class="memdesc:a8116aae790eaf236907d5d75401cd628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'acceder a la scene courante, celle updatee par le <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>.  <a href="#a8116aae790eaf236907d5d75401cd628">More...</a><br /></td></tr>
 <tr class="separator:a8116aae790eaf236907d5d75401cd628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70d59f0de33c34f84863a550408a476"><td class="memItemLeft" align="right" valign="top"><a id="ac70d59f0de33c34f84863a550408a476"></a>
-<a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getScene</b> (std::string name)</td></tr>
+<tr class="memitem:ac70d59f0de33c34f84863a550408a476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ac70d59f0de33c34f84863a550408a476">getScene</a> (std::string name)</td></tr>
+<tr class="memdesc:ac70d59f0de33c34f84863a550408a476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recuperer une scene.  <a href="#ac70d59f0de33c34f84863a550408a476">More...</a><br /></td></tr>
 <tr class="separator:ac70d59f0de33c34f84863a550408a476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000c4cc070830d727f349b094ab402e3"><td class="memItemLeft" align="right" valign="top"><a id="a000c4cc070830d727f349b094ab402e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>switchScene</b> (std::string newScene)</td></tr>
+<tr class="memitem:a000c4cc070830d727f349b094ab402e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a000c4cc070830d727f349b094ab402e3">switchScene</a> (std::string newScene)</td></tr>
+<tr class="memdesc:a000c4cc070830d727f349b094ab402e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change la scene courante.  <a href="#a000c4cc070830d727f349b094ab402e3">More...</a><br /></td></tr>
 <tr class="separator:a000c4cc070830d727f349b094ab402e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef45d9ee461773587e266c57783de1a3"><td class="memItemLeft" align="right" valign="top"><a id="aef45d9ee461773587e266c57783de1a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendMessage</b> (SCMessage message)</td></tr>
-<tr class="separator:aef45d9ee461773587e266c57783de1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabcb595b67641a2b090a4245a42febd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#adabcb595b67641a2b090a4245a42febd">sendGOMessage</a> (const std::string sceneName, const GOMessage msg)</td></tr>
+<tr class="memdesc:adabcb595b67641a2b090a4245a42febd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change la scene courante.  <a href="#adabcb595b67641a2b090a4245a42febd">More...</a><br /></td></tr>
+<tr class="separator:adabcb595b67641a2b090a4245a42febd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af079adf40fe6dd3eb152257abc2e2ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#af079adf40fe6dd3eb152257abc2e2ca6">sendGOMessage</a> (const <a class="el" href="class_scene.html">Scene</a> *scene, const GOMessage msg)</td></tr>
+<tr class="memdesc:af079adf40fe6dd3eb152257abc2e2ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie un GOMessage a une scene, qui le dispatchera a tous ses <a class="el" href="class_game_object.html">GameObject</a>.  <a href="#af079adf40fe6dd3eb152257abc2e2ca6">More...</a><br /></td></tr>
+<tr class="separator:af079adf40fe6dd3eb152257abc2e2ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01970da2c68fefbf48b98c59d5627ae"><td class="memItemLeft" align="right" valign="top"><a id="ab01970da2c68fefbf48b98c59d5627ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ab01970da2c68fefbf48b98c59d5627ae">run</a> ()</td></tr>
+<tr class="memdesc:ab01970da2c68fefbf48b98c59d5627ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance la boucle de jeu. <br /></td></tr>
 <tr class="separator:ab01970da2c68fefbf48b98c59d5627ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ddc45d96adc0373346663302e429b12"><td class="memItemLeft" align="right" valign="top"><a id="a0ddc45d96adc0373346663302e429b12"></a>
-std::vector&lt; <a class="el" href="class_game_object.html">GameObject</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>getObjects</b> ()</td></tr>
-<tr class="separator:a0ddc45d96adc0373346663302e429b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5881933816240d7c21d66383ad3abdae"><td class="memItemLeft" align="right" valign="top"><a id="a5881933816240d7c21d66383ad3abdae"></a>
-<a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNewGameObject</b> (std::string name, <a class="el" href="structvector2.html">vector2</a> position={ 0, 0 })</td></tr>
-<tr class="separator:a5881933816240d7c21d66383ad3abdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c121b430cbe2b77ba53ba4cfe295322"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_game_object.html">GameObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a3c121b430cbe2b77ba53ba4cfe295322">getCurrentObjects</a> ()</td></tr>
+<tr class="memdesc:a3c121b430cbe2b77ba53ba4cfe295322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'acceder aux <a class="el" href="class_game_object.html">GameObject</a> courant, c'est a dire ceux possedes par la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> courante.  <a href="#a3c121b430cbe2b77ba53ba4cfe295322">More...</a><br /></td></tr>
+<tr class="separator:a3c121b430cbe2b77ba53ba4cfe295322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaa9e4c0b2cfd2f248164a16684c700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#adaaa9e4c0b2cfd2f248164a16684c700">getNewGameObject</a> (std::string tag, <a class="el" href="structvector2.html">vector2</a> position={ 0, 0 })</td></tr>
+<tr class="memdesc:adaaa9e4c0b2cfd2f248164a16684c700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancie un nouvel <a class="el" href="class_game_object.html">GameObject</a>, l'ajoute a la scene courante et en retourne un pointeur.  <a href="#adaaa9e4c0b2cfd2f248164a16684c700">More...</a><br /></td></tr>
+<tr class="separator:adaaa9e4c0b2cfd2f248164a16684c700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93ae1a7543981d2d3d0e70b14174135f"><td class="memItemLeft" align="right" valign="top"><a id="a93ae1a7543981d2d3d0e70b14174135f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addNewObjects</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a93ae1a7543981d2d3d0e70b14174135f">addNewObjects</a> ()</td></tr>
+<tr class="memdesc:a93ae1a7543981d2d3d0e70b14174135f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute les GameObjects crees (A modifier :: Cette methode devrait etre privee) <br /></td></tr>
 <tr class="separator:a93ae1a7543981d2d3d0e70b14174135f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49e995c66c1c09394c75d31cbea4b691"><td class="memItemLeft" align="right" valign="top"><a id="a49e995c66c1c09394c75d31cbea4b691"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>passObject</b> (<a class="el" href="class_game_object.html">GameObject</a> *)</td></tr>
-<tr class="separator:a49e995c66c1c09394c75d31cbea4b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a0f7ffa3e36c93b51427dcf36a2586"><td class="memItemLeft" align="right" valign="top"><a id="a92a0f7ffa3e36c93b51427dcf36a2586"></a>
-<a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>findObjectWithTag</b> (std::string tag)</td></tr>
+<tr class="memitem:a92a0f7ffa3e36c93b51427dcf36a2586"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a92a0f7ffa3e36c93b51427dcf36a2586">findObjectWithTag</a> (std::string tag)</td></tr>
+<tr class="memdesc:a92a0f7ffa3e36c93b51427dcf36a2586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trouver un <a class="el" href="class_game_object.html">GameObject</a> possedant le tag passee en parametre.  <a href="#a92a0f7ffa3e36c93b51427dcf36a2586">More...</a><br /></td></tr>
 <tr class="separator:a92a0f7ffa3e36c93b51427dcf36a2586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad82b626def2e52b28f0d6c2d167589f6"><td class="memItemLeft" align="right" valign="top"><a id="ad82b626def2e52b28f0d6c2d167589f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>quit</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ad82b626def2e52b28f0d6c2d167589f6">quit</a> ()</td></tr>
+<tr class="memdesc:ad82b626def2e52b28f0d6c2d167589f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quit le jeu, ferme le programme. <br /></td></tr>
 <tr class="separator:ad82b626def2e52b28f0d6c2d167589f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d5df5f1dabaaa1b98eeb1340f4f118d"><td class="memItemLeft" align="right" valign="top"><a id="a5d5df5f1dabaaa1b98eeb1340f4f118d"></a>
-static <a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> ()</td></tr>
+<tr class="memitem:a5d5df5f1dabaaa1b98eeb1340f4f118d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5d5df5f1dabaaa1b98eeb1340f4f118d">instance</a> ()</td></tr>
+<tr class="memdesc:a5d5df5f1dabaaa1b98eeb1340f4f118d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode static permettant de recuperer l'instance du Singleton ou de la creer si elle n'existe pas encore.  <a href="#a5d5df5f1dabaaa1b98eeb1340f4f118d">More...</a><br /></td></tr>
 <tr class="separator:a5d5df5f1dabaaa1b98eeb1340f4f118d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a8d1a51bb0bd082dfddfbcc25bae08ace"><td class="memItemLeft" align="right" valign="top"><a id="a8d1a51bb0bd082dfddfbcc25bae08ace"></a>
-<a class="el" href="class_input_engine.html">InputEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_inputs</b></td></tr>
+<a class="el" href="class_input_engine.html">InputEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a8d1a51bb0bd082dfddfbcc25bae08ace">_inputs</a></td></tr>
+<tr class="memdesc:a8d1a51bb0bd082dfddfbcc25bae08ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'<a class="el" href="class_input_engine.html" title="Classe prenant en charge la gestion des inputs utilisateur. ">InputEngine</a>. <br /></td></tr>
 <tr class="separator:a8d1a51bb0bd082dfddfbcc25bae08ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84532de3912402092e41bded12137b44"><td class="memItemLeft" align="right" valign="top"><a id="a84532de3912402092e41bded12137b44"></a>
-<a class="el" href="class_n_y_timer.html">NYTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_timer</b></td></tr>
+<a class="el" href="class_n_y_timer.html">NYTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a84532de3912402092e41bded12137b44">_timer</a></td></tr>
+<tr class="memdesc:a84532de3912402092e41bded12137b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le timer. <br /></td></tr>
 <tr class="separator:a84532de3912402092e41bded12137b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -182,9 +191,6 @@ vector&lt; <a class="el" href="class_scene.html">Scene</a> * &gt;&#160;</td><td 
 <tr class="memitem:a774d8b94d3f52f0387de3eba6804dfa9"><td class="memItemLeft" align="right" valign="top"><a id="a774d8b94d3f52f0387de3eba6804dfa9"></a>
 <a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_nextScene</b></td></tr>
 <tr class="separator:a774d8b94d3f52f0387de3eba6804dfa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5a6689bfdebff663b691dfbf64596ec"><td class="memItemLeft" align="right" valign="top"><a id="aa5a6689bfdebff663b691dfbf64596ec"></a>
-std::vector&lt; <a class="el" href="class_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_passingGameObjects</b></td></tr>
-<tr class="separator:aa5a6689bfdebff663b691dfbf64596ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356588004d68586f945ae85bc5060700"><td class="memItemLeft" align="right" valign="top"><a id="a356588004d68586f945ae85bc5060700"></a>
 <a class="el" href="class_graphics_engine.html">GraphicsEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_graphics</b></td></tr>
 <tr class="separator:a356588004d68586f945ae85bc5060700"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,8 +214,322 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_quit</b> = false</td
 <tr class="separator:a6f8d9c72d09c8894b8ccbad014376285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_game_engine.html">GameEngine</a> Takes care of initiating the other engines, handleling the scenes and running the game </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Classe Singleton prenant en charge les <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> et la boucle de jeu. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aba1c35007c56a3082102f67c08ea5580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1c35007c56a3082102f67c08ea5580">&sect;&nbsp;</a></span>defineStartingScene() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::defineStartingScene </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definie la scene de depart, avant le lancement du jeu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>nom de la scene de depart </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2bb379da2ce51978a989de4ca979ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bb379da2ce51978a989de4ca979ecb">&sect;&nbsp;</a></span>defineStartingScene() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::defineStartingScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une scene au <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Un</td><td>pointeur vers la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> de depart </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92a0f7ffa3e36c93b51427dcf36a2586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a0f7ffa3e36c93b51427dcf36a2586">&sect;&nbsp;</a></span>findObjectWithTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object.html">GameObject</a> * GameEngine::findObjectWithTag </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trouver un <a class="el" href="class_game_object.html">GameObject</a> possedant le tag passee en parametre. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>tag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Le premier <a class="el" href="class_game_object.html">GameObject</a> trouve correspondant au tag </dd></dl>
+
+</div>
+</div>
+<a id="a3c121b430cbe2b77ba53ba4cfe295322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c121b430cbe2b77ba53ba4cfe295322">&sect;&nbsp;</a></span>getCurrentObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_game_object.html">GameObject</a> * &gt; &amp; GameEngine::getCurrentObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet d'acceder aux <a class="el" href="class_game_object.html">GameObject</a> courant, c'est a dire ceux possedes par la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> courante. </p>
+<dl class="section return"><dt>Returns</dt><dd>La liste de <a class="el" href="class_game_object.html">GameObject</a> courant </dd></dl>
+
+</div>
+</div>
+<a id="a8116aae790eaf236907d5d75401cd628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8116aae790eaf236907d5d75401cd628">&sect;&nbsp;</a></span>getCurrentScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a> * GameEngine::getCurrentScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet d'acceder a la scene courante, celle updatee par le <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Un pointeur vers la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> courante </dd></dl>
+
+</div>
+</div>
+<a id="adaaa9e4c0b2cfd2f248164a16684c700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaa9e4c0b2cfd2f248164a16684c700">&sect;&nbsp;</a></span>getNewGameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object.html">GameObject</a> * GameEngine::getNewGameObject </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structvector2.html">vector2</a>&#160;</td>
+          <td class="paramname"><em>position</em> = <code>{&#160;0,0&#160;}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instancie un nouvel <a class="el" href="class_game_object.html">GameObject</a>, l'ajoute a la scene courante et en retourne un pointeur. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>tag a donner au <a class="el" href="class_game_object.html">GameObject</a> </td></tr>
+    <tr><td class="paramname">La</td><td>position de depart du <a class="el" href="class_game_object.html">GameObject</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Un pointeur vers le <a class="el" href="class_game_object.html">GameObject</a> cree </dd></dl>
+
+</div>
+</div>
+<a id="ac70d59f0de33c34f84863a550408a476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70d59f0de33c34f84863a550408a476">&sect;&nbsp;</a></span>getScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a> * GameEngine::getScene </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recuperer une scene. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>nom de la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Un pointeur vers la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> </dd></dl>
+
+</div>
+</div>
+<a id="a5d5df5f1dabaaa1b98eeb1340f4f118d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5df5f1dabaaa1b98eeb1340f4f118d">&sect;&nbsp;</a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_game_engine.html">GameEngine</a>&amp; GameEngine::instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Methode static permettant de recuperer l'instance du Singleton ou de la creer si elle n'existe pas encore. </p>
+<dl class="section return"><dt>Returns</dt><dd>Une reference vers l'instance de <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a> </dd></dl>
+
+</div>
+</div>
+<a id="adabcb595b67641a2b090a4245a42febd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabcb595b67641a2b090a4245a42febd">&sect;&nbsp;</a></span>sendGOMessage() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::sendGOMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>sceneName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GOMessage&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change la scene courante. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>nom de la scene a passer en scene couranteEnvoie un GOMessage a une scene, qui le dispatchera a tous ses <a class="el" href="class_game_object.html">GameObject</a> </td></tr>
+    <tr><td class="paramname">Le</td><td>nom de la scene </td></tr>
+    <tr><td class="paramname">Le</td><td>GOMessage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af079adf40fe6dd3eb152257abc2e2ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af079adf40fe6dd3eb152257abc2e2ca6">&sect;&nbsp;</a></span>sendGOMessage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::sendGOMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GOMessage&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envoie un GOMessage a une scene, qui le dispatchera a tous ses <a class="el" href="class_game_object.html">GameObject</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Un</td><td>pointeur vers la <a class="el" href="class_scene.html" title="Classe gerant une scene, c&#39;est a dire une liste de GameObject. ">Scene</a> </td></tr>
+    <tr><td class="paramname">Le</td><td>GOMessage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a000c4cc070830d727f349b094ab402e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000c4cc070830d727f349b094ab402e3">&sect;&nbsp;</a></span>switchScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::switchScene </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>newScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change la scene courante. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Le</td><td>nom de la scene a passer en scene courante </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>F:/__MARTIN/__ENJMIN/Projets/ascii/shooter/ASCII_SHOOTER_PROTO/<a class="el" href="_game_engine_8h_source.html">GameEngine.h</a></li>
 <li>F:/__MARTIN/__ENJMIN/Projets/ascii/shooter/ASCII_SHOOTER_PROTO/GameEngine.cpp</li>
 </ul>

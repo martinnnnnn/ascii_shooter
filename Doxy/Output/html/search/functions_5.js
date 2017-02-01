@@ -1,9 +1,19 @@
 var searchData=
 [
-  ['init',['init',['../class_enemy.html#a2966f61498d00e488697a80ef4447ebe',1,'Enemy::init()'],['../class_game.html#a6f3a33940524b6ba9d83f627ccb14bbf',1,'Game::init()'],['../class_game_component.html#ae602abc2eed3c565f410548aad7ee14e',1,'GameComponent::init()'],['../class_life.html#a38250d67d459d3887e8d5adddf6b5129',1,'Life::init()'],['../class_player.html#abde7e5d5c9b248e9d151b63342a1651f',1,'Player::init()'],['../class_rocket.html#ace1889a9c70f40bafb955dbc48ecc9d0',1,'Rocket::init()'],['../class_u_i.html#a2277decc2cba013de2fbb5a64fbc1543',1,'UI::init()'],['../class_u_i_bullet.html#a46d657568a2458cbf6206265e17f966b',1,'UIBullet::init()']]],
-  ['initconsole',['initConsole',['../class_graphics_engine.html#a854823b6346b54852e1c3bfdc20cf8c9',1,'GraphicsEngine']]],
-  ['initphysics',['initPhysics',['../class_physics_engine.html#a1051e5a80e27864cc8d9c6cfd696c29a',1,'PhysicsEngine']]],
-  ['isdead',['isDead',['../class_game_object.html#af509340fc9f95d8d39afe7ec63d90128',1,'GameObject']]],
-  ['iskeydown',['isKeyDown',['../class_input_engine.html#a83ec547886c948af86305bc9fd576b63',1,'InputEngine']]],
-  ['istagged',['isTagged',['../class_game_object.html#aaac5b633ac19e0facea0b7cb6f93ccef',1,'GameObject']]]
+  ['game',['Game',['../class_game.html#a366e0d372a100b7de351caf14cede996',1,'Game']]],
+  ['gamecomponent',['GameComponent',['../class_game_component.html#a7d6d7a04c69a2eb0aa2d367925b501a2',1,'GameComponent']]],
+  ['getcomponent',['getComponent',['../class_game_object.html#a1c50376c7f24439359a3962f57dfd513',1,'GameObject']]],
+  ['getcomponents',['getComponents',['../class_game_object.html#addbe774c69d6fb3b50acbef5f74d7319',1,'GameObject']]],
+  ['getcurrentobjects',['getCurrentObjects',['../class_game_engine.html#a3c121b430cbe2b77ba53ba4cfe295322',1,'GameEngine']]],
+  ['getcurrentscene',['getCurrentScene',['../class_game_engine.html#a8116aae790eaf236907d5d75401cd628',1,'GameEngine']]],
+  ['gethitbox',['getHitBox',['../class_collider_component.html#ad0c16141d83ab4d8c249d8f61355f691',1,'ColliderComponent']]],
+  ['getlife',['getLife',['../class_life.html#a6bbbcb718407c98ce6c031c81685a659',1,'Life']]],
+  ['getname',['getName',['../class_game_object.html#a7a7cc496716e8c8453bd0bb954f2a7ee',1,'GameObject']]],
+  ['getnewgameobject',['getNewGameObject',['../class_game_engine.html#adaaa9e4c0b2cfd2f248164a16684c700',1,'GameEngine']]],
+  ['getobjects',['getObjects',['../class_scene.html#a9e7d39e9d4b1d6b76997e1453738658d',1,'Scene']]],
+  ['getscene',['getScene',['../class_game_engine.html#ac70d59f0de33c34f84863a550408a476',1,'GameEngine']]],
+  ['getsprite',['getSprite',['../class_graphics_component.html#aa88d6da1d4cceb7bf2b16c0419312517',1,'GraphicsComponent']]],
+  ['gettag',['getTag',['../class_game_object.html#a099a32d11225032f9a1a35d15a307a27',1,'GameObject']]],
+  ['getvelocity',['getVelocity',['../class_movement_component.html#a1b3cc0445b34ceafb79d694ecafbcd2c',1,'MovementComponent']]],
+  ['graphicscomponent',['GraphicsComponent',['../class_graphics_component.html#ab1b30f1e588303b117a932c49bddaba9',1,'GraphicsComponent::GraphicsComponent(GameObject *obj)'],['../class_graphics_component.html#a342ca4852ca1bd06471cd2db0614fdab',1,'GraphicsComponent::GraphicsComponent(GameObject *obj, std::string path)']]]
 ];

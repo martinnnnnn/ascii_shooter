@@ -71,15 +71,6 @@ public:
 		return nullptr;
 	}
 
-	void addCollider(ColliderComponent* c)
-	{
-		_collider = c;
-	}
-
-	ColliderComponent* getCollider()
-	{
-		return _collider;
-	}
 
 	/** \brief Donne le nom du GameObject
 	*

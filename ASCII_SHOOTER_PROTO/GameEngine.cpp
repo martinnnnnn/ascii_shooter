@@ -37,9 +37,9 @@ GameEngine::~GameEngine()
 {
 }
 
-GameObject* GameEngine::getNewGameObject(string name, vector2 position)
+GameObject* GameEngine::getNewGameObject(string tag, vector2 position)
 {
-	GameObject* o = new GameObject(name, position);
+	GameObject* o = new GameObject(tag, position);
 	_newObjects.push_back(o);
 	return o;
 }
@@ -157,13 +157,13 @@ void GameEngine::goToPreviousScene()
 	goToNextScene();
 }
 
-void GameEngine::sendSCMessage(SCMessage message)
-{
-	for (Scene* scene : _scenes)
-	{
-		//scene->receiveMessage(message);
-	}
-}
+//void GameEngine::sendSCMessage(SCMessage message)
+//{
+//	for (Scene* scene : _scenes)
+//	{
+//		//scene->receiveMessage(message);
+//	}
+//}
 
 
 void GameEngine::sendGOMessage(const string sceneName, const GOMessage msg)

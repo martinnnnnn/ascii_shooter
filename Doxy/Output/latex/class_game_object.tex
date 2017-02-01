@@ -22,7 +22,7 @@ std\+::string \hyperlink{class_game_object_a7a7cc496716e8c8453bd0bb954f2a7ee}{ge
 \begin{DoxyCompactList}\small\item\em Donne le nom du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_object_a58a24ffbffbcd03afa926b2c01d545fe}{set\+Name} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Set le nom du \hyperlink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
-void \hyperlink{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{send\+Message} (G\+O\+Message)
+void \hyperlink{class_game_object_abdc20833ca1a65acd819888247216929}{send\+Message} (const G\+O\+Message) const
 \begin{DoxyCompactList}\small\item\em Envoie d\textquotesingle{}un message. \end{DoxyCompactList}\item 
 bool \hyperlink{class_game_object_aaac5b633ac19e0facea0b7cb6f93ccef}{is\+Tagged} (std\+::string tag)
 \begin{DoxyCompactList}\small\item\em Test sur le tag de l\textquotesingle{}object. \end{DoxyCompactList}\item 
@@ -186,11 +186,11 @@ true si les tags sont identiques, faux sinon
 
 Marque le \hyperlink{class_game_object}{Game\+Object} comme mort, il sera supprime par le \hyperlink{class_game_engine}{Game\+Engine} lors de la tick suivante. 
 
-\hypertarget{class_game_object_a4ef97dbdc30378013b28f4708cb708a0}{}\label{class_game_object_a4ef97dbdc30378013b28f4708cb708a0} 
+\hypertarget{class_game_object_abdc20833ca1a65acd819888247216929}{}\label{class_game_object_abdc20833ca1a65acd819888247216929} 
 \index{Game\+Object@{Game\+Object}!send\+Message@{send\+Message}}
 \index{send\+Message@{send\+Message}!Game\+Object@{Game\+Object}}
 \subsubsection{\texorpdfstring{send\+Message()}{sendMessage()}}
-{\footnotesize\ttfamily void Game\+Object\+::send\+Message (\begin{DoxyParamCaption}\item[{G\+O\+Message}]{message }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Object\+::send\+Message (\begin{DoxyParamCaption}\item[{const G\+O\+Message}]{message }\end{DoxyParamCaption}) const}
 
 
 

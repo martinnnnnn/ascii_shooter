@@ -69,15 +69,15 @@ Raphael Bailly </dd>
 Martin Penard</dd></dl>
 <p>Jeu ASCII de shoot 'em up. Pour lancer le jeu, simplement lancer l'executable, Pour utiliser le moteur du jeu :</p><ul>
 <li>Creer les scenes necessaires au jeu</li>
-<li>Ajouter les scenes au singleton <a class="el" href="class_game_engine.html">GameEngine</a></li>
+<li>Ajouter les scenes au singleton <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a></li>
 <li>Ajouter un (ou des) <a class="el" href="class_game_object.html">GameObject</a> a une scene :<ul>
-<li>Definir la scene comme scene de debut avec GameEngine::instance().defineStartingScene()</li>
-<li>Ajouter le ou les nouveaux objects au <a class="el" href="class_game_engine.html">GameEngine</a></li>
+<li>Definir la scene comme scene de debut avec <a class="el" href="class_game_engine.html#a5d5df5f1dabaaa1b98eeb1340f4f118d" title="Methode static permettant de recuperer l&#39;instance du Singleton ou de la creer si elle n&#39;existe pas en...">GameEngine::instance()</a>.defineStartingScene()</li>
+<li>Ajouter le ou les nouveaux objects au <a class="el" href="class_game_engine.html" title="Classe Singleton prenant en charge les Scene et la boucle de jeu. ">GameEngine</a></li>
 <li>Ajouter le ou les scripts (<a class="el" href="class_game_component.html" title="Classe de base des scripts utilisateurs. ">GameComponent</a>) au <a class="el" href="class_game_object.html">GameObject</a></li>
 </ul>
 </li>
 <li>Definir la scene par lequel le jeu doit vraiment commencer</li>
-<li>Appeler GameEngine::instance().run() </li>
+<li>Appeler <a class="el" href="class_game_engine.html#a5d5df5f1dabaaa1b98eeb1340f4f118d" title="Methode static permettant de recuperer l&#39;instance du Singleton ou de la creer si elle n&#39;existe pas en...">GameEngine::instance()</a>.run() </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->

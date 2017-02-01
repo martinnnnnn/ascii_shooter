@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player',['Player',['../class_player.html#ac9e2313c9f0599f111d51b1ededc7b59',1,'Player']]]
+  ['operator_28_29',['operator()',['../class_life.html#ab33e0ff7003ed8c066d61ddb65ffc321',1,'Life']]]
 ];

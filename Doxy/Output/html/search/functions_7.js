@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['life',['Life',['../class_life.html#ad5a065168648ef6114eee8851c63a9e0',1,'Life']]]
+  ['kill',['kill',['../class_game_object.html#af54107b086de78b1fc6190088bdfb468',1,'GameObject']]]
 ];

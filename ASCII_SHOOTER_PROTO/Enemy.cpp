@@ -43,7 +43,6 @@ void Enemy::initComponents(int lifeValue, string path)
 
 	ColliderComponent* collider = new ColliderComponent(_gameObject, 3.0, 1.0);
 	addComponent(collider);
-	//_gameObject->addCollider(collider);
 
 	Life* life = new Life(_gameObject);
 	life->init(lifeValue);

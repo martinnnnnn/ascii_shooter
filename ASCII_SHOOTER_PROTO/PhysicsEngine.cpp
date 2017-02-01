@@ -83,37 +83,6 @@ void PhysicsEngine::update()
 			
 		}
 	}
-
-
-		//ColliderComponent* currentCollider = current->getComponent<ColliderComponent>();
-		//if (currentCollider)
-		//{
-		//	for (unsigned int j = i+1; j < gameObjects.size(); ++j)
-		//	{
-		//		GameObject* other = gameObjects[j];
-		//		if (other->isDead())
-		//		{
-		//			continue;
-		//		}
-		//		
-		//		//ColliderComponent* otherCollider = other->getComponent<ColliderComponent>();
-		//		ColliderComponent* otherCollider = other->getCollider();
-		//		
-		//		if (otherCollider)
-		//		{
-		//			if (intersect(current->_position, currentCollider->getHitBox(), other->_position, otherCollider->getHitBox()))
-		//			{
-		//				if (!ignore(current->getTag(), other->getTag()))
-		//				{
-		//					current->sendMessage(CHANGE_LIFE{ -1 });
-		//					other->sendMessage(CHANGE_LIFE{ -1 });
-		//				}
-		//			}
-		//		}
-		//	}
-		//}
-		
-	/*}*/
 }
 
 void PhysicsEngine::updatePosition(vector2& pos, vector2 vel)

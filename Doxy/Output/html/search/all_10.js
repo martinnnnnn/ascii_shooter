@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['ui',['UI',['../class_u_i.html',1,'UI'],['../class_u_i.html#ab299e77b21896655f94ef84c727a4e22',1,'UI::UI()']]],
-  ['uibullet',['UIBullet',['../class_u_i_bullet.html',1,'UIBullet'],['../class_u_i_bullet.html#a5036f0f1649cbb182b46a37ba4096bc1',1,'UIBullet::UIBullet()']]],
-  ['uicontext',['UICONTEXT',['../struct_u_i_c_o_n_t_e_x_t.html',1,'']]],
-  ['update',['update',['../class_enemy.html#ad55ee71b5a8c23fbd00b3c368b90cc64',1,'Enemy::update()'],['../class_game.html#a79df6376b332d63c9eca0dcee30305c3',1,'Game::update()'],['../class_game_component.html#a65fc004cd4dc7593052327ff874bb2f0',1,'GameComponent::update()'],['../class_game_object.html#adad7d284b670db722a2fda8e6a7997e3',1,'GameObject::update()'],['../class_input_engine.html#ab4eacde9d5826d436bc2f62b241f5fd9',1,'InputEngine::update()'],['../class_life.html#a0e00f2735584f3ddebb397742b520d3b',1,'Life::update()'],['../class_physics_engine.html#ac4951e3070893b809ec9b8888ad92e07',1,'PhysicsEngine::update()'],['../class_player.html#a82c3476f3e65a4e2ac6bcd040771bdd4',1,'Player::update()'],['../class_rocket.html#aa0f4dcf673358e841e4b4b2fa0b1462e',1,'Rocket::update()'],['../class_u_i.html#a47c96192a9924bbd6c6b610922770988',1,'UI::update()'],['../class_u_i_bullet.html#ad88e53627d06397907b9537c809626ed',1,'UIBullet::update()']]]
+  ['scene',['Scene',['../class_scene.html',1,'']]],
+  ['scmessagehandler',['SCMessageHandler',['../class_s_c_message_handler.html',1,'']]],
+  ['sendgomessage',['sendGOMessage',['../class_game_engine.html#adabcb595b67641a2b090a4245a42febd',1,'GameEngine::sendGOMessage(const std::string sceneName, const GOMessage msg)'],['../class_game_engine.html#af079adf40fe6dd3eb152257abc2e2ca6',1,'GameEngine::sendGOMessage(const Scene *scene, const GOMessage msg)'],['../class_scene.html#a75722f5960b037b0ec6d9cdf04ff9fa1',1,'Scene::sendGOMessage()']]],
+  ['sendmessage',['sendMessage',['../class_game_component.html#a30bad20d9395895883bb75b998e9c974',1,'GameComponent::sendMessage()'],['../class_game_object.html#abdc20833ca1a65acd819888247216929',1,'GameObject::sendMessage()']]],
+  ['sethitbox',['setHitBox',['../class_collider_component.html#ac745e518856d98ae5f0d53b356c390f7',1,'ColliderComponent::setHitBox(const vector2 &amp;hb)'],['../class_collider_component.html#a21bf46d6f8049e2832e07a896a91f7b0',1,'ColliderComponent::setHitBox(const float x, const float y)']]],
+  ['setname',['setName',['../class_game_object.html#a58a24ffbffbcd03afa926b2c01d545fe',1,'GameObject']]],
+  ['setsprite',['setSprite',['../class_graphics_component.html#ab3e309ee0a8dcbc1b927d38bf2e1d8c9',1,'GraphicsComponent']]],
+  ['settag',['setTag',['../class_game_object.html#a2c5d76ea1ebd18e6c3e74cdd680ed349',1,'GameObject']]],
+  ['setvelocity',['setVelocity',['../class_movement_component.html#a713784d4a7ccca4e4ad946f73d2db6cd',1,'MovementComponent::setVelocity(const vector2 &amp;v)'],['../class_movement_component.html#add7629692ed68862ff1fd1f3515e2ea6',1,'MovementComponent::setVelocity(const float x, const float y)']]],
+  ['switchscene',['switchScene',['../class_game_engine.html#a000c4cc070830d727f349b094ab402e3',1,'GameEngine']]]
 ];
