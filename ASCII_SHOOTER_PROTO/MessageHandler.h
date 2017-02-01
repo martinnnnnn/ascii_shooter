@@ -13,7 +13,7 @@ typedef boost::variant<
 	UICONTEXT
 	> GOMessage;
 
-/**
+/** \brief Message recu et envoyer par les GameObject, qui les dispatchent aux GameComponents
 *
 */
 class GOMessageHandler : public boost::static_visitor<void>
